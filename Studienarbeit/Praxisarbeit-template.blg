@@ -1,0 +1,19 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[1] Config.pm:307> INFO - Logfile is 'Praxisarbeit-template.blg'
+[154] biber-MSWIN64:322> INFO - === 
+[185] Biber.pm:415> INFO - Reading 'Praxisarbeit-template.bcf'
+[328] Biber.pm:943> INFO - Found 16 citekeys in bib section 0
+[367] Biber.pm:4256> INFO - Processing section 0
+[367] Utils.pm:75> INFO - Globbing data source 'lit.bib'
+[392] Utils.pm:91> INFO - Globbed data source 'lit.bib' to lit.bib
+[426] Biber.pm:4455> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[433] bibtex.pm:1653> INFO - LaTeX decoding ...
+[486] bibtex.pm:1471> INFO - Found BibTeX data source 'lit.bib'
+[539] Utils.pm:304> WARN - ISBN '978-16045646625' in entry 'FaceRec' is invalid - run biber with '--validate_datamodel' for details.
+[648] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[648] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[648] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[648] Biber.pm:4090> INFO - No sort tailoring available for locale 'de-DE'
+[672] bbl.pm:652> INFO - Writing 'Praxisarbeit-template.bbl' with encoding 'UTF-8'
+[685] bbl.pm:755> INFO - Output to Praxisarbeit-template.bbl
+[686] Biber.pm:128> INFO - WARNINGS: 1
