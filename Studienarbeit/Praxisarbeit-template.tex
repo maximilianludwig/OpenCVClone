@@ -9,6 +9,7 @@
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{acronym}
+\usepackage{pgfplots}
 
 %\usepackage[normalem]{ulem}
 %\useunder{\uline}{\ul}{}
@@ -683,10 +684,82 @@ Das Testen des im vorherigen Schritt trainierten Modells kann aufgrund der Vorar
 \lstinputlisting[style=custompython, numbers=none, linerange=26-50, caption=Klassifizierer mit der Input GUI testen]{Code/ClassifierHandler.py}
 
 \subsubsection{Optimierung der Lösung}
+Durch das Testen des Modells konnte festgestellt werden, dass trotz der vergrößerten Menge an Daten zum Trainieren, die Genauigkeit der Vorhersagen deutlich unter 50\% liegt. Aufgrund dieser Tatsache wird versucht, den Trainingsprozess zu optimieren. Die Möglichkeiten zum komplexen Konfigurieren eines Modells in OpenCV sind begrenzt, so dass das Konfigurieren eines Modells, welches wesentlich mehr Features der Emotion analysiert als zuvor, erschwert wird. Außerdem würde sich dann die Tatsache bemerkbar mahcen, dass OpenCV keine Möglichkeit bietet, die  Rechenleistungen der CPU und der GPU zu kombinieren. Daraus würde sich ein sehr langwieriger Trainingsprozess ergeben, was nicht mehr den Anforderungen entspricht. Daher wird zunächst versucht, den Prozess in eine extra dafür vorgesehene Bibiliothek auszulagern, wobei die Entscheidung auf die Keras-API des Tensorflow-Frameworks gefallen ist. Auf die genaue funktionsweise von Keras wird in einem späteren Kapitel näher eingegangen. An dieser Stelle bleibt dann nur noch zu bemerken, dass die Installation von Keras und das Einbinden benötigter Komponenten erfolgreich durchgeführt werden konnte, jedoch die Ausführen der benötigten Komponenten wegen einer nicht unterstützten Prozessorarchitektur bzw. eines nicht unterstützten Chipsets nicht möglich war. Aufgrund der benötigten Ressourcen und der mit Tensorflow kompatiblen Architektur wurde sich deshalb für eine webbasierte Cloudlösung entschieden.
 
 \subsection{Webbasierte Lösung}
+Trotz der augetretenen Komplikationen bei der Entwicklung einer Stand-Alone Lösung muss an dieser Stelle erwähnt werden, dass große Teile, gerade im Bereich des Inputs und Outputs wiederverwendet werden. Die auf Grundlage der Stand-Alone Version entwickelte webbasierte Lösung wird nachfolgend genauer erläutert.
+
+\subsubsection{Programmierumgebung}
+Zusätzlich zu den bereits erwähnten Gründen für die Entscheidung der Programmiersprache Python ist noch die Wiederverwendbarkeit der bisher entwickelten Lösung zu nennen. Da weiterhin Python verwendet wird, stellt sich nun die Frage, mit welcher Entwicklungsumgebung gearbeitet wird. Da nun auf einer Cloud-Infrastruktur entwickelt wird, sind die reinen grafischen Umgebungen wie Visual Studio Code oder PyCharm nicht zu empfehlen. Aufgrund vieler Vorteile, die dem entsprechenden Kapitel zu entnehmen sind und der ebenfalls bereits erwähnten Relevanz innerhalb des Studiums wird zum weiteren Entwickeln die Open-Source Webapplikation Jupyter Notebook verwendet. Die finale Version wird jedoch später mit den durch Jupyter Notebook exportierbaren Python-Skripten und nicht direkt über das Jupyter Notebook laufen. OpenCV, die Programmbibliothek für Bildverarbeitung und Keras, die Deep-Learning-Bibliothek, werden weiterhin für die bereits beschriebenen Zwecke verwendet.
 
 \subsubsection{Dataset}
+Im Zuge der vertieften Recherche nach Keras und der direkten Verwendung im Bereich Gesichts- und Emotionserkennung wurde ein besseres Dataset gefunden, als bisher verwendet wurde. Das Dataset gehört zu einer Open-Source Facial Expression Recognition auf Kaggle.\footcite[Vgl.][]{FER-Challenge} Kaggle ist eine Online-Community deren Hauptzweck es ist, Data-Science-Wettbewerbe auszuschreiben, an denen jeder interessierte teilnehmen kann. Außerdem ermöglicht die Platform Datensätze zu finden und zu veröffentlichen und ggf. Modelle auszuprobieren oder ebenfalls zu veröffentlichen. Vereinfacht kann mann sagen, dass Kaggle ein virtueller Treffpunkt für Data-Scientists in den Bereichen Maschinelles Lernen und KI-Entwicklung ist.\newline
+Betrachten wir nun das im Projekt verwendete Dataset.
+Das Dataset umfasst 35887 Datensätze, die allesamt gelabelt sind. Dabei wird das Set in Trainingsdaten, Public-Testdaten und Private-Testdaten unterteilt, wobei 80\% aller Werte auf das Trainingsset entfallen und jeweils 10\% auf die Testsets. Die Unterteilung der Testdaten in Public und Private ist dabei nur im direkten Zusammenhang mit dem Kaggle-Wettbewert von Relevanz, da ein Set zum Testen des Modells für die Entwickler selbst ist und das Andere, um einen Sieger der Challenge auszumachen. Da wir mit unserem Modell nicht an der Facial Emotion Recognition Challenge teilnehmen, können wir die beiden Testsets zu einem großen zusammenfassen. Damit erhalten wir 28709 Datensätze zum Trainieren des Modells und 7178 Datensätze zum Testen. Aufgrund der Menge an Daten werden diese nicht wie beim anderen Dataset in einer Ordnerstruktur mit entsprechend vielen Bilddateien zur Verfügung gestellt, sondern als Comma-Separated-Values (.csv). Dabei handelt es sich um eine Art Tabelle, deren Struktur beispielhaft der Tabelle \ref{tab:FER2013} zu entnehmen ist.
+\begin{table}[h]
+\centering
+\begin{tabular}[t]{c|l|c}
+emotion & pixels & Usage \\
+\hline
+0 & 70 80 82 72 58 58 60 63 54 58 60 48 89 115 121 119 115 110 98 ... & Training \\
+0 & 151 150 147 155 148 133 111 140 170 174 182 154 153 164 173 178 ... & Training \\
+2 & 231 212 156 164 174 138 161 173 182 200 106 38 39 74 138 161 ... & Training \\
+4 & 24 32 36 30 32 23 19 20 30 41 21 22 32 34 21 19 43 52 13 26 40 ... & Training \\
+6 & 4 0 0 0 0 0 0 0 0 0 0 0 3 15 23 28 48 50 58 84 115 127 137 142 ... & Training \\
+2 & 55 55 55 55 55 54 60 68 54 85 151 163 170 179 181 185 188 188 ... & Training \\
+4 & 20 17 19 21 25 38 42 42 46 54 56 62 63 66 82 108 118 130 139 ... & Training \\
+3 & 77 78 79 79 78 75 60 55 47 48 58 73 77 79 57 50 37 44 56 70 80 ... & Training \\
+0 & 254 254 254 254 254 249 255 160 2 58 53 70 77 76 75 78 68 18 32 ... & PublicTest \\
+0 & 170 118 101 88 88 75 78 82 66 74 68 59 63 64 65 90 89 73 80 80 ... & PrivateTest \\
+\hline
+\end{tabular}
+\caption{Struktur des CSV-Datasets der FER-Challenge}
+\label{tab:FER2013}
+\end{table}
+Die Spalte \texttt{emotion} kann dabei Werte von 0 bis 6 annehmen, wobei sich insgesamt 7 verschiedene Werte ergeben, die den Emotionen entsprechend der Tabelle \ref{tab:feremotions} zugeordnet werden können. Außerdem werden in der Tabelle die absoluten und relativen Häufigkeiten der Emotionswerte dargestellt, da diese für spätere Optimierungen relevant sind.
+\begin{table}[h]
+\centering
+\begin{tabular}[t]{c|c|c|c}
+Wert & Emotion & $H_n$ & $h_n$ \\
+\hline
+0 & Angry & 4953 & 13,80\% \\
+1 & Disgust & 547 & 1,52\% \\
+2 & Fear & 5121 & 14,27\% \\
+3 & Happy & 8989 & 25,05\% \\
+4 & Sad & 6077 & 16,93\% \\
+5 & Surprise & 4002 & 11,15\% \\
+6 & Neutral & 6198 & 17,27\% \\
+\hline
+\end{tabular}
+\caption{Zuordnung und Häufigkeiten der Emotionen}
+\label{tab:feremotions}
+\end{table}
+\begin{figure}[h]
+\begin{tikzpicture}
+	\begin{axis}[
+	  ybar,
+	  axis x line = bottom,
+	  enlarge x limits = .1,
+	  bar width=20pt,
+	  nodes near coords,
+	  symbolic x coords ={Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral},
+	  x tick label style={rotate=45,anchor=north east},
+	  title = {Häufigkeitsverteilung der Emotionen}
+	  ]
+	  \addplot[fill=blue] coordinates {
+		(Angry,4953)
+		(Disgust,547)
+		(Fear,5121)
+		(Happy,8989)
+		(Sad,6077)
+		(Surprise,4002)
+		(Neutral,6198)
+	  };
+	\end{axis}
+  \end{tikzpicture}
+\end{figure}
+Betrachten wir nun die anderen Spalten. In der Spalte \texttt{pixels} befinden sich die eigentlichen Bilddaten als Pixelwerte, die lediglich mit einem Leerzeichen getrennt in einem String dargestellt werden. In Tabelle \ref{tab:FER2013} wird nur ein kleiner Ausschnitt der insgesamt 2304 Pixelwerte pro Datensatz angezeigt, wobei jedes Pixel Werte von 0 bis 255 annehmen kann. Die Anzahl von 2304 Pixeln ergibt sich durch die Länge und die Breite der Bilder von jeweils 48 Pixel mal 48 Pixel. Bevor man die Bilddaten in Form des Strings aus Pixeln für das Modell nutzen kann, müssen diese erst entsprechend formatiert und ungeformt werden, aber dazu später mehr.  
+Die letzte der Tabelle zu entnehmende Information befindet sich in der Spalte \texttt{Usage}. Dort wird jedem Datensatz zugeordnet, ob er im Zuge des Wettbewerbes zum Trainieren, zum privaten Testen oder zum öffentlichen Testen verwendet wird.
 
 \subsubsection{Modell}
 Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert und \ref{fig:Model Summary}
