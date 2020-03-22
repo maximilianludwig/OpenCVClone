@@ -2203,17 +2203,16 @@
     <bcf:citekey order="19">Keras</bcf:citekey>
     <bcf:citekey order="20">Unsupervised</bcf:citekey>
     <bcf:citekey order="21">Supervised</bcf:citekey>
-    <bcf:citekey order="22">netguru</bcf:citekey>
-    <bcf:citekey order="23">netguru</bcf:citekey>
-    <bcf:citekey order="24">Dlib</bcf:citekey>
-    <bcf:citekey order="25">Keras</bcf:citekey>
-    <bcf:citekey order="26">Unsupervised</bcf:citekey>
-    <bcf:citekey order="27">Supervised</bcf:citekey>
-    <bcf:citekey order="28">CK</bcf:citekey>
-    <bcf:citekey order="29">EmotionInSpeech</bcf:citekey>
-    <bcf:citekey order="30">MusicEmotion</bcf:citekey>
+    <bcf:citekey order="22">willberger</bcf:citekey>
+    <bcf:citekey order="23">integral</bcf:citekey>
+    <bcf:citekey order="24">willberger</bcf:citekey>
+    <bcf:citekey order="25">willberger</bcf:citekey>
+    <bcf:citekey order="26">CK</bcf:citekey>
+    <bcf:citekey order="27">FER-Challenge</bcf:citekey>
+    <bcf:citekey order="28">EmotionInSpeech</bcf:citekey>
+    <bcf:citekey order="29">MusicEmotion</bcf:citekey>
+    <bcf:citekey order="30">EmotionInSound</bcf:citekey>
     <bcf:citekey order="31">EmotionInSound</bcf:citekey>
-    <bcf:citekey order="32">EmotionInSound</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
