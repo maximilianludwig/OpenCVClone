@@ -268,6 +268,66 @@ Zuletzt steht hinter Keras eine große aktive Community, welche zahlreiche Tutor
 
 
 \subsubsection{Unterschiede}
+
+
+%\begin{table}[]
+%\begin{tabular}{llllllllllllllllll}
+%\multicolumn{1}{c}{{\ul \textbf{Software}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{Creator}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial \\ Release\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Software \\ Licence\end{tabular}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{Open Source}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{Platform}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{Written in}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{Interface}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{OpenMP support}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{OpenCL support}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}CUDA\\ support\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Automatic\\ differentiation\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Has pretrained\\ models\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Recurrent\\ nets\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Convolutional \\ nets\end{tabular}}} &
+%  \multicolumn{1}{c}{{\ul \textbf{RBM/DBNs}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Parallel execution \\ (multi node)\end{tabular}}} &
+%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Actively\\ Developed\end{tabular}}} \\
+%Keras &
+%  Francois Chollet &
+%  2015 &
+%  MIT license &
+%  Yes &
+%  \begin{tabular}[c]{@{}l@{}}Linux, macOS,\\ Windows\end{tabular} &
+%  Python &
+%  Python, R &
+%  \begin{tabular}[c]{@{}l@{}}Only if using \\ Theano as backend\end{tabular} &
+%  \begin{tabular}[c]{@{}l@{}}Can use Theano,\\ Tensorflow or \\ PlaidML as backends\end{tabular} &
+%  Yes &
+%  Yes &
+%  Yes &
+%  Yes &
+%  Yes &
+%  No &
+%  Yes &
+%  Yes \\
+%Dlib &
+%  Davis King &
+%  2002 &
+%  Boost Software License &
+%  Yes &
+%  Cross-Platform &
+%  C++ &
+%  C++ &
+%  Yes &
+%  No &
+%  Yes &
+%  Yes &
+%  Yes &
+%  No &
+%  Yes &
+%  Yes &
+%  Yes &
+%  
+%\end{tabular}
+%\end{table}
 Zusammenfassen kann gesagt werden, dass Dlib eine mächtige Bibliothek für die Umsetzung verschiedenster Aufgaben ist. Die ausführliche Dokumentation bietet eine große Hilfestellung. Jedoch folgt aus dem Angebot der zahlreichen Features auch eine längere Einarbeitung, bis die Anforderungen produktiv umgesetzt werden können. 
 \newline
 Keras hingegen bietet durch dessen benutzerfreundliche Entwicklung und den zahlreichen Tutorials eine schnelle erste Umsetzung der Aufgaben. Durch die Modularität und der aktiven Community können viele öffentliche Lösungen genutzt und für die eigenen Anforderungen abgeändert werden. 
@@ -280,9 +340,39 @@ Nun gilt es zu klären, ob sich für die zu Grunde liegende Aufgabe ein Supervis
 \footcite[Vgl. ][21]{Unsupervised}
  Supervised Learning Algoriuthmen hingegen bieten sich vor allem an, wenn es darum geht einen Prozess zu automatisieren oder aus der Wirklichkeit zu replizieren.
 \footcite[Vgl. ][4]{Supervised}
-Das in dieser Arbeit zu Grunde liegende Problem ist demnach vor allem für Supervised Learning Algorithmen geeignet. Dies liegt zum einem daran, dass jedem Bild eines Menschen eine Basisemotion zugeordnet werden kann. Zum anderem ist auch der verwendete Datensatz mit dem das Modell trainiert und getestet werden soll ebenfalls gelabelt. Deshalb bietet sich dieses Verfahren am meisten an. Es wäre auch hypothetisch denkbar einen Unsupervised Learning Algorithmus zu verwenden, aber dieser Ansatz wäre suboptimal, da er nicht dem eigentlichen Use case dieses ANsatzes entspricht.
+Das in dieser Arbeit zu Grunde liegende Problem ist demnach vor allem für Supervised Learning Algorithmen geeignet. Dies liegt zum einem daran, dass jedem Bild eines Menschen eine Basisemotion zugeordnet werden kann. Zum anderem ist auch der verwendete Datensatz mit dem das Modell trainiert und getestet werden soll ebenfalls gelabelt. Deshalb bietet sich dieses Verfahren am meisten an. Es wäre auch hypothetisch denkbar einen Unsupervised Learning Algorithmus zu verwenden, aber dieser Ansatz wäre suboptimal, da er nicht dem eigentlichen Use case dieses Ansatzes entspricht.
 
-
+\section{Gesichtserkennung mit Opencv}
+In dem nun folgenden Abschnitt wird der theoretische Aspekt der Gesichtserkennung mit dem Tool Opencv erläutert, und die für die Arbeit relevanten Eigenschaften aufgearbeitet.
+\subsection{Opencv Klassifizierer}
+Opencv stellt verschiedenste Klassifizierer zur Verfügung um die Aufgabe der Gesichtserkennung. Zum einem die sogenannten HAAR-Cascade Klassifizierer, zum anderen dedizierte Gesichtserkennungsalgorithmen. Beide Arten werden im Laufe dieser Arbeit verwendet werden, weshalb es zum besseren Verständnis der Arbeit dienlich ist die Funktionsweise dieser zu beleuchten.
+\subsubsection{HAAR Cascade Klassifizierer}
+Als Datengrundlage für diese Art der Klassifizierer werden positive Bilder gebraucht - Im Falle der Gesichtserkennung also Bilder mit Gesichtern - sowie negative. Aus diesen werden dann Eigenschaften extrahiert und verarbeitet. Grundsätzlich ist diese Art der Klassifizierung deutlich flexibler als ''reine'' Gesichtserkennungsalgorithmen. Dies liegt daran, dass Haar klassifizierungen nicht auf Gesichter beschränkt sind, sondern auf zahlreiche Eigenschaften wie Augen und Münder, oder gänzlich andere Tiere oder Objekte wie Mäuse und Häuser.
+Der Haar-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
+\begin{itemize}
+\item Haar feature selection
+\item Creating  Integral Images
+\item Adaboost Training
+\item Cascading Classifiers
+\end{itemize}
+\footcite[Vgl.][]{willberger}
+In dem ersten Schritt werden sogenannte Haar features festgelegt. Diese sind im wesentlichen verschiedenartige Ausschnitte aus den Bildern. Eine beispielhafte Selektion dieser kann der   Grafik \ref{fig: haar-features} entnommen werden.
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{Bilder/haar-cascade.png}
+\caption{haar features \newline Quelle: % https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
+}
+\label{fig: haar-features}
+\end{figure}
+Wie in der Grafik ebenfalls zu sehen ist, sind diese features alle samt rechteckig. Dies bietet die Möglichkeit die Berechnungen die gemacht werden müssen zu beschleunigen, indem Schritt zwei angewandt wird. die vorliegenden Bilder werden dabei in Integralbilder umgewandelt.  Diese werden im folgenden nicht genau expliziert, jedoch werden in Integralbildern vereinfacht gesagt in jedem Punkt des Bildes die Pixelsummen eines Rechteckes gehalten, das vom Ursprung bis zu dem jeweiligen Pixel aufgespannt wird. Bei einem Punkt (x,y) wird also das Rechteck (0,0) , (x,0), (0,y), (x,y) betrachtet.
+\footcite[Vgl.][]{integral}
+Nun können verschiedene Haar features selektiert werden. Das Problem dabei ist jedoch, dass diese für sich nicht sonderlich aussagekräftig sind. Beispielsweise ein Feature dass die Nasenflügel betrachtet ist nicht in der Lage ein Gesicht wirklich zu erkennen. Um deshalb ein aussagekräftiges Ergebnis zu erzielen werden die besten dieser sogenannten schwachen Klassifizierer zusammengefasst und trainiert,  zu einem starken Klassifizierer. Dieser Schritt beschreibt das Adaboost Training.
+\footcite[Vgl.][]{willberger}
+Diese Trainingsart benutzt nun den letzten Teil, das Kaskadieren von Klassifizieren. Im wesentlichen handelt es sich dabei um eine Methode die so schnell wie möglich falsche Bilder, also solche die nicht der gewünschten Klasse entsprechen, auszusortieren. Dabei wird in multiplen Stadien gearbeitet, in denen	 ein sich verschiebender Rahmen über das Bild gelegt, der wiederum die Größe des Zielbildes hat - Zum Beispiel eines Gesichtes, Auges, Mundes, ... . Wenn nun der Rückgabewert für einen den der Rahmen gerade umfasst negativ ist, wird der Rahmen weiter verschoben. Wenn das Ergebnis jedoch positiv ist, wird das Bild dem nächstem Stadium übergeben. 
+\footcite[Vgl.][]{willberger}
+\subsubsection{Fisher Face Recognizer}
+Der Fisher Face Recognizer ist einer von zwei Gesichtserkennungs Algortihmen die Opencv mit sich bringt. Im Gegensatz zu seinem Gegenstück, dem Eigenface Recognizer der ein unsupervised Algortihmus darstellt, arbeitet der Fisher Face Recognizer mit einem gelabelten Datensatz und ist somit auch ein supervised Algortihmus
+\subsection{Eingabe Daten}
+hier kommt dann Grayscale hin
 \let\cleardoublepage\relax
 
 \chapter{Ergebnis}
@@ -642,6 +732,10 @@ Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils
 
 \subsubsection{Verzeichnisstruktur}
 
+\subsubsection{Alternativ Ansatz zur Pokerface Erkennung}
+Die nun vorgestellte Lösung zur Analyse der Emotionen eines Subjektes weißt jedoch eine Schwachstelle auf. Sie ist nur darauf ausgelegt ein einzelnes Bild zu analysieren und setzt dieses nicht in einen zeitlichen Kontext. Dies ist auch zur Erkennung eines Pokerfaces nicht optimal, da von einem einzelnen Bild nur partiell darauf geschlossen werden kann, dass ein Pokerface vorliegt. Man nehme zum Beispiel an, dass das Pokerface ein geübten Pokerspielers nicht dadurch gekennzeichnet ist, dass er permanent einen neutralen Gesichtszug annimmt, sondern ständig den gleichen annimmt. Dieses Szenario kann nicht mit der jetzigen Lösung abgedeckt werden. Daher bietet sich hier an eine alternativen Ansatz zu fahren. Dieser besteht im Grunde daraus, dass die Bilder die an den Server zu evaluieren des emotionalen Zustandes noch in einen zeitlichen Kontext gesetzt werden. Die Grundidee dazu ist, dass die einzelnen Ergebnisse der Vorhersagen der Bilder über einen gewissen Zeitraum gespeichert werden. Mit diesen gespeicherten Daten wird dann ermittelt, wie stark sich die einzelnen Bilder hinsichtlich der Emotionen von einander unterscheiden. Da die Rückgabewerte des trainierten Modells numerisch sind, fällt es recht einfach Unterschiede auszumachen. 
+\paragraph{Umsetzung}
+Realisert wird dieser Ansatz durch ein Rahmenprogramm. Dieses greift dabei auf die Webcam des Computers zu und nimmt in einem geregelten Intervall Bilder auf. Diese werden dann wiederum an den bereits erläuterten Flask Server geschickt.
 \let\cleardoublepage\relax
 \chapter{Diskussion}
 Das nunmehr letzte Kapitel soll sich mit der kurzen Zusammenfassung der Ergebnisse des letztens Teils und deren Bewertung widmen. 
