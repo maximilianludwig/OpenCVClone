@@ -340,7 +340,7 @@ In dem nun folgenden Abschnitt wird der theoretische Aspekt der Gesichtserkennun
 \subsection{Opencv Klassifizierer}
 Opencv stellt verschiedenste Klassifizierer zur Verfügung um die Aufgabe der Gesichtserkennung. Zum einem die sogenannten HAAR-Cascade Klassifizierer, zum anderen dedizierte Gesichtserkennungsalgorithmen. Beide Arten werden im Laufe dieser Arbeit verwendet werden, weshalb es zum besseren Verständnis der Arbeit dienlich ist die Funktionsweise dieser zu beleuchten.
 \subsubsection{HAAR Cascade Klassifizierer}
-Als Datengrundlage für diese Art der Klassifizierer werden positive Bilder gebraucht - Im Falle der Gesichtserkennung also Bilder mit Gesichtern - sowie negative. Aus diesen werden dann Eigenschaften extrahiert und verarbeitet. Grundsätzlich ist diese Art der Klassifizierung deutlich flexibler als ''reine'' Gesichtserkennungsalgorithmen. Dies liegt daran, dass Haar klassifizierungen nicht auf Gesichter beschränkt sind, sondern auf zahlreiche Eigenschaften wie Augen und Münder, oder gänzlich andere Tiere oder Objekte wie Mäuse und Häuser.
+Als Datengrundlage für diese Art der Klassifizierer werden positive Bilder gebraucht - Im Falle der Gesichtserkennung also Bilder mit Gesichtern - sowie negative. Aus diesen werden dann Eigenschaften extrahiert und verarbeitet. Grundsätzlich ist diese Art der Klassifizierung deutlich flexibler als ''reine'' Gesichtserkennungsalgorithmen. Dies liegt daran, dass Haar Klassifizierungen nicht auf Gesichter beschränkt sind, sondern auf zahlreiche Eigenschaften wie Augen und Münder, oder gänzlich andere Tiere oder Objekte wie Mäuse und Häuser.
 Der Haar-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
 \begin{itemize}
 \item Haar feature selection
@@ -352,7 +352,7 @@ Der Haar-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
 In dem ersten Schritt werden sogenannte Haar features festgelegt. Diese sind im wesentlichen verschiedenartige Ausschnitte aus den Bildern. Eine beispielhafte Selektion dieser kann der   Grafik \ref{fig: haar-features} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/haar-cascade.png}
-\caption{haar features \newline Quelle: % https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
+\caption{haar features \newline Quelle: \url{https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html}
 }
 \label{fig: haar-features}
 \end{figure}
@@ -362,10 +362,20 @@ Nun können verschiedene Haar features selektiert werden. Das Problem dabei ist 
 \footcite[Vgl.][]{willberger}
 Diese Trainingsart benutzt nun den letzten Teil, das Kaskadieren von Klassifizieren. Im wesentlichen handelt es sich dabei um eine Methode die so schnell wie möglich falsche Bilder, also solche die nicht der gewünschten Klasse entsprechen, auszusortieren. Dabei wird in multiplen Stadien gearbeitet, in denen	 ein sich verschiebender Rahmen über das Bild gelegt, der wiederum die Größe des Zielbildes hat - Zum Beispiel eines Gesichtes, Auges, Mundes, ... . Wenn nun der Rückgabewert für einen den der Rahmen gerade umfasst negativ ist, wird der Rahmen weiter verschoben. Wenn das Ergebnis jedoch positiv ist, wird das Bild dem nächstem Stadium übergeben. 
 \footcite[Vgl.][]{willberger}
-\subsubsection{Fisher Face Recognizer}
-Der Fisher Face Recognizer ist einer von zwei Gesichtserkennungs Algortihmen die Opencv mit sich bringt. Im Gegensatz zu seinem Gegenstück, dem Eigenface Recognizer der ein unsupervised Algortihmus darstellt, arbeitet der Fisher Face Recognizer mit einem gelabelten Datensatz und ist somit auch ein supervised Algortihmus
+\subsubsection{Gesichtserkennungs Algorithmen}
+Der Fisher Face Recognizer ist einer von zwei Gesichtserkennungs Algortihmen die Opencv mit sich bringt. Sein Gegenstück ist der Eigenface Recognizer, auf dem der Fisher Face Recognizer partiell aufbaut. Aus diesem grund wird zuerst die grunndsätzliche funktionsweise des Eigenface Algortihmus beleuchtet. Dieser Algorithmus bekommt einen Datensatz von verschiedenen Gesichtsbildern als Eingabeparameter. Der Eigenface Algortihmus stuft dabei verschiedene gescihtskomponenten wichtiger ein als andere. zum Beispiel wenn mehr varianz in den Trainingsdaten gegeben ist im Bereich der Nasen und Augen, und weniger im bereich der münder und Stirnen,  wird der Algorithmus die Nasen und auch Augen als die sinnvolleren oder wichtigeren Komponenten erachten. Anhand dieser wichtigen Komponenten können dann verschieden Gesichter erkannt werden.
+\footcite[Vgl.][]{Eigenface}
+Das Problem dieses Algorithmus ist nun, dass viele Komponenten der Gesichter nicht mehr beachtet werden weil sie insgesamt eine zu niedrige Varianz aufgewiesen haben. Ein anderes Szenario wäre dass eine Komponente ohne Aussagekraft eine sehr große Varianz in den Traingsdaten enthält. Z.B. Wenn in den Datensätzen eine hohe Varianz der jeweiligen Beleuchtung vorhanden ist, also wenn keine einheitlich Beleuchtung der Bilder vorhanden ist. Die Beleuchtung sagt per se nicht viel über ein Gesicht aus, aber der Eigenface Recognizer würde diese Komponente als sehr wichtig einstufen, was zu Fehlern führen kann.
+\footcite[Vgl.][]{Fisherface}
+Im Gegensatz zum Eigenface Recognizer arbeitet der Fisherface Algorithmus mit klassifizierten Daten. Daher ist er im Vergleich zum bereits explizierten Eigenface Ansatz ein supervised learning Algorithmus. Dieser supervised Algorithmus verfolgt ebenso den Ansatz dass aus dem Datensatz verschiedene Komponenten extrahiert werden, jedoch wird hierbei keine Gewichtung anhand der Varianz vorgenommen. Dadurch wird das zuvor beschriebene Problem teilweise aufgelöst. 
+\footcite[Vgl.][How to fix this issue]{Eigenface}
+Teilweise nur deshalb, weil ein Modell welches mit dem Fisherface Algorithmus trainiert wird und nur Bilder als Eingabewerte mit einer hohen Beleuchtung bekommt, auch nur solche Bilder korrekt bewerten kann. Wenn nun ein schlecht beleuchtetes Bild bewertet werden sollte, wird der Algorithmus an seine Grenzen kommen.
+Dieses Problem kann durch den dritten von Opencv angeboten Gesichtserkennungslaoritmus ausgeglichen werden, dem sogenannten  Local binary patterns histograms Recognizer. Dieser ist jedoch nicht relevant für diese Arbeit, weshalb hier zum weiteren nachlesen auf die Opencv Dokumenation verwiesen wird. 
+\footnote{\url{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html\#local-binary-patterns-histograms}}. 
+ein weiterer Lösungsansatz wäre hingegen noch die Eingabedaten anzupassen, mit denen das resultierenden Modell trainiert wird. Dazu wird jedoch auf den folgenden Unterpunkt \pageref{subsec: Eingabe Daten} verwiesen
 \subsection{Eingabe Daten}
-hier kommt dann Grayscale hin
+\label{subsec: Eingabe Daten}
+Wie im vorherigen Unterpunkt erwähnt kann das Modell ebenfalls dadurch beeinflusst werden wie der Eingabedatensatz aufgebaut ist.
 \let\cleardoublepage\relax
 
 \chapter{Ergebnis}
