@@ -352,8 +352,7 @@ Der Haar-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
 In dem ersten Schritt werden sogenannte Haar features festgelegt. Diese sind im wesentlichen verschiedenartige Ausschnitte aus den Bildern. Eine beispielhafte Selektion dieser kann der   Grafik \ref{fig: haar-features} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/haar-cascade.png}
-\caption{haar features \newline Quelle: \url{https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html}
-}
+\caption{haar features \newline Quelle: https://docs.opencv.org/master/dc/d88/tutorial\_traincascade.html}
 \label{fig: haar-features}
 \end{figure}
 Wie in der Grafik ebenfalls zu sehen ist, sind diese features alle samt rechteckig. Dies bietet die Möglichkeit die Berechnungen die gemacht werden müssen zu beschleunigen, indem Schritt zwei angewandt wird. die vorliegenden Bilder werden dabei in Integralbilder umgewandelt.  Diese werden im folgenden nicht genau expliziert, jedoch werden in Integralbildern vereinfacht gesagt in jedem Punkt des Bildes die Pixelsummen eines Rechteckes gehalten, das vom Ursprung bis zu dem jeweiligen Pixel aufgespannt wird. Bei einem Punkt (x,y) wird also das Rechteck (0,0) , (x,0), (0,y), (x,y) betrachtet.
@@ -373,9 +372,19 @@ Teilweise nur deshalb, weil ein Modell welches mit dem Fisherface Algorithmus tr
 Dieses Problem kann durch den dritten von Opencv angeboten Gesichtserkennungslaoritmus ausgeglichen werden, dem sogenannten  Local binary patterns histograms Recognizer. Dieser ist jedoch nicht relevant für diese Arbeit, weshalb hier zum weiteren nachlesen auf die Opencv Dokumenation verwiesen wird. 
 \footnote{\url{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html\#local-binary-patterns-histograms}}. 
 ein weiterer Lösungsansatz wäre hingegen noch die Eingabedaten anzupassen, mit denen das resultierenden Modell trainiert wird. Dazu wird jedoch auf den folgenden Unterpunkt \pageref{subsec: Eingabe Daten} verwiesen
+
 \subsection{Eingabe Daten}
 \label{subsec: Eingabe Daten}
-Wie im vorherigen Unterpunkt erwähnt kann das Modell ebenfalls dadurch beeinflusst werden wie der Eingabedatensatz aufgebaut ist.
+Wie im vorherigen Unterpunkt erwähnt kann das Modell ebenfalls dadurch beeinflusst werden wie der Eingabedatensatz aufgebaut ist. Dabei wird im Folgenden nicht auf den konkreten Datensatz eingegangen, sondern viel mehr auf die Anforderungen an die Beschaffenheit von diesem. Zunächst ist dabei zu beachten, dass es grundsätzlich einige Möglichkeiten gibt die Eingabedaten, in diesem Falle Bilder von Gesichtern, vorab zu bearbeiten. ein wesentlicher Aspekt dabei ist neben dem Anpassen der Bilder auf eine bestimmte Größe auch die Wahl der Farbdarstellung. Dabei geht es weniger darum ob beispielsweise die Bilder im RGB (Rot - Grün - Blau) oder HSV (Hue - Saturation - Value) Farbraum vorliegen, sondern um die generelle Zahl an Kanälen die Informationen von einem Bild beinhalten.
+Beispielsweise wird bei einer klassichen RGB Darstellung auf drei Kanälen Informationen über das Bild gespeichert. 
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{Bilder/RGB.png}
+\caption{RGB Kanäle \newline Quelle: https://www.howtogeek.com/wp-content/uploads/2011/02/sshot-74.png}
+\label{fig: RGB}
+\end{figure}
+die obige Abbildung \ref{fig: RGB} zeigt wie die einzelnen Kanäle arbeiten. Informationen aus dem Grundbild die Rot erscheinen, werden im Roten Kanal besonders hell dargestellt. 
+Ausschnitte aus der originalen Abbildung die blau erscheinen werden im blauen Kanal ebenso heller dargestellt. Analog zu den beiden Beispielen arbeitet ebenso der grüne Kanal.
+Werden die drei Kanäle wieder miteinander verbunden entsteht das Ausgangsbild. Der Vorteil solcher mehr kanaligen Formate ist, dass für das praktisch alle Informationen aus dem original Bild erhalten bleiben. Der Nachteil jedoch wird deutlich wenn die Farbe für den Anwendungsfall keine, oder eine geringe Rolle spielt. da in dieser Arbeit Emotionen anhand von Gesichtern erkannt werden soll, spielt die Farbe der Bilder selber eine untergeordnete Rolle, da diese keine nützlichen Informationen für das zu berechnende Modell enthält. Es wäre sogar kontraproduktiv, dadurch dass mehr Kanäle mit Informationen vorhanden sind, muss auch das Modell mehr Daten bekommen um zu lernen wie die Informationen aus diesen zu verstehen sind. Dies wird auch von dem sogenannten ''Fluch der Dimensionalität'' beschrieben. Auf den Anwendungsfall bezogen bedeutet dies nur, dass je mehr Eigenschaften ausgewertet werden sollen, desto mehr Daten zum Lernen müssen vorhanden sein. Um dem präventiv entgegenzuwirken, ohne in Verlegenheit zu geraten die Testdatensätze später erweitern zu müssen, können auch Bilder verwendet werden die auf weniger Kanäle an Informationen zurückgreifen. Sogenannte Grayscale oder Graustufen Bilder bieten hier den Vorteil, dass es nicht drei, sondern lediglich einen Farbkanal gibt. In diesem wird ein Wert pro Pixel gespeichert. Je höher dieser Wert, desto weißer der Pixel, je niedriger, desto schwärzer. Dieses Format eignet sich bestens für die Anwendung für das hier behandelte Modell, da keine wichtigen Informationen entfallen die in einer farbigen Version des Bildes vorhanden während sich aber die Anzahl der Daten verringert die benötigt werden um das Modell erfolgreich trainieren zu können. Dies erhöht wiederum die Chance das zuvor definierte should Kriterium zu erfüllen, welches besagt, dass die Wahrscheinlichkeit zur Erkennung der richtigen Emotion > 50\% liegen muss. 
 \let\cleardoublepage\relax
 
 \chapter{Ergebnis}
