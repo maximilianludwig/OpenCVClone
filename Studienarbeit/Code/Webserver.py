@@ -1,4 +1,5 @@
 import os
+import import_ipynb
 import Constants
 import cv2 as cv
 import numpy as np
@@ -9,6 +10,7 @@ from werkzeug import secure_filename
 from tensorflow.keras.models import load_model
 from PIL import Image
 from lib import count_files, image_to_pixel_array, load_prediction_dict
+import json
 
 APP = Flask(__name__, template_folder=Constants.TEMPLATE_FOLDER, static_url_path="", static_folder=Constants.UPLOAD_FOLDER)
 MODEL = None
@@ -19,12 +21,14 @@ def init():
     global PREDICTION_DICT
     MODEL = load_model(os.path.join(Constants.MODEL_FOLDER, Constants.BEST_MODEL))
     PREDICTION_DICT = load_prediction_dict(Constants.BEST_MODEL)
+
     if not os.path.isdir(os.path.join(Constants.UPLOAD_FOLDER, Constants.UPLOAD_PROCESSED_FOLDER)):
         os.makedirs(os.path.join(Constants.UPLOAD_FOLDER, Constants.UPLOAD_PROCESSED_FOLDER))
 
 def image_preprocessing(file_name):
     image = cv.imread(os.path.join(Constants.UPLOAD_FOLDER, file_name))
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+
     if gray.shape[:2] == (48, 48):
         cv.imwrite(os.path.join(Constants.UPLOAD_FOLDER, Constants.UPLOAD_PROCESSED_FOLDER, file_name), gray)
 
@@ -50,12 +54,8 @@ def image_preprocessing(file_name):
     cv.imwrite(os.path.join(Constants.UPLOAD_FOLDER, Constants.UPLOAD_PROCESSED_FOLDER, file_name), gray_face_resized)
     return True
 
-@APP.route("/")
+@APP.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("image-selector.html")
-
-@APP.route('/image-selector', methods=['GET', 'POST'])
-def form_post():
     return render_template("image-selector.html")
 
 @APP.route('/uploader', methods = ['GET', 'POST'])
@@ -77,6 +77,23 @@ def upload_file():
             return render_template("prediction.html", predicted_values=prediction_float, PREDICTION_DICT=PREDICTION_DICT, file_name=file_name)
         else:
             return render_template("no-face.html")
+
+@APP.route('/continuous-check', methods = ["GET","POST"])
+def detect_pokerface():
+    if request.method == 'POST':
+        file = request.files['image']
+        file_name = "opencvPicture.png"
+        file.save(os.path.join(Constants.UPLOAD_FOLDER, file_name))
+        if image_preprocessing(file_name):
+            arr = image_to_pixel_array(os.path.join(Constants.UPLOAD_FOLDER, Constants.UPLOAD_PROCESSED_FOLDER, file_name))
+            arr = np.expand_dims(arr, axis=0)
+            prediction = MODEL.predict(arr)
+            emotion = PREDICTION_DICT[np.argmax(prediction[0])]
+            prediction_float = list(map(lambda x: '{0:.10f}'.format(float(x)), prediction[0]))
+            result_dict = { x : prediction_float[x] for x in range(len(prediction_float)) }
+            return  json.dumps(result_dict)
+        else: 
+            return json.dumps({'success':False}), 204
 
 init()
 APP.run(debug=False, host=Constants.HOST, port=Constants.PORT)
