@@ -2207,12 +2207,15 @@
     <bcf:citekey order="23">integral</bcf:citekey>
     <bcf:citekey order="24">willberger</bcf:citekey>
     <bcf:citekey order="25">willberger</bcf:citekey>
-    <bcf:citekey order="26">CK</bcf:citekey>
-    <bcf:citekey order="27">FER-Challenge</bcf:citekey>
-    <bcf:citekey order="28">EmotionInSpeech</bcf:citekey>
-    <bcf:citekey order="29">MusicEmotion</bcf:citekey>
-    <bcf:citekey order="30">EmotionInSound</bcf:citekey>
-    <bcf:citekey order="31">EmotionInSound</bcf:citekey>
+    <bcf:citekey order="26">Eigenface</bcf:citekey>
+    <bcf:citekey order="27">Fisherface</bcf:citekey>
+    <bcf:citekey order="28">Eigenface</bcf:citekey>
+    <bcf:citekey order="29">CK</bcf:citekey>
+    <bcf:citekey order="30">FER-Challenge</bcf:citekey>
+    <bcf:citekey order="31">EmotionInSpeech</bcf:citekey>
+    <bcf:citekey order="32">MusicEmotion</bcf:citekey>
+    <bcf:citekey order="33">EmotionInSound</bcf:citekey>
+    <bcf:citekey order="34">EmotionInSound</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

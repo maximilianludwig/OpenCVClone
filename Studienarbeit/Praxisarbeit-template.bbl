@@ -19,10 +19,22 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{Eigenface}{misc}{}
+      \field{labelalpha}{17}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.superdatascience.com/blogs/opencv-face-recognition}
+      \field{note}{Einsichtnahme: 23.03.2020}
+      \field{title}{Face recognition using OpenCV and Python}
+      \field{year}{2017}
+    \endentry
     \entry{integral}{misc}{}
       \field{labelalpha}{17}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{2}
       \field{labeltitlesource}{title}
       \field{howpublished}{https://de.wikipedia.org/wiki/Integralbild}
       \field{note}{Einsichtnahme: 22.03.2020}
@@ -33,10 +45,22 @@
       \field{labelalpha}{19}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{1}
       \field{labeltitlesource}{title}
       \field{howpublished}{http://dlib.net/}
       \field{note}{Einsichtnahme:07.03.2020}
       \field{title}{Dlib C++ Library}
+      \field{year}{2019}
+    \endentry
+    \entry{Fisherface}{misc}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec\_tutorial.html}
+      \field{note}{Einsichtnahme: 23.03.2020}
+      \field{title}{Opencv Dokumentation}
       \field{year}{2019}
     \endentry
     \entry{willberger}{misc}{}
