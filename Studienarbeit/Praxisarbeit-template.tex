@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{scrbook}
+\documentclass[12pt, a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage[german]{babel}
@@ -10,6 +10,23 @@
 \usepackage{graphicx}
 \usepackage{acronym}
 \usepackage{pgfplots}
+%\usepackage{chngcntr}
+%\counterwithout{figure}{chapter}
+\renewcommand{\thefigure}{\Alph{figure}}
+
+
+
+
+\usepackage{caption}
+\DeclareCaptionFormat{citation}{%
+   \ifx\captioncitation\relax\relax\else
+     \captioncitation\par
+   \fi
+   #1#2#3\par}
+\newcommand*\setcaptioncitation[1]{\def\captioncitation{\textit{Quelle:}~#1}}
+\let\captioncitation\relax
+\captionsetup{format=citation,justification=centering}
+ 
 
 %\usepackage[normalem]{ulem}
 %\useunder{\uline}{\ul}{}
@@ -18,7 +35,7 @@
 
 \usepackage[backend=biber,
 bibstyle=alphabetic, 
-citestyle=authortitle,
+citestyle=authortitle-ibid,
 natbib=true, 
 hyperref=true,
 ]{biblatex}
@@ -50,9 +67,8 @@ bindingoffset=5mm,
 \include{Titelseite}
 \setlength{\parindent}{0em} 
 \let\cleardoublepage\relax
-
-
-
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addtocontents{lof}{\protect\thispagestyle{empty}}
 
 
 \section*{Erklärung}
@@ -65,24 +81,19 @@ Ich versichere hiermit, dass ich meine Projektarbeit mit dem Thema: ''Titel der 
 Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift
 \newpage
 \section*{Abstract}
-\newpage
-\begingroup
-\renewcommand*{\chapterpagestyle}{empty}
-\pagestyle{empty}
-\tableofcontents
-\listoffigures
-
 \section*{Abkürzungen}
-
 \begin{acronym}[Bash]
 % \acro{VCS}{Version Control System}
 \end{acronym}
-\endgroup
 \newpage
+%\renewcommand*{\chapterpagestyle}{empty}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\chapter{Einleitung}
 \pagestyle{plain}
 \setcounter{page}{1}
-
-\chapter{Einleitung}
 ''Several researchers have stated that facial expression recognition appears to play one of the most important roles in human communication'' 
 \footcite[Vgl.][1]{FaceRec}
 Dieses Zitat von Katherine B. Leeland gibt einen Einblick in die Relevanz der Emotionserkennung für den Menschen. Fragen zu dieser Thematik stellen sich allerdings nicht erst seit Beginn der Digitalisierung. Bereits Darwin
@@ -192,7 +203,8 @@ Gesichtserkennung in vier Phasen einteilen, Face ''detection'', ''alignment'', '
 \footcite[Vgl. ][2]{HandbookFaceRec}
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/FaceRecognition.png}
-\caption{ Phasen der Gesichtserkennung \newline Quelle: https://alitarhini.files.wordpress.com/2010/12/untitled1.png }
+\setcaptioncitation{ https://alitarhini.files.wordpress.com/2010/12/untitled1.png}
+\caption{ Phasen der Gesichtserkennung}
 \label{fig:Face Recognition}
 \end{figure}
 Die Detection Phase ist dafür verantwortlich um zu erkennen ob Gesichter vorhanden sind in einem Bild, oder aber Video.
@@ -245,6 +257,12 @@ Bei der Gesichtserkennung hingegen spielt lediglich die Rolle wer eine Aktion au
  Denn diese sind ebenso verschieden. Während Gesichtserkennung eher in den Bereich IT-Security oder aber Social Media (Snapchat Filter) eingesetzt wird, ist Emotionserkennung eher Informationsgenerierend.
 Zum Beispiel kann durch Emotionserkennung Informationen zugänglich werden wie das Befinden eines Individuums ist, ob emotional betroffen ist, oder aber nicht emotional betroffen wirken möchte und ein Pokerface aufsetzt.
 Wegen dieser signifikanten Unterschiede kann daher trotz der Gemeinsamkeiten nicht gesagt werden, dass Emotionserkennung eine Unterkategorie von Gesichtserkennung ist.
+
+\subsubsection{Wann ist ein Gesicht ein Pokerface?}
+\label{pokerface}
+Bis zu diesem Teil der Arbeit wurden schon immer wieder das Wort Pokerfaces verwendet ohne es formal zu definieren. Jedoch ist es für die Arbeit wichtig eine konkrete Definition für diesen Begriff zu geben, da ansonsten die Anforderungen an die Arbeit nicht korrekt bewertet werden könnten. Da es mehrere Ansätze gibt ein Pokerface zu definieren, wird dies in diesem Abschnitt nachgeholt. Zum einem gibt es den trivialen Ansatz, der bereits am Ende des letzten Kapitels verwendet wurde. Dieser ist, dass ein Pokerface dann vorliegt, wenn ein Subjekt keinerlei Emotion in seinem Gesicht zu erkennen gibt. Dies würde wie bereits erwähnt einer neutralen Emotion entsprechen. Dieser Fall kann auch vergleichsweise einfach behandelt werden, da diese neutrale Emotion auch in die Basisemotionen mit aufgenommen wurde in dieser Arbeit. Das bedeutet, dass beispielsweise ein neuronales Netz auch diese Arten von Gesichtern klassifizieren könnte. \newline
+Der zweite Ansatz ist weniger intuitiv, jedoch ebenso wichtig. Es kann durchaus angenommen werden, dass z.B. ein sehr erfahrener Pokerspieler weiß, dass man ein Pokerface einfach identifizieren kann, und demnach alleine dadurch Informationen gewinnen kann. Um dem entgegenzuwirken könnte ein solcher Spieler eine andere Art Pokerface verwenden. Es wäre denkbar, dass ein Spieler versucht sein Gesichtsausdruck permanent gleich zu halten, indem er eben dauerhaft lacht oder lächelt, dauerhaft betrübt, wütend, ängstlich, etc. aussieht. Dieser Ansatz ist weniger intuitiv als der erste und könnte demnach auch weniger schnell erkannt werden.
+Mit diesen beiden Definitionen für ein Pokerface wird im Verlaufe der Arbeit gearbeitet.
 
 \section{Emotionserkennung mithilfe von Deep Learning}
 In dem nun folgenden Kapitel wird erörtert wie das Ziel des Prototypen dieser Arbeit - das Erkennen eines Pokerfaces - mittels eines neuronalen Netzes umgesetzte werden kann. Dabei wird weniger auf die generellen Eigenschaften von Neuronalen Netzen Bezug genommen, als auf die in dieser Arbeit spezifischen Aspekte. Diese sind vor allem verschieden Ansätze und Möglichkeiten mittels Machine Learning eine Emotionserkennungssoftware zu erstellen.
@@ -360,7 +378,8 @@ Ein Haar-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
 In dem ersten Schritt werden sogenannte Haar features festgelegt. Diese sind im wesentlichen verschiedenartige Ausschnitte aus den Bildern. Eine beispielhafte Selektion dieser kann der   Grafik \ref{fig: haar-features} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/haar-cascade.png}
-\caption{haar features \newline Quelle: https://docs.opencv.org/master/dc/d88/tutorial\_traincascade.html}
+\setcaptioncitation{ https://docs.opencv.org/master/dc/d88/tutorial\_traincascade.html}
+\caption{haar features}
 \label{fig: haar-features}
 \end{figure}
 Wie in der Grafik ebenfalls zu sehen ist, sind diese features alle samt rechteckig. Dies bietet die Möglichkeit die Berechnungen die gemacht werden müssen zu beschleunigen, indem Schritt zwei angewandt wird. die vorliegenden Bilder werden dabei in Integralbilder umgewandelt.  Diese werden im folgenden nicht genau expliziert, jedoch werden in Integralbildern vereinfacht gesagt in jedem Punkt des Bildes die Pixelsummen eines Rechteckes gehalten, das vom Ursprung bis zu dem jeweiligen Pixel aufgespannt wird. Bei einem Punkt (x,y) wird also das Rechteck (0,0) , (x,0), (0,y), (x,y) betrachtet.
@@ -379,19 +398,20 @@ Im Gegensatz zum Eigenface Recognizer arbeitet der Fisherface Algorithmus mit kl
 \footcite[Vgl.][How to fix this issue]{Eigenface}
 Teilweise nur deshalb, weil ein Modell welches mit dem Fisherface Algorithmus trainiert wird und beispielsweise nur Bilder als Eingabewerte mit einer hohen Beleuchtung bekommt, auch nur solche Bilder korrekt bewerten kann. Wenn nun ein schlecht beleuchtetes Bild bewertet werden sollte, wird der Algorithmus an seine Grenzen kommen.
 Dieses Problem kann unter anderem durch den dritten von Opencv angeboten Gesichtserkennungsalgorithmus ausgeglichen werden, dem sogenannten Local binary patterns histograms Recognizer. Ein weiterer Lösungsansatz wäre hingegen noch die Eingabedaten anzupassen, mit denen das resultierenden Modell trainiert wird. Darauf wird im folgenden Unterpunkt \pageref{subsec: Eingabe Daten} eingegangen. Da diese Vorbearbeitung das Problem der Beleuchtung ebenfalls löst, und dabei sogar noch weitere positive Aspekte für die Arbeit mit sich bringt, wird an dieser Stelle darauf verzichtet auf den Local binary patterns histograms Recognizer weiter einzugehen, und zum Nachlesen auf die Opencv Dokumenation verwiesen wird. 
-\footnote{\url{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html\#local-binary-patterns-histograms}}. 
+\footcite[Vgl.][]{Recognizer}
 \subsection{Eingabe Daten}
 \label{subsec: Eingabe Daten}
 Wie im vorherigen Unterpunkt erwähnt kann das Modell ebenfalls dadurch beeinflusst werden wie der Eingabedatensatz aufgebaut ist. Dabei wird im Folgenden nicht auf den konkreten Datensatz eingegangen, sondern viel mehr auf die Anforderungen an die Beschaffenheit von diesem. Zunächst ist dabei zu beachten, dass es grundsätzlich einige Möglichkeiten gibt die Eingabedaten, in diesem Falle Bilder von Gesichtern, vorab zu bearbeiten. ein wesentlicher Aspekt dabei ist neben dem Anpassen der Bilder auf eine bestimmte Größe auch die Wahl der Farbdarstellung. Dabei geht es weniger darum ob beispielsweise die Bilder im RGB (Rot - Grün - Blau) oder HSV (Hue - Saturation - Value) Farbraum vorliegen, sondern um die generelle Zahl an Kanälen die Informationen von einem Bild beinhalten.
 Beispielsweise wird bei einer klassichen RGB Darstellung auf drei Kanälen Informationen über das Bild gespeichert. 
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/RGB.png}
-\caption{RGB Kanäle \newline Quelle: https://www.howtogeek.com/wp-content/uploads/2011/02/sshot-74.png}
+\setcaptioncitation{ https://www.howtogeek.com/wp-content/uploads/2011/02/sshot-74.png}
+\caption{RGB Kanäle}
 \label{fig: RGB}
 \end{figure}
 die obige Abbildung \ref{fig: RGB} zeigt wie die einzelnen Kanäle arbeiten. Informationen aus dem Grundbild die Rot erscheinen, werden im Roten Kanal besonders hell dargestellt. 
 Ausschnitte aus der originalen Abbildung die blau erscheinen werden im blauen Kanal ebenso heller dargestellt. Analog zu den beiden Beispielen arbeitet ebenso der grüne Kanal.
-Werden die drei Kanäle wieder miteinander verbunden entsteht das Ausgangsbild. Der Vorteil solcher mehr kanaligen Formate ist, dass für das praktisch alle Informationen aus dem original Bild erhalten bleiben. Der Nachteil jedoch wird deutlich wenn die Farbe für den Anwendungsfall keine, oder eine geringe Rolle spielt. da in dieser Arbeit Emotionen anhand von Gesichtern erkannt werden soll, spielt die Farbe der Bilder selber eine untergeordnete Rolle, da diese keine nützlichen Informationen für das zu berechnende Modell enthält. Es wäre sogar kontraproduktiv, dadurch dass mehr Kanäle mit Informationen vorhanden sind, muss auch das Modell mehr Daten bekommen um zu lernen wie die Informationen aus diesen zu verstehen sind. Dies wird auch von dem sogenannten ''Fluch der Dimensionalität'' beschrieben. Auf den Anwendungsfall bezogen bedeutet dies nur, dass je mehr Eigenschaften ausgewertet werden sollen, desto mehr Daten zum Lernen müssen vorhanden sein. Um dem präventiv entgegenzuwirken, ohne in Verlegenheit zu geraten die Testdatensätze später erweitern zu müssen, können auch Bilder verwendet werden die auf weniger Kanäle an Informationen zurückgreifen. Sogenannte Grayscale oder Graustufen Bilder bieten hier den Vorteil, dass es nicht drei, sondern lediglich einen Farbkanal gibt. In diesem wird ein Wert pro Pixel gespeichert. Je höher dieser Wert, desto weißer der Pixel, je niedriger, desto schwärzer. Dieses Format eignet sich bestens für die Anwendung für das hier behandelte Modell, da keine wichtigen Informationen entfallen die in einer farbigen Version des Bildes vorhanden während sich aber die Anzahl der Daten verringert die benötigt werden um das Modell erfolgreich trainieren zu können. Dies erhöht wiederum die Chance das zuvor definierte should Kriterium zu erfüllen, welches besagt, dass die Wahrscheinlichkeit zur Erkennung der richtigen Emotion > 50\% liegen muss. 
+Werden die drei Kanäle wieder miteinander verbunden entsteht das Ausgangsbild. Der Vorteil solcher mehr kanaligen Formate ist, dass für das praktisch alle Informationen aus dem original Bild erhalten bleiben. Der Nachteil jedoch wird deutlich wenn die Farbe für den Anwendungsfall keine, oder eine geringe Rolle spielt. da in dieser Arbeit Emotionen anhand von Gesichtern erkannt werden soll, spielt die Farbe der Bilder selber eine untergeordnete Rolle, da diese keine nützlichen Informationen für das zu berechnende Modell enthält. Es wäre sogar kontraproduktiv, dadurch dass mehr Kanäle mit Informationen vorhanden sind, muss auch das Modell mehr Daten bekommen um zu lernen wie die Informationen aus diesen zu verstehen sind. Dies wird auch von dem sogenannten ''Fluch der Dimensionalität'' beschrieben. Auf den Anwendungsfall bezogen bedeutet dies nur, dass je mehr Eigenschaften ausgewertet werden sollen, desto mehr Daten zum Lernen müssen vorhanden sein. Um dem präventiv entgegenzuwirken, ohne in Verlegenheit zu geraten die Testdatensätze später erweitern zu müssen, können auch Bilder verwendet werden die auf weniger Kanäle an Informationen zurückgreifen. Sogenannte Grayscale oder Graustufen Bilder bieten hier den Vorteil, dass es nicht drei, sondern lediglich einen Farbkanal gibt. In diesem wird ein Wert pro Pixel gespeichert. Je höher dieser Wert, desto weißer der Pixel, je niedriger, desto schwärzer. Dieses Format eignet sich bestens für die Anwendung für das hier behandelte Modell, da keine wichtigen Informationen entfallen die in einer farbigen Version des Bildes vorhanden während sich aber die Anzahl der Daten verringert die benötigt werden um das Modell erfolgreich trainieren zu können. Dies erhöht wiederum die Chance das zuvor definierte should Kriterium zu erfüllen, welches besagt, dass die Wahrscheinlichkeit zur Erkennung der richtigen Emotion über 50\% liegen muss. 
 \let\cleardoublepage\relax
 
 \chapter{Konzept}
@@ -770,8 +790,20 @@ Damit der Server Vohersagen mithilfe eines Modells machen und Bilder archivieren
 Die allgemeine Vorgehensweise ist dabei, zuerst ein Gesicht zu erkennen und dieses danach auf 48 Pixel x 48 Pixel zuzuschneiden. Damit das Modell eine optimale Vorhersage geben kann, muss der Ausschnitt des extrahierten Gesichtes ggf. noch in ein Graustufenformat konvertiert werden. Um nun einen validen Input für das Modell zu generieren, muss das Image-Objekt noch in einen Pixel-String bzw. in eine Matrixrepräsentation der Form \texttt{(48, 48, 1)} gebracht werden. Jetzt kann auf dem bei der Initialisierung geladenen Modell die bereits erläuterte Methode \texttt{predict} aufgerufen und die Vorhersagewerte an den Client zurückgegeben werden.
 
 \subsection{Client}
-Der Hauptzweck des Client-Anwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht. 
-
+Der Hauptzweck des Client-Anwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht. \newline
+Wie bereits beschrieben wertet der hier explizierte Algorithmus Eingabedaten aus einem Videostream aus um ein Pokerface festzustellen. Nach der Definition in Kaptiel 
+\ref{pokerface}gibt es zwei Arten von Pokerfaces. Dieser Algorithmus behandelt dabei die Variante, in der das beobachtete Subjekt seinen Gesichtsausdruck dauerhaft beibehält. Um dies zu bewerkstelligen muss der Videostream in einer gewissen Rate abgetastet werden. Dies bedeutet, dass immer wieder Momentaufnahmen aus dem Videostream entnommen werden, und dem Server zum evaluieren gegeben werden. Dieser Vorgang wird einige Male wiederholt, und die daraus resultierenden Daten aggregiert und zwischengespeichert. Das Ergebnis dieser Aggregation ist dann eine Liste der Länge
+$ n $  , wobei $ n \in N $	$ n $  , wobei $ n \in N $
+Jedes Element dieser Liste ist wiederum eine Liste, die Emotionsvorhersagen für ein bestimmtes Bild aus dem Videostream beinhaltet. So könnte z.B. eine solche Liste der Länge 2 folgende Struktur aufweisen: \newline
+$ \qquad[ [0.61, 0.30, 0.15, 0.01, 0.76, 0.95] , [0.31, 0.22, 0.51, 0.41, 0.01, 0.55] ] $
+Wobei jeweils ein Wert für eine Emotion steht bzw. die Wahrscheinlichkeit einer Emotion für das jeweilige Bild. Anhand dieser Liste wird dann wiederum die Abweichung der Emotionen in den Bildern festgelegt. Dazu werden die einzelnen Emotionswerte zuerst extrahiert und zusammengefasst - also alle fröhlichen, ängstlichen, neutralen, etc. Danach werden dann die Unterschiede in den jeweiligen Werten ermittelt.
+Dies geschieht, indem zuerst der Mittelwert einer Emotion ermittelt wird, und dann die Werte gegen diesen geprüft werden. Weicht dabei eine Emotionsvorhersage zu weit von dem Mittelwert ab, wird zurückgegeben, dass ein Pokerface nicht vorliegen kann, da der Gesichtsausdruck nicht beibehalten wurde. Ein Toleranzwerte muss wegen Messungenauigkeiten des Models eingeplant werden.
+Formal beschrieben wertet der Algorithmus also folgende Formel aus: \newline
+Sei $ Emotion $ eine Liste der Länge $ n $ mit den Daten einer Emotion aus der Eingabeliste, mit der Form $$ Emotion = \qquad [e_{1} \dots e_{n}] $$ 	
+und $$avg =\frac{1}{n} \cdot \sum_{i = 0}^{n} e_{i} $$ so gilt:
+\newline 
+$$ \forall e_{i} \in Emotion : (avg - e_{i} ) \leq \epsilon \Rightarrow Pokerface = True $$	\newline
+ $ \epsilon$ ist hierbei die Toleranz in der sich eine Abweichung der Emotion begeben darf.
 \chapter{Ergebnis}
 Außerdem werden die Aufgrund des erstellten Konzeptes entwickelten Lösungsansätze und Lösungen erläutert. Darin inbegriffen ist vor allem auch das trainierte Modell zum klassifizieren von den vordefinierten Emotionen und das Verifizieren und Testen dieses Modells.
 
