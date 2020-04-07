@@ -35,70 +35,76 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}Supervised vs. Unsupervised Learning}{9}{subsection.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.3}Machine Learning - Frameworks}{10}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Gesichtserkennung mit Opencv}{10}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3.1}Dlib}{10}{subsubsection.3.2.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Opencv Klassifizierer}{10}{subsection.3.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3.2}Keras}{11}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}HAAR Cascade Klassifizierer}{10}{subsubsection.3.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3.3}Unterschiede}{11}{subsubsection.3.2.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Gesichtserkennungs Algorithmen}{11}{subsubsection.3.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.4}Supervised vs. Unsupervised Learning}{11}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3.2}Eingabe Daten}{12}{subsection.3.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Ergebnis}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Ergebnis}{14}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Konzept}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Konzept}{14}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Architektur}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Architektur}{15}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1.1}Hardware}{12}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Hardware}{15}{subsubsection.4.1.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1.2}Programmierumgebung}{12}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Programmierumgebung}{15}{subsubsection.4.1.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Interaktionskonzept}{13}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Interaktionskonzept}{15}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Umsetzung der Lösung}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Umsetzung der Lösung}{16}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Stand-Alone Lösung mit Schwerpunkt OpenCV}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Stand-Alone Lösung mit Schwerpunkt OpenCV}{16}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.1}Input GUI}{14}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Input GUI}{16}{subsubsection.4.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.2}Dataset}{20}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Dataset}{22}{subsubsection.4.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.3}Training}{24}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}Training}{27}{subsubsection.4.2.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.4}Testing}{26}{subsubsection.4.2.1.4}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}Testing}{29}{subsubsection.4.2.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1.5}Optimierung der Lösung}{28}{subsubsection.4.2.1.5}%
+\contentsline {subsubsection}{\numberline {4.2.1.5}Optimierung der Lösung}{31}{subsubsection.4.2.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Webbasierte Lösung}{28}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Webbasierte Lösung}{31}{subsection.4.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.1}Dataset}{28}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Programmierumgebung}{31}{subsubsection.4.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.2}Modell}{28}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Dataset}{32}{subsubsection.4.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.3}Trainieren des Modells}{28}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Modell}{33}{subsubsection.4.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.4}Testen des Modells}{28}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}Trainieren des Modells}{34}{subsubsection.4.2.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.5}Webserver}{28}{subsubsection.4.2.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}Testen des Modells}{34}{subsubsection.4.2.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.6}Jupyter Notebook}{28}{subsubsection.4.2.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.2.6}Webserver}{34}{subsubsection.4.2.2.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2.7}Verzeichnisstruktur}{28}{subsubsection.4.2.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.2.7}Jupyter Notebook}{34}{subsubsection.4.2.2.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Diskussion}{28}{chapter.5}%
+\contentsline {subsubsection}{\numberline {4.2.2.8}Verzeichnisstruktur}{34}{subsubsection.4.2.2.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Reflexion der Ergebnisse}{29}{section.5.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.9}Alternativ Ansatz zur Pokerface Erkennung}{34}{subsubsection.4.2.2.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Alternativen}{29}{subsection.5.1.1}%
+\contentsline {paragraph}{\nonumberline Umsetzung}{35}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Reflexion Vorgehen}{29}{section.5.2}%
+\contentsline {chapter}{\numberline {5}Diskussion}{35}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Reflexion der Literatur}{29}{section.5.3}%
+\contentsline {section}{\numberline {5.1}Reflexion der Ergebnisse}{35}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Offene Implikationen}{29}{section.5.4}%
+\contentsline {subsection}{\numberline {5.1.1}Alternativen}{35}{subsection.5.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Ausblick}{29}{chapter.6}%
+\contentsline {section}{\numberline {5.2}Reflexion Vorgehen}{35}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Alternative Ansätze zur Umsetzung von Emotionserkennung}{29}{section.6.1}%
+\contentsline {section}{\numberline {5.3}Reflexion der Literatur}{35}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Offene Implikationen}{35}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Ausblick}{35}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Alternative Ansätze zur Umsetzung von Emotionserkennung}{36}{section.6.1}%
