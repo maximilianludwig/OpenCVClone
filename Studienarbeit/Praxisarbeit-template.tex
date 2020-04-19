@@ -278,65 +278,6 @@ Zuletzt steht hinter Keras eine große aktive Community, welche zahlreiche Tutor
 
 \subsubsection{Unterschiede}
 
-
-%\begin{table}[]
-%\begin{tabular}{llllllllllllllllll}
-%\multicolumn{1}{c}{{\ul \textbf{Software}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Creator}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial \\ Release\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Software \\ Licence\end{tabular}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Open Source}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Platform}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Written in}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Interface}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{OpenMP support}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{OpenCL support}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}CUDA\\ support\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Automatic\\ differentiation\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Has pretrained\\ models\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Recurrent\\ nets\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Convolutional \\ nets\end{tabular}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{RBM/DBNs}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Parallel execution \\ (multi node)\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Actively\\ Developed\end{tabular}}} \\
-%Keras &
-%  Francois Chollet &
-%  2015 &
-%  MIT license &
-%  Yes &
-%  \begin{tabular}[c]{@{}l@{}}Linux, macOS,\\ Windows\end{tabular} &
-%  Python &
-%  Python, R &
-%  \begin{tabular}[c]{@{}l@{}}Only if using \\ Theano as backend\end{tabular} &
-%  \begin{tabular}[c]{@{}l@{}}Can use Theano,\\ Tensorflow or \\ PlaidML as backends\end{tabular} &
-%  Yes &
-%  Yes &
-%  Yes &
-%  Yes &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes \\
-%Dlib &
-%  Davis King &
-%  2002 &
-%  Boost Software License &
-%  Yes &
-%  Cross-Platform &
-%  C++ &
-%  C++ &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes &
-%  Yes &
-%  
-%\end{tabular}
-%\end{table}
 Zusammenfassen kann gesagt werden, dass Dlib eine mächtige Bibliothek für die Umsetzung verschiedenster Aufgaben ist. Die ausführliche Dokumentation bietet eine große Hilfestellung. Jedoch folgt aus dem Angebot der zahlreichen Features auch eine längere Einarbeitung, bis die Anforderungen produktiv umgesetzt werden können. 
 \newline
 Keras hingegen bietet durch dessen benutzerfreundliche Entwicklung und den zahlreichen Tutorials eine schnelle erste Umsetzung der Aufgaben. Durch die Modularität und der aktiven Community können viele öffentliche Lösungen genutzt und für die eigenen Anforderungen abgeändert werden. 
@@ -350,6 +291,25 @@ Nun gilt es zu klären, ob sich für die zu Grunde liegende Aufgabe ein Supervis
  Supervised Learning Algoriuthmen hingegen bieten sich vor allem an, wenn es darum geht einen Prozess zu automatisieren oder aus der Wirklichkeit zu replizieren.
 \footcite[Vgl. ][4]{Supervised}
 Das in dieser Arbeit zu Grunde liegende Problem ist demnach vor allem für Supervised Learning Algorithmen geeignet. Dies liegt zum einem daran, dass jedem Bild eines Menschen eine Basisemotion zugeordnet werden kann. Zum anderem ist auch der verwendete Datensatz mit dem das Modell trainiert und getestet werden soll ebenfalls gelabelt. Deshalb bietet sich dieses Verfahren am meisten an. Es wäre auch hypothetisch denkbar einen Unsupervised Learning Algorithmus zu verwenden, aber dieser Ansatz wäre suboptimal, da er nicht dem eigentlichen Use case dieses Ansatzes entspricht.
+
+\subsection{Aktivierungsfunktion}
+Im folgendem wird kurz auf die sogenannten Aktivierungsfunktionen eines neuronalen Netzwerkes eingegangen.
+Dabei wird dem Leser lediglich eine kurze Einführung gegeben, weshalb diese Funktionen für Machine Learning verwendet werden sollten und weniger auf die Mathematische Problemstellung, welche den Komplexitätsrahmen dieser Arbeit überschreiten würde.
+\newline
+Aktivierungsfunktionen werden für ein kompliziertes nichtlineares Zuordnen der Eingangsdaten und deren abhängige Ergebnisse verwendet. In der einfachsten Mathematischen Darstellung kann man sich also die Eingangsdaten \textbf{X} und deren Gewichtung \textbf{W} vorstellen, auf welchen die Aktivierungsfunktion \textbf{f(x)} angewendet wird. Sollte bei der Berechnung eines neuronalen Netzes die Aktivierungsfunktion nicht explizit bestimmt werden, wird die einfachste Lineare Funktion \textbf{f(x)=x} verwendet, welche von ihrer Komplexität derart begrenzt ist, dass kein komplexes Funktionsmapping aus den Daten erlernbar ist. Daraus folgt, dass ein neuronales Netzwerk ohne Aktivierungsfunktion keine komplizierten Datenarten, wie zum Beispiel Bilder welche für die Umsetzung der Aufgabe natürlich verwendet werden müssen, nutzen kann.
+\newline
+Welche Aktivierungsfunktion soll also eingesetzt werden? Die beliebtesten und bekanntesten Aktivierungsfunktionen sind \textit{Sigmoid}, \textit{Logistik}, \textit{Tanh (Hyperbolischer Tangens)}, sowie \textit{ReLu (Rectified Linear Unit)}.
+Ein gemeinsames Problem der ersten drei genannten Funktionen liegt in dem sogenannten \textit{\textbf{Gradientenverschwinden}}, welches bei der ReLu Funktion vermieden und korrigiert wird. Auf das Problem des Grandientenverschwindens wird aufgrund dessen Mathematischer Komplexität nicht weiter eingegangen.In der Grafik \ref{fig: ReLu} ist der Funktionsgraphen der ReLu Funktion dargestellt.
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{Bilder/relu.png}
+\caption{ReLu Funktionsgraph \newline Quelle: https://sebastianraschka.com/images/faq/relu-derivative/relu\_3.png}
+\label{fig: ReLu}
+\end{figure}
+Zu sehen ist die einfache mathematische Funktion der Form \textbf{ReLu(x) = max(0,x)}, welche für alle Eingabewerte \textbf{x $<$ 0 = 0} ausgibt, und für \textbf{x $>$ 0} einen einfachen linear steigenden Graphen darstellt. Aufgrund der einfachen und effizienten mathematischen Grundform, sowie der Fähigkeit des Umgehens des Gradientenverschwindens, wurde diese Aktivierungsfunktion immer beliebter und wird neuerdings in fast allen neuronalen Netzwerken verwendet.
+\newline
+Aus diesen Gründen wurde sich auch dafür entschieden diese Aktivierungsfunktion für das hier entwickelte Modell zu verwenden.
+%https://www.ai-united.de/aktivierungsfunktionen-neuronale-netze/
+%https://www.ai-united.de/aktivierungsfunktionen-ihre-arten-und-verwendungsmoeglichkeiten/
 
 \section{Gesichtserkennung mit Opencv}
 In dem nun folgenden Abschnitt wird der theoretische Aspekt der Gesichtserkennung mit dem Tool Opencv erläutert. in der Arbeit findet die Gesichtserkennung an mehreren Stellen Anwendung, auch wenn es eigentlich um Emotionserkennung geht. So wird zum Beispiel, bevor eine Vorhersage über eine Emotion zu einem Bild gemacht wird überhaupt erst geprüft, ob auf dem Bild auch ein Gesicht vorhanden ist. Dies ist auch notwendig, da dies die Fehlerbehandlung erleichtert. Sollte ein Bild eingegeben werden auf dem kein Gesicht zu erkennen ist, darf auch kein Rückgabewert von Emotionsklassifizierungen erhalten werden, weshalb vorher überprüft werden sollte, ob ein Menschliches Gesicht auf dem Bild vorhanden ist.
@@ -788,9 +748,36 @@ Damit der Server Vohersagen mithilfe eines Modells machen und Bilder archivieren
 Die allgemeine Vorgehensweise ist dabei, zuerst ein Gesicht zu erkennen und dieses danach auf 48 Pixel x 48 Pixel zuzuschneiden. Damit das Modell eine optimale Vorhersage geben kann, muss der Ausschnitt des extrahierten Gesichtes ggf. noch in ein Graustufenformat konvertiert werden. Um nun einen validen Input für das Modell zu generieren, muss das Image-Objekt noch in einen Pixel-String bzw. in eine Matrixrepräsentation der Form \texttt{(48, 48, 1)} gebracht werden. Jetzt kann auf dem bei der Initialisierung geladenen Modell die bereits erläuterte Methode \texttt{predict} aufgerufen und die Vorhersagewerte an den Client zurückgegeben werden.
 
 \subsection{Client}
-Der Hauptzweck des Client-Anwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht.\newline
+Der Hauptzweck des Client-Anwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätzlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht.\newline
 Wie bereits beschrieben wertet der hier explizierte Algorithmus Eingabedaten aus einem Videostream aus um ein Pokerface festzustellen. Nach der Definition in Kaptiel 
-\ref{pokerface}gibt es zwei Arten von Pokerfaces. Dieser Algorithmus behandelt dabei die Variante, in der das beobachtete Subjekt seinen Gesichtsausdruck dauerhaft beibehält. Um dies zu bewerkstelligen muss der Videostream in einer gewissen rate abgetastet werden. Dies bedeutet, dass immer wieder Momentaufnahmen aus dem Videostream entnommen werden, und dem Server zum evaluieren gegeben werden. Dieser Vorgang wird einige Male wiederholt, und die daraus resultierenden Daten aggregiert und zwischengespeichert. Das Ergebnis dieser Aggregation ist dann eine Liste der Länge 
+\ref{pokerface} gibt es zwei Arten von Pokerfaces. Dieser Algorithmus behandelt dabei die Variante, in der das beobachtete Subjekt seinen Gesichtsausdruck dauerhaft beibehält. 
+\newline
+Um diese Auswertung eines Pokerfaces umzusetzen wurden zwei verschiedene Algorithmen entwickelt, welche im Folgendem genauer expliziert werden.
+
+\subsubsection{Langzeit-orientierter Algorithmus}
+Die erste Umsetzung der Client-seitigen Auswertung betrachtete das Szenario, einen Pokerspieler während eines Spieles zu analysieren und in Echtzeit dem Anwender mitzuteilen, wenn der Gesichtsausdruck des Spielers von seinem üblichen Pokerface abweicht. In der Theorie sollte demnach ein leichtes Lächeln oder ein trauriger Gesichtsausdruck direkt erkannt werden und somit dem Anwender ein Feedback über das derzeitige Blatt des betrachteten Spielers geben.
+Die Grundidee bei der Umsetzung des Algorithmus war es den Programmablauf in zwei Phasen einzuteilen. In der ersten Phase, der  \textit{\textbf{Initialisierungsphase}}, sollten Daten gesammelt und analysiert werden, um eine erste Vorstellung des Pokerfaces der zu betrachteten Person zu bekommen. Sobald die Daten genügend Aufschluss über ein mögliches Pokerface generiert haben, geht das Programm in die  \textit{\textbf{Hauptphase}} über. Hier wird anhand der gewonnen Daten erkannt, ob ein Pokerface vorliegt oder die Person Emotionen zeigt.
+Die genaue Umsetzung des Algorithmus kann dem Programmablaufplan in Grafik \ref{flowchart} entnommen werden, welcher im folgendem erläutert wird.
+
+%Unbedingt Grafik richtig Formatieren an der richtigen Stelle!!
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{Bilder/ClientDataflow.pdf}
+\caption{Programmablaufplan des Client-Programms}
+\label{fig:flowchart}
+\end{figure}
+
+Der dargestellte Ablauf wird solange durchgeführt, bis der entsprechende Thread beendet wird. Zu Beginn wird ein Bild aufgenommen und über die Verbindung zum Server analysiert. Während der Initialisierungsphase wird dieser Vorgang wiederholt bis ein definierter Buffer gefüllt wurde. Dieser kann beispielsweise mit zehn Plätzen definiert worden sein, demnach zehn Bilder der Person aufgenommen werden und die ausgewerteten Emotionen aller Bilder im Buffer abgespeichert werden. Eine Formalere Formulierung wäre die Buffer Größe der Länge $ n $  , wobei $ n \in N $, welche die aggregierten Ergebnisse der Server-Evaluierung speichert. Jeder Eintrag innerhalb des Buffers ist wiederum eine Liste, welche die Emotionsvorhersagen beinhaltet. Eine mögliche Struktur eines Buffers der Länge zwei könnte wie folgt aussehen: $ \qquad[ [0.61, 0.30, 0.15, 0.01, 0.76, 0.95] , [0.31, 0.22, 0.51, 0.41, 0.01, 0.55] ] $
+Sobald der Buffer mit den Emotionswerten gefüllt wurde, wird die Initialisierungsphase eingeläutet. Hier wird zuerst die durchschnittliche Emotionswahrscheinlichkeit aller Emotionen über die gespeicherten Werte berechnet. Am Beispiel der zuletzt genannten Liste würde für die Emotion \textit{Angry}, welche durch die erste Stelle der Liste repräsentiert wird, der Durchschnitt der Werte \textbf{0.61} und \textbf{0.31} berechnet werden. Diese Rechnung wird für jede Emotion durchgeführt. 
+\newline
+Um mit Gewissheit sagen zu können, dass man einen guten Durchschnitt aller Emotionen erhalten hat, welche ein Pokerface repräsentieren, sollten die zugrunde liegenden Daten auch möglichst Ähnlich sein. Werden beispielsweise bei zehn aufgenommenen Bildern verschiedene Grimassen geschnitten, wodurch die Bilder mal ein glückliches Bild und mal ein trauriges Bild zeigen, kann man annehmen, dass der Durchschnitt der Bilder nicht das Pokerface der Person darstellt. Demnach wird geprüft ob mindestens 50\% der Bilder innerhalb eines Toleranzbereichs des berechneten Durchschnitts liegen. Bei zehn Bildern sollten also fünf der Bilder möglichst gleiche Emotionen zeigen, wobei die anderen fünf Bilder natürlich keine starken Abweichungen darstellen dürfen.
+Sollte dies nicht gelingen, kann man keine klare Aussage über das Pokerface der Person treffen und die Initialisierungsphase wird durch das Löschen des Buffers wiederholt.
+Sollten allerdings die gewünschten Ergebnisse erzielt werden, kann mit den Durchschnittsemotionen ein Fazit über das Vorhandensein eines Pokerfaces getroffen werden und die Hauptphase wird eingeläutet. Hier werden die Analyseergebnisse der Bilder anhand der Durchschnittswerte und einem definierten Toleranzbereich verglichen und als Pokerface oder Nicht-Pokerface eingeordnet. Sollte das Bild als Pokerface eingeordnet werden, werden die Emotionen in die Durchnittsemotionen mit einberechnet. Dadurch kann die Genauigkeit der Emotionswerte des Pokerfaces während des Spiels gesteigert werden. Sollte das Bild außerhalb des Toleranzbereichs liegen, wird der Zeitpunkt und das dazugehörige Bild gespeichert und der Anwender wird über das Vorliegen eines Nicht-Pokerfaces informiert.
+\newline
+Der beschriebene Algorithmus ist in der Theorie eine gute Umsetzung für das Erkennen eines Pokerfaces während eines Pokerspiel, allerdings sehr fehleranfällig in der Praxis. Das Problem liegt in der Bewegung der zu betrachtenden Person. Sollte die Person beispielsweise Reden, verändert sich der Gesichtsausdruck und somit auch die Emotionswerte, wodurch sich der Algorithmus für ein Nicht-Pokerface entscheidet. Auch wenn die Person sich zurück lehnt oder in eine andere Richtung blickt, werden, selbst wenn sich der Gesichtsausdruck nicht verändert, neue Werte durch das Modell berechnet und die Ergebnisse unbrauchbar. Im schlechtesten anzunehmenden Szenario würde die Person sich nach der Initialisierung zurück lehnen und somit könnte man über den gesamten Spielverlauf keine Aussagen mehr über ein Pokerface treffen. 
+Aus diesem Grund wurde sich für den zweiten Algorithmus entschieden, welcher im Folgendem vorgestellt wird.
+
+\subsubsection{Kurzzeit-orientierter Algorithmus}
+Im Gegensatz zu dem letzten Algorithmus analysiert dieser nur Kurzaufnahmen und nicht das gesamte Spiel. Hierbei wird wie in dem ersten Algorithmus der Videostream in einer gewissen Rate abgetastet werden. Diese Momentaufnahmen aus dem Videostream werden ebenfalls dem Server zum evaluieren gegeben. Dieser Vorgang wird einige Male wiederholt, und die daraus resultierenden Daten aggregiert und zwischengespeichert. Das Ergebnis dieser Aggregation ist dann eine Liste der Länge 
 $ n $  , wobei $ n \in N $
 . Jedes Element dieser Liste ist wiederum eine Liste, der die Emotionsvorhersagen für ein bestimmtes Bild aus dem Videostream beinhaltet. So könnte z.B. eine solche Liste der Länge 2 folgende Struktur aufweisen: \newline
 $ \qquad[ [0.61, 0.30, 0.15, 0.01, 0.76, 0.95] , [0.31, 0.22, 0.51, 0.41, 0.01, 0.55] ] $
