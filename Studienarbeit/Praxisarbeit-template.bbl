@@ -19,6 +19,14 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{Keras2}{misc}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://datasolut.com/einfuehrung-in-keras/}
+      \field{note}{Einsichtnahme:15.03.2020}
+      \field{title}{Einführung in Keras}
+    \endentry
     \entry{Eigenface}{misc}{}
       \field{labelalpha}{17}
       \field{sortinit}{1}
@@ -60,6 +68,17 @@
       \field{labeltitlesource}{title}
       \field{howpublished}{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec\_tutorial.html}
       \field{note}{Einsichtnahme: 23.03.2020}
+      \field{title}{Opencv Dokumentation}
+      \field{year}{2019}
+    \endentry
+    \entry{Recognizer}{misc}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec\_tutorial.html\#local-binary-patterns-histograms}
+      \field{note}{Einsichtnahme: 01.04.2020}
       \field{title}{Opencv Dokumentation}
       \field{year}{2019}
     \endentry
@@ -180,6 +199,200 @@
       \field{isbn}{978-1789349276}
       \field{title}{Hands-On Unsupervised Learning with Python}
       \field{year}{2019}
+    \endentry
+    \entry{FER-Challenge}{misc}{}
+      \name{author}{28}{}{%
+        {{un=0,uniquepart=base,hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed3093ca2067edee4f9f8c32ad0dfb00}{%
+           family={Carrier},
+           familyi={C\bibinitperiod},
+           given={Pierre-Luc},
+           giveni={P\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de888487a30f49e96f975b467864545c}{%
+           family={Hamner},
+           familyi={H\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=847cee9758d796d99e9a8e46a56db7b3}{%
+           family={Cukierski},
+           familyi={C\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d1ea1358c52c890f2489fec3ccf1c45}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yichuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1be21aa8e658cf643587014a63293626}{%
+           family={Thaler},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21625086a5f2ed7349d554e6b3a0f646}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Dong-Hyun},
+           giveni={D\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99d818bd721f161cfa96d2747becaf80}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yingbo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7b52c8a03748063f0136cc155fdf070}{%
+           family={Ramaiah},
+           familyi={R\bibinitperiod},
+           given={Chetan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85ce886826d841c645b365bd25cd6d9d}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Fangxiang},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45f6a7b0c42214e53fbf91fcd0df8ac}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ruifan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc39f0d03180551c2e4552ef7a78c8b9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaojie},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4483e9e3b53edd64b5b4c01008abf8a1}{%
+           family={Athanasakis},
+           familyi={A\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8feae4ec394a5f6905c74b1a7abff875}{%
+           family={Shawe-Taylor},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc3ee783b17de32940b8dde28ee2e80a}{%
+           family={Milakov},
+           familyi={M\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b3ffb15f84b531490a5f5c88c53d04c}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21e1e2ac468c3ac86a8505729f0d9aa1}{%
+           family={Ionescu},
+           familyi={I\bibinitperiod},
+           given={Radu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcc6ee17e48ce93987889c98efabe82a}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Marius},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a9767624b8b563a546eab24b73c169e}{%
+           family={Grozea},
+           familyi={G\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bc66fe902c838c216bd3175dfeb045b}{%
+           family={Bergstra},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f410bb828039e3ab9a9b2ac52e7ff66}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Jingjing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e85bfdbced362e263956ce3aa2a4eac}{%
+           family={Romaszko},
+           familyi={R\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9528f027cfc353138c890ffbe0ed79da}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Unicer}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{1995b8661fc81f9bf1dfd0fae4672b40}
+      \strng{bibnamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorbibnamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{1995b8661fc81f9bf1dfd0fae4672b40}
+      \field{labelalpha}{Goo+13}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Challenges in Representation Learning: A report on three machine learning contests}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1307.0414\%7D
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1307.0414%5C%7D
+      \endverb
     \endentry
     \entry{Supervised}{book}{}
       \name{author}{2}{}{%
@@ -567,7 +780,6 @@
       \field{year}{2011}
     \endentry
   \enddatalist
-  \missing{FER-Challenge}
 \endrefsection
 \endinput
 

@@ -1,147 +1,39 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.3.11)  27 MAR 2020 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.3.11)  21 APR 2020 19:23
 entering extended mode
 **./Praxisarbeit-template.tex
 (Praxisarbeit-template.tex
 LaTeX2e <2019-10-01> patch level 3
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrb
-ook.cls"
-Document Class: scrbook 2019/12/23 v3.28 KOMA-Script document class (book)
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrk
-base.sty"
-Package: scrkbase 2019/12/23 v3.28 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrb
-ase.sty"
-Package: scrbase 2019/12/23 v3.28 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.
-sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+Document Class: report 2019/10/25 v1.4k Standard LaTeX document class
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
 )
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrl
-file.sty"
-Package: scrlfile 2019/12/23 v3.28 KOMA-Script package (loading files)
-)))
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\tocb
-asic.sty"
-Package: tocbasic 2019/12/23 v3.28 KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip41
-\scr@dte@tocline@numbox=\box27
-)
-Package tocbasic Info: omitting babel extension for `toc'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 137.
-Package scrbook Info: You've used standard option `12pt'.
-(scrbook)             This is correct!
-(scrbook)             Internally I'm using `fontsize=12pt'.
-(scrbook)             If you'd like to set the option with \KOMAoptions,
-(scrbook)             you'd have to use `fontsize=12pt' there
-(scrbook)             instead of `12pt', too.
-Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
-ne 2423.
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrs
-ize12pt.clo"
-File: scrsize12pt.clo 2019/12/23 v3.28 KOMA-Script font size class option (12pt
-)
-)
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\type
-area.sty"
-Package: typearea 2019/12/23 v3.28 KOMA-Script package (type area)
-\ta@bcor=\skip42
-\ta@div=\count80
-Package typearea Info: You've used standard option `a4paper'.
-(typearea)             This is correct!
-(typearea)             Internally I'm using `paper=a4'.
-(typearea)             If you'd like to set the option with \KOMAoptions,
-(typearea)             you'd have to use `paper=a4' there
-(typearea)             instead of `a4paper', too.
-\ta@hblk=\skip43
-\ta@vblk=\skip44
-\ta@temp=\skip45
-\footheight=\skip46
-Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 12
-(typearea)             BCOR = 0.0pt
-(typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 448.13095pt
-(typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 27.31467pt
-(typearea)              \oddsidemargin  = -22.47766pt
-(typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 635.5pt
-(typearea)              \topmargin      = -41.72441pt
-(typearea)              \headheight     = 18.125pt
-(typearea)              \headsep        = 21.75pt
-(typearea)              \topskip        = 12.0pt
-(typearea)              \footskip       = 50.75pt
-(typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1718.
-)
-\c@part=\count81
-\c@chapter=\count82
-\c@section=\count83
-\c@subsection=\count84
-\c@subsubsection=\count85
-\c@paragraph=\count86
-\c@subparagraph=\count87
-\scr@dte@chapter@maxnumwidth=\skip47
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\chapter on input line 5544.
-\scr@dte@section@maxnumwidth=\skip48
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\section on input line 5554.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\section on input line 5554.
-\scr@dte@part@maxnumwidth=\skip49
-Class scrbook Info: using compatibility default `afterindent=true'
-(scrbook)           for `\part on input line 5563.
-\scr@dte@subsection@maxnumwidth=\skip50
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subsection on input line 5573.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subsection on input line 5573.
-\scr@dte@subsubsection@maxnumwidth=\skip51
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subsubsection on input line 5583.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subsubsection on input line 5583.
-\scr@dte@paragraph@maxnumwidth=\skip52
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\paragraph on input line 5593.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\paragraph on input line 5593.
-\scr@dte@subparagraph@maxnumwidth=\skip53
-Class scrbook Info: using compatibility default `runin=bysign'
-(scrbook)           for `\subparagraph on input line 5603.
-Class scrbook Info: using compatibility default `afterindent=bysign'
-(scrbook)           for `\subparagraph on input line 5603.
-\abovecaptionskip=\skip54
-\belowcaptionskip=\skip55
-\c@pti@nb@sid@b@x=\box28
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6845.
-\scr@dte@figure@maxnumwidth=\skip56
-\c@figure=\count88
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6866.
-\scr@dte@table@maxnumwidth=\skip57
-\c@table=\count89
-Class scrbook Info: Redefining `\numberline' on input line 7039.
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
 y"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks16
+\float@box=\box27
+\@float@everytoks=\toks17
+\@floatcapt=\box28
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquote
 s.sty"
@@ -152,13 +44,18 @@ x.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count90
 )
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.
+sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
 \csq@reset=\count91
 \csq@gtype=\count92
 \csq@glevel=\count93
 \csq@qlevel=\count94
 \csq@maxlvl=\count95
 \csq@tshold=\count96
-\csq@ltx@everypar=\toks17
+\csq@ltx@everypar=\toks19
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquote
 s.def"
@@ -366,7 +263,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip43
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspac
 e.sty"
@@ -391,7 +288,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen113
 \Gm@layouthoffset=\dimen114
 \Gm@layoutvoffset=\dimen115
-\Gm@dimlist=\toks18
+\Gm@dimlist=\toks20
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometr
 y.cfg"))
@@ -413,7 +310,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 s.sty"
 \lst@mode=\count112
 \lst@gtempboxa=\box29
-\lst@token=\toks19
+\lst@token=\toks21
 \lst@length=\count113
 \lst@currlwidth=\dimen116
 \lst@column=\count114
@@ -475,7 +372,7 @@ g.tex"
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-\AC@clearlist=\toks20
+\AC@clearlist=\toks22
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgfplots\pgfplot
 s.sty"
@@ -491,7 +388,7 @@ gf.sty"
 frcs.sty"
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\
 pgfutil-common.tex"
-\pgfutil@everybye=\toks21
+\pgfutil@everybye=\toks23
 \pgfutil@tempdima=\dimen122
 \pgfutil@tempdimb=\dimen123
 
@@ -522,12 +419,12 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\
 pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks22
-\pgfkeys@temptoks=\toks23
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\
 pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks24
+\pgfkeys@tmptoks=\toks26
 ))
 \pgf@x=\dimen124
 \pgf@y=\dimen125
@@ -545,9 +442,9 @@ pgfkeysfiltered.code.tex"
 \c@pgf@countb=\count123
 \c@pgf@countc=\count124
 \c@pgf@countd=\count125
-\t@pgf@toka=\toks25
-\t@pgf@tokb=\toks26
-\t@pgf@tokc=\toks27
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
 \pgf@sys@id@count=\count126
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlaye
@@ -609,9 +506,9 @@ thparser.code.tex"
 \pgfmath@dimen=\dimen134
 \pgfmath@count=\count129
 \pgfmath@box=\box32
-\pgfmath@toks=\toks28
-\pgfmath@stack@operand=\toks29
-\pgfmath@stack@operation=\toks30
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfma
 thfunctions.code.tex"
@@ -773,8 +670,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 th.code.tex")
 \pgffor@iter=\dimen161
 \pgffor@skip=\dimen162
-\pgffor@stack=\toks31
-\pgffor@toks=\toks32
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
 ))
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendla
 yer/tikz\tikz.code.tex"
@@ -820,9 +717,9 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ots.code.tex"
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgfplots\pgfpl
 otscore.code.tex"
-\t@pgfplots@toka=\toks33
-\t@pgfplots@tokb=\toks34
-\t@pgfplots@tokc=\toks35
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
 \pgfplots@tmpa=\dimen172
 \c@pgfplots@coordindex=\count143
 \c@pgfplots@scanlineindex=\count144
@@ -850,7 +747,7 @@ tructure\pgfplotsmatrix.code.tex")
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgfplots/numta
 ble\pgfplotstableshared.code.tex"
 \c@pgfplotstable@counta=\count146
-\t@pgfplotstable@a=\toks36
+\t@pgfplotstable@a=\toks38
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgfplots/lists
 tructure\pgfplotsdeque.code.tex")
@@ -929,13 +826,113 @@ File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 pgflibraryplotmarks.code.tex"
 File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.
+sty"
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3
+.sty"
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen186
+\captionmargin@=\dimen187
+\captionwidth=\dimen188
+\caption@tempdima=\dimen189
+\caption@indent=\dimen190
+\caption@parindent=\dimen191
+\caption@hangindent=\dimen192
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count150
+\c@continuedfloat=\count151
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.
+sty"
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.
+sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.s
+ty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks39
+\ex@=\dimen193
+))
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.s
+ty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen194
+)
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.s
+ty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count152
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count153
+\leftroot@=\count154
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count155
+\DOTSCASE@=\count156
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box43
+\strutbox@=\box44
+\big@size=\dimen195
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count157
+\c@MaxMatrixCols=\count158
+\dotsspace@=\muskip11
+\c@parentequation=\count159
+\dspbrk@lvl=\count160
+\tag@help=\toks40
+\row@=\count161
+\column@=\count162
+\maxfields@=\count163
+\andhelp@=\toks41
+\eqnshift@=\dimen196
+\alignsep@=\dimen197
+\tagshift@=\dimen198
+\tagwidth@=\dimen199
+\totwidth@=\dimen256
+\lineht@=\dimen257
+\@envbody=\toks42
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks43
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+)
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb
+.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfont
+s.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lstautodedent\ls
 tautodedent.sty"
 Package: lstautodedent 2014/05/20 v0.1 A package for automatically dedenting li
 stings
-\toks@lstad=\toks37
-\spacesToGobble@lstad=\count150
-\spacesGobbledSoFar@lstad=\count151
+\toks@lstad=\toks44
+\spacesToGobble@lstad=\count164
+\spacesGobbledSoFar@lstad=\count165
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/dirtree\dirtree.
 sty"
@@ -943,20 +940,20 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/generic/dirtree\dirtre
 e.tex" `dirtree' v0.32, 2012/12/11 (jcc)
-\DT@offset=\dimen186
-\DT@width=\dimen187
-\DT@sep=\dimen188
-\DT@all=\dimen189
-\DT@rulewidth=\dimen190
-\DT@dotwidth=\dimen191
-\DTbaselineskip=\dimen192
-\DT@counti=\count152
-\DT@countii=\count153
-\DT@countiii=\count154
-\DT@countiv=\count155
-\DT@indent=\dimen193
-\DT@parskip=\dimen194
-\DT@baselineskip=\dimen195
+\DT@offset=\dimen258
+\DT@width=\dimen259
+\DT@sep=\dimen260
+\DT@all=\dimen261
+\DT@rulewidth=\dimen262
+\DT@dotwidth=\dimen263
+\DTbaselineskip=\dimen264
+\DT@counti=\count166
+\DT@countii=\count167
+\DT@countiii=\count168
+\DT@countiv=\count169
+\DT@indent=\dimen265
+\DT@parskip=\dimen266
+\DT@baselineskip=\dimen267
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 )
@@ -967,7 +964,7 @@ Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.st
 y"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count156
+\lrq@indent=\count170
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.de
 f"
@@ -976,61 +973,61 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count157
-\c@listtotal=\count158
-\c@listcount=\count159
-\c@liststart=\count160
-\c@liststop=\count161
-\c@citecount=\count162
-\c@citetotal=\count163
-\c@multicitecount=\count164
-\c@multicitetotal=\count165
-\c@instcount=\count166
-\c@maxnames=\count167
-\c@minnames=\count168
-\c@maxitems=\count169
-\c@minitems=\count170
-\c@citecounter=\count171
-\c@maxcitecounter=\count172
-\c@savedcitecounter=\count173
-\c@uniquelist=\count174
-\c@uniquename=\count175
-\c@refsection=\count176
-\c@refsegment=\count177
-\c@maxextratitle=\count178
-\c@maxextratitleyear=\count179
-\c@maxextraname=\count180
-\c@maxextradate=\count181
-\c@maxextraalpha=\count182
-\c@abbrvpenalty=\count183
-\c@highnamepenalty=\count184
-\c@lownamepenalty=\count185
-\c@maxparens=\count186
-\c@parenlevel=\count187
-\blx@tempcnta=\count188
-\blx@tempcntb=\count189
-\blx@tempcntc=\count190
-\blx@maxsection=\count191
-\blx@maxsegment@0=\count192
-\blx@notetype=\count193
-\blx@parenlevel@text=\count194
-\blx@parenlevel@foot=\count195
-\blx@sectionciteorder@0=\count196
-\blx@entrysetcounter=\count197
-\labelnumberwidth=\skip59
-\labelalphawidth=\skip60
-\biblabelsep=\skip61
-\bibitemsep=\skip62
-\bibnamesep=\skip63
-\bibinitsep=\skip64
-\bibparsep=\skip65
-\bibhang=\skip66
+\c@tabx@nest=\count171
+\c@listtotal=\count172
+\c@listcount=\count173
+\c@liststart=\count174
+\c@liststop=\count175
+\c@citecount=\count176
+\c@citetotal=\count177
+\c@multicitecount=\count178
+\c@multicitetotal=\count179
+\c@instcount=\count180
+\c@maxnames=\count181
+\c@minnames=\count182
+\c@maxitems=\count183
+\c@minitems=\count184
+\c@citecounter=\count185
+\c@maxcitecounter=\count186
+\c@savedcitecounter=\count187
+\c@uniquelist=\count188
+\c@uniquename=\count189
+\c@refsection=\count190
+\c@refsegment=\count191
+\c@maxextratitle=\count192
+\c@maxextratitleyear=\count193
+\c@maxextraname=\count194
+\c@maxextradate=\count195
+\c@maxextraalpha=\count196
+\c@abbrvpenalty=\count197
+\c@highnamepenalty=\count198
+\c@lownamepenalty=\count199
+\c@maxparens=\count266
+\c@parenlevel=\count267
+\blx@tempcnta=\count268
+\blx@tempcntb=\count269
+\blx@tempcntc=\count270
+\blx@maxsection=\count271
+\blx@maxsegment@0=\count272
+\blx@notetype=\count273
+\blx@parenlevel@text=\count274
+\blx@parenlevel@foot=\count275
+\blx@sectionciteorder@0=\count276
+\blx@entrysetcounter=\count277
+\labelnumberwidth=\skip47
+\labelalphawidth=\skip48
+\biblabelsep=\skip49
+\bibitemsep=\skip50
+\bibnamesep=\skip51
+\bibinitsep=\skip52
+\bibparsep=\skip53
+\bibhang=\skip54
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language83
-\c@mincomprange=\count198
-\c@maxcomprange=\count199
-\c@mincompwidth=\count266
+\c@mincomprange=\count278
+\c@maxcomprange=\count279
+\c@mincompwidth=\count280
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1039,93 +1036,93 @@ def"
 File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex citestyle data model...
-Package biblatex Info: ... file 'authortitle.dbx' not found.
+Package biblatex Info: ... file 'authortitle-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex bibstyle data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count267
-\c@savedafterword=\count268
-\c@annotator=\count269
-\c@savedannotator=\count270
-\c@author=\count271
-\c@savedauthor=\count272
-\c@bookauthor=\count273
-\c@savedbookauthor=\count274
-\c@commentator=\count275
-\c@savedcommentator=\count276
-\c@editor=\count277
-\c@savededitor=\count278
-\c@editora=\count279
-\c@savededitora=\count280
-\c@editorb=\count281
-\c@savededitorb=\count282
-\c@editorc=\count283
-\c@savededitorc=\count284
-\c@foreword=\count285
-\c@savedforeword=\count286
-\c@holder=\count287
-\c@savedholder=\count288
-\c@introduction=\count289
-\c@savedintroduction=\count290
-\c@namea=\count291
-\c@savednamea=\count292
-\c@nameb=\count293
-\c@savednameb=\count294
-\c@namec=\count295
-\c@savednamec=\count296
-\c@translator=\count297
-\c@savedtranslator=\count298
-\c@shortauthor=\count299
-\c@savedshortauthor=\count300
-\c@shorteditor=\count301
-\c@savedshorteditor=\count302
-\c@labelname=\count303
-\c@savedlabelname=\count304
-\c@institution=\count305
-\c@savedinstitution=\count306
-\c@lista=\count307
-\c@savedlista=\count308
-\c@listb=\count309
-\c@savedlistb=\count310
-\c@listc=\count311
-\c@savedlistc=\count312
-\c@listd=\count313
-\c@savedlistd=\count314
-\c@liste=\count315
-\c@savedliste=\count316
-\c@listf=\count317
-\c@savedlistf=\count318
-\c@location=\count319
-\c@savedlocation=\count320
-\c@organization=\count321
-\c@savedorganization=\count322
-\c@origlocation=\count323
-\c@savedoriglocation=\count324
-\c@origpublisher=\count325
-\c@savedorigpublisher=\count326
-\c@publisher=\count327
-\c@savedpublisher=\count328
-\c@language=\count329
-\c@savedlanguage=\count330
-\c@origlanguage=\count331
-\c@savedoriglanguage=\count332
-\c@pageref=\count333
-\c@savedpageref=\count334
-\shorthandwidth=\skip67
-\shortjournalwidth=\skip68
-\shortserieswidth=\skip69
-\shorttitlewidth=\skip70
-\shortauthorwidth=\skip71
-\shorteditorwidth=\skip72
-\locallabelnumberwidth=\skip73
-\locallabelalphawidth=\skip74
-\localshorthandwidth=\skip75
-\localshortjournalwidth=\skip76
-\localshortserieswidth=\skip77
-\localshorttitlewidth=\skip78
-\localshortauthorwidth=\skip79
-\localshorteditorwidth=\skip80
+\c@afterword=\count281
+\c@savedafterword=\count282
+\c@annotator=\count283
+\c@savedannotator=\count284
+\c@author=\count285
+\c@savedauthor=\count286
+\c@bookauthor=\count287
+\c@savedbookauthor=\count288
+\c@commentator=\count289
+\c@savedcommentator=\count290
+\c@editor=\count291
+\c@savededitor=\count292
+\c@editora=\count293
+\c@savededitora=\count294
+\c@editorb=\count295
+\c@savededitorb=\count296
+\c@editorc=\count297
+\c@savededitorc=\count298
+\c@foreword=\count299
+\c@savedforeword=\count300
+\c@holder=\count301
+\c@savedholder=\count302
+\c@introduction=\count303
+\c@savedintroduction=\count304
+\c@namea=\count305
+\c@savednamea=\count306
+\c@nameb=\count307
+\c@savednameb=\count308
+\c@namec=\count309
+\c@savednamec=\count310
+\c@translator=\count311
+\c@savedtranslator=\count312
+\c@shortauthor=\count313
+\c@savedshortauthor=\count314
+\c@shorteditor=\count315
+\c@savedshorteditor=\count316
+\c@labelname=\count317
+\c@savedlabelname=\count318
+\c@institution=\count319
+\c@savedinstitution=\count320
+\c@lista=\count321
+\c@savedlista=\count322
+\c@listb=\count323
+\c@savedlistb=\count324
+\c@listc=\count325
+\c@savedlistc=\count326
+\c@listd=\count327
+\c@savedlistd=\count328
+\c@liste=\count329
+\c@savedliste=\count330
+\c@listf=\count331
+\c@savedlistf=\count332
+\c@location=\count333
+\c@savedlocation=\count334
+\c@organization=\count335
+\c@savedorganization=\count336
+\c@origlocation=\count337
+\c@savedoriglocation=\count338
+\c@origpublisher=\count339
+\c@savedorigpublisher=\count340
+\c@publisher=\count341
+\c@savedpublisher=\count342
+\c@language=\count343
+\c@savedlanguage=\count344
+\c@origlanguage=\count345
+\c@savedoriglanguage=\count346
+\c@pageref=\count347
+\c@savedpageref=\count348
+\shorthandwidth=\skip55
+\shortjournalwidth=\skip56
+\shortserieswidth=\skip57
+\shorttitlewidth=\skip58
+\shortauthorwidth=\skip59
+\shorteditorwidth=\skip60
+\locallabelnumberwidth=\skip61
+\locallabelalphawidth=\skip62
+\localshorthandwidth=\skip63
+\localshortjournalwidth=\skip64
+\localshortserieswidth=\skip65
+\localshorttitlewidth=\skip66
+\localshortauthorwidth=\skip67
+\localshorteditorwidth=\skip68
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1139,19 +1136,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblate
 x.def"
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count335
-\c@textcitetotal=\count336
-\c@textcitemaxnames=\count337
-\c@biburlbigbreakpenalty=\count338
-\c@biburlbreakpenalty=\count339
-\c@biburlnumpenalty=\count340
-\c@biburlucpenalty=\count341
-\c@biburllcpenalty=\count342
-\biburlbigskip=\muskip11
-\biburlnumskip=\muskip12
-\biburlucskip=\muskip13
-\biburllcskip=\muskip14
-\c@smartand=\count343
+\c@textcitecount=\count349
+\c@textcitetotal=\count350
+\c@textcitemaxnames=\count351
+\c@biburlbigbreakpenalty=\count352
+\c@biburlbreakpenalty=\count353
+\c@biburlnumpenalty=\count354
+\c@biburlucpenalty=\count355
+\c@biburllcpenalty=\count356
+\biburlbigskip=\muskip12
+\biburlnumskip=\muskip13
+\biburlucskip=\muskip14
+\biburllcskip=\muskip15
+\c@smartand=\count357
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -1174,15 +1171,15 @@ Package biblatex Info: ... file 'standard.bbx' found.
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\sta
 ndard.bbx"
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count344
-\c@bbx:relatedtotal=\count345
+\c@bbx:relatedcount=\count358
+\c@bbx:relatedtotal=\count359
 ))
-Package biblatex Info: Trying to load citation style 'authortitle'...
-Package biblatex Info: ... file 'authortitle.cbx' found.
+Package biblatex Info: Trying to load citation style 'authortitle-ibid'...
+Package biblatex Info: ... file 'authortitle-ibid.cbx' found.
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\aut
-hortitle.cbx"
-File: authortitle.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+hortitle-ibid.cbx"
+File: authortitle-ibid.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1205,22 +1202,22 @@ Package csquotes Info: Redefining alias 'default' -> 'german'.
  (Praxisarbeit-template.aux (Titelseite.aux))
 \openout1 = `Praxisarbeit-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-\AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+\AtBeginShipoutBox=\box45
+Package hyperref Info: Link coloring OFF on input line 64.
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty"
@@ -1234,36 +1231,16 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 \gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count346
+\c@section@level=\count360
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
  (Praxisarbeit-template.out) (Praxisarbeit-template.out)
 \@outlinefile=\write5
 \openout5 = `Praxisarbeit-template.out'.
 
-Class scrbook Info: loading recommended package `bookmark'.
-(scrbook)           Using `bookmark' together with `hyperref' is recommended,
-(scrbook)           because of handling of possible bookmark level gaps.
-(scrbook)           You can avoid loading `bookmark' with KOMA-Script option
-(scrbook)           `bookmarkpackage=false' before \begin{document} and
-(scrbook)           you can avoid this message adding:
-(scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 49.
 
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bookmar
-k.sty"
-Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
-
-("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bkm-pdf
-tex.def"
-File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-Package auxhook Info: \AddLineBeginMainAux comes a little late,
-(auxhook)             because the main .aux file is already opened on input lin
-e 168.
-\BKM@id=\count347
-))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1272,7 +1249,7 @@ e 168.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 14.22636pt
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(71.13188pt, 441.01775pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
@@ -1281,21 +1258,21 @@ e 168.
 * \textheight=702.78308pt
 * \oddsidemargin=13.08826pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-41.0131pt
-* \headheight=18.125pt
-* \headsep=21.75pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
 * \topskip=12.0pt
-* \footskip=50.75pt
-* \marginparwidth=74.68849pt
-* \marginparsep=12.8401pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1303,17 +1280,17 @@ e 168.
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count348
-\scratchdimen=\dimen196
-\scratchbox=\box44
-\nofMPsegments=\count349
-\nofMParguments=\count350
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count351
-\MPscratchDim=\dimen197
-\MPnumerator=\count352
-\makeMPintoPDFobject=\count353
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count361
+\scratchdimen=\dimen268
+\scratchbox=\box46
+\nofMPsegments=\count362
+\nofMParguments=\count363
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count364
+\MPscratchDim=\dimen269
+\MPnumerator=\count365
+\makeMPintoPDFobject=\count366
+\everyMPtoPDFconversion=\toks46
 )
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\eps
 topdf-base.sty"
@@ -1321,14 +1298,16 @@ Package: epstopdf-base 2019-12-09 v2.10 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\c@lstlisting=\count354
+\c@lstlisting=\count367
  ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 49.
+ on input line 64.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
@@ -1343,26 +1322,18 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Praxisarbeit-template.bbl' found.
- (Praxisarbeit-template.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                FER-Challenge
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 49.
-Package biblatex Info: Reference segment=0 on input line 49.
+ (Praxisarbeit-template.bbl)
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
 \openout2 = `Titelseite.aux'.
 
  (Titelseite.tex
-<Bilder/DHBW_logo.jpg, id=6, 702.625pt x 293.095pt>
+<Bilder/DHBW_logo.jpg, id=230, 702.625pt x 293.095pt>
 File: Bilder/DHBW_logo.jpg Graphic file (type jpg)
 <use Bilder/DHBW_logo.jpg>
 Package pdftex.def Info: Bilder/DHBW_logo.jpg  used on input line 15.
 (pdftex.def)             Requested size: 175.6558pt x 73.27356pt.
-<Bilder/Atos_logo.png, id=8, 526.96875pt x 180.675pt>
+<Bilder/Atos_logo.png, id=232, 526.96875pt x 180.675pt>
 File: Bilder/Atos_logo.png Graphic file (type png)
 <use Bilder/Atos_logo.png>
 Package pdftex.def Info: Bilder/Atos_logo.png  used on input line 16.
@@ -1372,103 +1343,90 @@ Overfull \hbox (2.25058pt too wide) in paragraph at lines 14--17
 []|  [] |  [] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
-[1
+LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
+"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
 
 
+("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
+"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
 
 
 {C:/Users/A675866/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Bilder/
 DHBW_logo.jpg> <./Bilder/Atos_logo.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 59--66
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--66
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--66
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
 
  []
-
-[2
-
-] [3] (Praxisarbeit-template.toc
-Underfull \vbox (badness 4429) has occurred while \output is active []
-
- [4])
-\tf@toc=\write6
-\openout6 = `Praxisarbeit-template.toc'.
-
-
-(Praxisarbeit-template.lof
-Overfull \hbox (4.61601pt too wide) in paragraph at lines 12--12
- \OT1/cmr/m/n/12 Quelle: htt-ps://docs.opencv.org/master/dc/d88/tutorial[]train
-cascade.html[] [][]  
- []
-
-
-Overfull \hbox (10.8304pt too wide) in paragraph at lines 14--14
- \OT1/cmr/m/n/12 Quelle: https://www.howtogeek.com/wp-content/uploads/2011/02/s
-shot- 
- []
-
-
-Underfull \vbox (badness 3769) has occurred while \output is active []
-
- [5])
-\tf@lof=\write7
-\openout7 = `Praxisarbeit-template.lof'.
-
-
-[6]
-chapter 1.
-
-Class scrbook Warning: \float@addtolists detected!
-(scrbook)              Implementation of \float@addtolist became
-(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
-(scrbook)              has been replaced by several more flexible
-(scrbook)              features of package `tocbasic`.
-(scrbook)              Since Version 3.12 support for deprecated
-(scrbook)              \float@addtolist interface has been
-(scrbook)              restricted to only some of the KOMA-Script
-(scrbook)              features and been removed from others.
-(scrbook)              Loading of package `scrhack' may help to
-(scrbook)              avoid this warning, if you are using a
-(scrbook)              a package that still implements the
-(scrbook)              deprecated \float@addtolist interface .
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 87.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 87.
-
-Underfull \vbox (badness 1460) has occurred while \output is active []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 \begin{itemize}
-                      [1]
+l.80 \newpage
+              [1
+
+] [2] (Praxisarbeit-template.toc [3
+
+])
+\tf@toc=\write6
+\openout6 = `Praxisarbeit-template.toc'.
+
+ [4]
+(Praxisarbeit-template.lof)
+\tf@lof=\write7
+\openout7 = `Praxisarbeit-template.lof'.
+
+ [5
+
+] (Praxisarbeit-template.lot)
+\tf@lot=\write8
+\openout8 = `Praxisarbeit-template.lot'.
+
+ [6
+
+]
+(Praxisarbeit-template.lol)
+\tf@lol=\write9
+\openout9 = `Praxisarbeit-template.lol'.
+
+ [7
+
+]
+Kapitel 1.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.126 \begin{itemize}
+                      [1
+
+]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-14.
+27.
 
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
 
-Overfull \hbox (7.75401pt too wide) in paragraph at lines 116--117
+Overfull \hbox (7.75533pt too wide) in paragraph at lines 129--130
 \OT1/cmr/m/n/12 Es ist denk-bar, dass ei-ne er-wei-ter-te Form des ent-wickel-t
 en Pro-to-ty-pen bei Po-li-zeiverh[]oren
  []
@@ -1477,411 +1435,427 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.131 
-       [2]
-chapter 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
+l.144 
+       [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.148 \item M
-             ust - Core Anforderungen die unbedingt umgesetzt werden müssen
-[3]
-Overfull \hbox (29.1954pt too wide) in paragraph at lines 171--172
-[]\OT1/cmr/m/n/12 Eine Ober-fl[]ache zur in-tui-ti-ven Be-die-nung der L[]osung
- oh-ne tech-ni-sches Verst[]andnis
- []
-
-chapter 3.
+l.145 \chapter
+              {Anforderungen} [3]
+Kapitel 2.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.182 \chapter{Stand der Technik}
-                                  [4]
-<Bilder/FaceRecognition.png, id=228, 378.213pt x 137.313pt>
-File: Bilder/FaceRecognition.png Graphic file (type png)
-<use Bilder/FaceRecognition.png>
-Package pdftex.def Info: Bilder/FaceRecognition.png  used on input line 193.
-(pdftex.def)             Requested size: 441.01775pt x 160.12335pt.
-Class scrbook Info: Workaround for not recommended usage of \\ or
-(scrbook)           \newlinein caption text  on input line 194.
+l.161 \item M
+             ust - Core Anforderungen die unbedingt umgesetzt werden müssen
+[4
+
+]
+Overfull \hbox (29.1954pt too wide) in paragraph at lines 185--186
+[]\OT1/cmr/m/n/12 Eine Ober-fl[]ache zur in-tui-ti-ven Be-die-nung der L[]osung
+ oh-ne tech-ni-sches Verst[]andnis
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.211 
-       [5 <./Bilder/FaceRecognition.png>]pdfTeX warning (ext4): destination wit
-h the same identifier (name{page.6}) has been already used, duplicate ignored
+l.190 \end{itemize}
+                    [5]pdfTeX warning (ext4): destination with the same identif
+ier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.240 
-       [6] [7]
-Overfull \hbox (4.71237pt too wide) in paragraph at lines 257--262
+l.196 \chapter
+              {Stand der Technik} [6]
+Kapitel 3.
+<Bilder/FaceRecognition.png, id=448, 378.213pt x 137.313pt>
+File: Bilder/FaceRecognition.png Graphic file (type png)
+<use Bilder/FaceRecognition.png>
+Package pdftex.def Info: Bilder/FaceRecognition.png  used on input line 207.
+(pdftex.def)             Requested size: 441.01775pt x 160.12335pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.226 
+       [7
+
+] [8 <./Bilder/FaceRecognition.png>] [9]
+Overfull \hbox (2.05994pt too wide) in paragraph at lines 269--269
+[]\OT1/cmr/bx/n/17.28 Emotionserkennung mit-hil-fe von De-ep Lear-ning 
+ []
+
+[10]
+Overfull \hbox (4.71368pt too wide) in paragraph at lines 278--283
 \OT1/cmr/m/n/12 Dlib ist nach des-sen Ent-wick-ler Da-vis King ein mo-der-nes C
 ++ Tool-kit, wel-ches Machine-
  []
 
-[8]
-Underfull \vbox (badness 5667) has occurred while \output is active []
-
- [9]
-<Bilder/haar-cascade.png, id=296, 898.85812pt x 451.6875pt>
+[11] [12] [13]
+<Bilder/haar-cascade.png, id=529, 898.85812pt x 451.6875pt>
 File: Bilder/haar-cascade.png Graphic file (type png)
 <use Bilder/haar-cascade.png>
-Package pdftex.def Info: Bilder/haar-cascade.png  used on input line 354.
+Package pdftex.def Info: Bilder/haar-cascade.png  used on input line 382.
 (pdftex.def)             Requested size: 441.01775pt x 221.61827pt.
-Class scrbook Info: Workaround for not recommended usage of \\ or
-(scrbook)           \newlinein caption text  on input line 355.
 
-Overfull \hbox (21.71439pt too wide) in paragraph at lines 355--355
-\OT1/cmr/m/n/12 Quelle: htt-ps://docs.opencv.org/master/dc/d88/tutorial[]trainc
-ascade.html| 
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
+
+ []
+
+[14 <./Bilder/haar-cascade.png>] [15]
+<Bilder/RGB.png, id=564, 401.24907pt x 269.50688pt>
+File: Bilder/RGB.png Graphic file (type png)
+<use Bilder/RGB.png>
+Package pdftex.def Info: Bilder/RGB.png  used on input line 409.
+(pdftex.def)             Requested size: 441.01775pt x 296.2364pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
+
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 373--373
-  [][][]$\OT1/cmtt/m/n/10 https : / / docs . opencv . org / 2 . 4 / modules / c
-ontrib / doc / facerec / facerec _ tutorial . html #
+[16] [17 <./Bilder/RGB.png>] [18]
+Kapitel 4.
+
+Overfull \hbox (14.40808pt too wide) in paragraph at lines 424--425
+\OT1/cmr/m/n/12 nung un-ter ver-schie-de-nen Aspek-ten wie der Ar-chi-tek-tur u
+nd der Kom-mu-ni-ka-ti-on erl[]autert. 
  []
 
-[11 <./Bilder/haar-cascade.png>]
-<Bilder/RGB.png, id=327, 401.24907pt x 269.50688pt>
-File: Bilder/RGB.png Graphic file (type png)
-<use Bilder/RGB.png>
-Package pdftex.def Info: Bilder/RGB.png  used on input line 381.
-(pdftex.def)             Requested size: 441.01775pt x 296.2364pt.
-Class scrbook Info: Workaround for not recommended usage of \\ or
-(scrbook)           \newlinein caption text  on input line 382.
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--382
-\OT1/cmr/m/n/12 Quelle: https://www.howtogeek.com/wp-
+Overfull \hbox (41.24245pt too wide) in paragraph at lines 427--430
+\OT1/cmr/m/n/12 zur[]uckzugeben, so-lan-ge es den An-for-de-run-gen der be-nut-
+zer-freund-li-chen In-ter-ak-ti-onsm[]oglichkeit
  []
 
-[12] [13 <./Bilder/RGB.png>]
-chapter 4.
+[19
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-[15]
+] [20]
 ("C:\Users\A675866\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang
 1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [16]
+)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 418.
- (Code/InputGUI1.py)
-<Bilder/InputGUI1.png, id=360, 642.4pt x 511.9125pt>
+nput line 445.
+ (Code/InputGUI1.py [21])
+<Bilder/InputGUI1.png, id=607, 642.4pt x 511.9125pt>
 File: Bilder/InputGUI1.png Graphic file (type png)
 <use Bilder/InputGUI1.png>
-Package pdftex.def Info: Bilder/InputGUI1.png  used on input line 420.
+Package pdftex.def Info: Bilder/InputGUI1.png  used on input line 447.
 (pdftex.def)             Requested size: 441.01775pt x 351.44688pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+[22 <./Bilder/InputGUI1.png>] (Code/InputGUI2.py)
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
 
 (Code/InputGUI2.py)
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-[17]
-
-Class scrbook Warning: `\caption' outside float.
-(scrbook)              Seems you are using `\caption' outside a float.
-(scrbook)              Maybe you are using a package that uses `\@makecaption'
-(scrbook)              without setting `\@captype' before.
-(scrbook)              Because I cannot detect the caption type, I'm using
-(scrbook)              the empty one. on input line 427.
-
-(Code/InputGUI2.py
-Underfull \vbox (badness 1005) has occurred while \output is active []
-
- [18 <./Bilder/InputGUI1.png>])
-<Bilder/InputGUI2.png, id=404, 642.4pt x 511.9125pt>
+<Bilder/InputGUI2.png, id=622, 642.4pt x 511.9125pt>
 File: Bilder/InputGUI2.png Graphic file (type png)
 <use Bilder/InputGUI2.png>
-Package pdftex.def Info: Bilder/InputGUI2.png  used on input line 430.
+Package pdftex.def Info: Bilder/InputGUI2.png  used on input line 457.
 (pdftex.def)             Requested size: 441.01775pt x 351.44688pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(Code/InputGUI3.py)
-Overfull \hbox (41.76027pt too wide) in paragraph at lines 436--437
+ [23] (Code/InputGUI3.py)
+Overfull \hbox (41.76158pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/12 Um nun al-le Au-gen in ei-nem Bild zu er-ken-nen, kann nun wie-
 der die Me-tho-de \OT1/cmtt/m/n/12 detectMultiScale
  []
 
-(Code/InputGUI3.py) [19]
-
-Class scrbook Warning: `\caption' outside float.
-(scrbook)              Seems you are using `\caption' outside a float.
-(scrbook)              Maybe you are using a package that uses `\@makecaption'
-(scrbook)              without setting `\@captype' before.
-(scrbook)              Because I cannot detect the caption type, I'm using
-(scrbook)              the empty one. on input line 439.
-
-(Code/InputGUI3.py [20 <./Bilder/InputGUI2.png>])
-<Bilder/InputGUI3.png, id=446, 642.4pt x 511.9125pt>
+(Code/InputGUI3.py [24 <./Bilder/InputGUI2.png>]) (Code/InputGUI3.py [25])
+<Bilder/InputGUI3.png, id=690, 642.4pt x 511.9125pt>
 File: Bilder/InputGUI3.png Graphic file (type png)
 <use Bilder/InputGUI3.png>
-Package pdftex.def Info: Bilder/InputGUI3.png  used on input line 442.
+Package pdftex.def Info: Bilder/InputGUI3.png  used on input line 469.
 (pdftex.def)             Requested size: 441.01775pt x 351.44688pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21]
-<Bilder/Disgust1.png, id=488, 642.4pt x 491.8375pt>
+<Bilder/Disgust1.png, id=695, 642.4pt x 491.8375pt>
 File: Bilder/Disgust1.png Graphic file (type png)
 <use Bilder/Disgust1.png>
-Package pdftex.def Info: Bilder/Disgust1.png  used on input line 470.
+Package pdftex.def Info: Bilder/Disgust1.png  used on input line 497.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust2.png, id=489, 642.4pt x 491.8375pt>
+<Bilder/Disgust2.png, id=696, 642.4pt x 491.8375pt>
 File: Bilder/Disgust2.png Graphic file (type png)
 <use Bilder/Disgust2.png>
-Package pdftex.def Info: Bilder/Disgust2.png  used on input line 474.
+Package pdftex.def Info: Bilder/Disgust2.png  used on input line 501.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust3.png, id=490, 642.4pt x 491.8375pt>
+<Bilder/Disgust3.png, id=697, 642.4pt x 491.8375pt>
 File: Bilder/Disgust3.png Graphic file (type png)
 <use Bilder/Disgust3.png>
-Package pdftex.def Info: Bilder/Disgust3.png  used on input line 478.
+Package pdftex.def Info: Bilder/Disgust3.png  used on input line 505.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust4.png, id=491, 642.4pt x 491.8375pt>
+<Bilder/Disgust4.png, id=698, 642.4pt x 491.8375pt>
 File: Bilder/Disgust4.png Graphic file (type png)
 <use Bilder/Disgust4.png>
-Package pdftex.def Info: Bilder/Disgust4.png  used on input line 482.
+Package pdftex.def Info: Bilder/Disgust4.png  used on input line 509.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust5.png, id=492, 642.4pt x 491.8375pt>
+<Bilder/Disgust5.png, id=699, 642.4pt x 491.8375pt>
 File: Bilder/Disgust5.png Graphic file (type png)
 <use Bilder/Disgust5.png>
-Package pdftex.def Info: Bilder/Disgust5.png  used on input line 486.
+Package pdftex.def Info: Bilder/Disgust5.png  used on input line 513.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust6.png, id=493, 642.4pt x 491.8375pt>
+<Bilder/Disgust6.png, id=700, 642.4pt x 491.8375pt>
 File: Bilder/Disgust6.png Graphic file (type png)
 <use Bilder/Disgust6.png>
-Package pdftex.def Info: Bilder/Disgust6.png  used on input line 490.
+Package pdftex.def Info: Bilder/Disgust6.png  used on input line 517.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust7.png, id=494, 642.4pt x 491.8375pt>
+<Bilder/Disgust7.png, id=701, 642.4pt x 491.8375pt>
 File: Bilder/Disgust7.png Graphic file (type png)
 <use Bilder/Disgust7.png>
-Package pdftex.def Info: Bilder/Disgust7.png  used on input line 494.
+Package pdftex.def Info: Bilder/Disgust7.png  used on input line 521.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust8.png, id=495, 642.4pt x 491.8375pt>
+<Bilder/Disgust8.png, id=702, 642.4pt x 491.8375pt>
 File: Bilder/Disgust8.png Graphic file (type png)
 <use Bilder/Disgust8.png>
-Package pdftex.def Info: Bilder/Disgust8.png  used on input line 498.
+Package pdftex.def Info: Bilder/Disgust8.png  used on input line 525.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust9.png, id=496, 642.4pt x 491.8375pt>
+<Bilder/Disgust9.png, id=703, 642.4pt x 491.8375pt>
 File: Bilder/Disgust9.png Graphic file (type png)
 <use Bilder/Disgust9.png>
-Package pdftex.def Info: Bilder/Disgust9.png  used on input line 502.
+Package pdftex.def Info: Bilder/Disgust9.png  used on input line 529.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust10.png, id=497, 642.4pt x 491.8375pt>
+<Bilder/Disgust10.png, id=704, 642.4pt x 491.8375pt>
 File: Bilder/Disgust10.png Graphic file (type png)
 <use Bilder/Disgust10.png>
-Package pdftex.def Info: Bilder/Disgust10.png  used on input line 506.
+Package pdftex.def Info: Bilder/Disgust10.png  used on input line 533.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
-<Bilder/Disgust11.png, id=498, 642.4pt x 491.8375pt>
+<Bilder/Disgust11.png, id=705, 642.4pt x 491.8375pt>
 File: Bilder/Disgust11.png Graphic file (type png)
 <use Bilder/Disgust11.png>
-Package pdftex.def Info: Bilder/Disgust11.png  used on input line 510.
+Package pdftex.def Info: Bilder/Disgust11.png  used on input line 537.
 (pdftex.def)             Requested size: 88.2022pt x 67.52841pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 523--565
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 550--592
 [][] [] 
  []
 
-[22 <./Bilder/InputGUI3.png>]
-Underfull \vbox (badness 3525) has occurred while \output is active []
+[26] [27 <./Bilder/InputGUI3.png>] [28 <./Bilder/Disgust1.png (PNG copy)> <./Bi
+lder/Disgust2.png (PNG copy)> <./Bilder/Disgust3.png (PNG copy)> <./Bilder/Disg
+ust4.png (PNG copy)> <./Bilder/Disgust5.png (PNG copy)> <./Bilder/Disgust6.png 
+(PNG copy)> <./Bilder/Disgust7.png (PNG copy)> <./Bilder/Disgust8.png (PNG copy
+)> <./Bilder/Disgust9.png (PNG copy)> <./Bilder/Disgust10.png (PNG copy)> <./Bi
+lder/Disgust11.png (PNG copy)>] [29] (Code/OrganizingTheDataset.py [30])
+(Code/ClassifierHandler.py) [31] [32] (Code/ClassifierHandler.py)
+(Code/ClassifierHandler.py) (Code/ClassifierHandler.py) [33]
+(Code/ClassifierHandler.py [34]) [35]
+Kapitel 5.
+[36
 
- [23 <./Bilder/Disgust1.png (PNG copy)> <./Bilder/Disgust2.png (PNG copy)> <./B
-ilder/Disgust3.png (PNG copy)> <./Bilder/Disgust4.png (PNG copy)> <./Bilder/Dis
-gust5.png (PNG copy)> <./Bilder/Disgust6.png (PNG copy)> <./Bilder/Disgust7.png
- (PNG copy)> <./Bilder/Disgust8.png (PNG copy)> <./Bilder/Disgust9.png (PNG cop
-y)> <./Bilder/Disgust10.png (PNG copy)> <./Bilder/Disgust11.png (PNG copy)>] [2
-4] [25]
-(Code/OrganizingTheDataset.py
-Underfull \vbox (badness 3919) has occurred while \output is active []
+]
 
- [26])
-(Code/ClassifierHandler.py) (Code/ClassifierHandler.py [27] [28])
-(Code/ClassifierHandler.py) (Code/ClassifierHandler.py) [29]
-(Code/ClassifierHandler.py
-Underfull \vbox (badness 3417) has occurred while \output is active []
+Package hyperref Warning: Suppressing empty link on input line 694.
 
- [30])
-[31]
-Overfull \hbox (49.53731pt too wide) in paragraph at lines 660--675
+
+Overfull \hbox (49.53731pt too wide) in paragraph at lines 697--712
  [][] 
  []
 
 
+Package hyperref Warning: Suppressing empty link on input line 715.
+
+
+Package hyperref Warning: Suppressing empty link on input line 757.
+
+[37]
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[32]
-<Bilder/ModelSummary.png, id=657, 457.71pt x 1850.915pt>
+<Bilder/ModelSummary.png, id=877, 457.71pt x 1850.915pt>
 File: Bilder/ModelSummary.png Graphic file (type png)
 <use Bilder/ModelSummary.png>
-Package pdftex.def Info: Bilder/ModelSummary.png  used on input line 726.
-(pdftex.def)             Requested size: 301.125pt x 669.50125pt.
-File: Bilder/ModelSummary.png Graphic file (type png)
-<use Bilder/ModelSummary.png>
-Package pdftex.def Info: Bilder/ModelSummary.png  used on input line 729.
-(pdftex.def)             Requested size: 315.17749pt x 883.29999pt.
+Package pdftex.def Info: Bilder/ModelSummary.png  used on input line 765.
+(pdftex.def)             Requested size: 160.2009pt x 647.82996pt.
+[38] [39]
+<Bilder/loss_history.png, id=890, 433.62pt x 289.08pt>
+File: Bilder/loss_history.png Graphic file (type png)
+<use Bilder/loss_history.png>
+Package pdftex.def Info: Bilder/loss_history.png  used on input line 777.
+(pdftex.def)             Requested size: 441.01775pt x 294.02841pt.
+<Bilder/accuracy_history.png, id=891, 433.62pt x 289.08pt>
+File: Bilder/accuracy_history.png Graphic file (type png)
+<use Bilder/accuracy_history.png>
+Package pdftex.def Info: Bilder/accuracy_history.png  used on input line 780.
+(pdftex.def)             Requested size: 441.01775pt x 294.02841pt.
 
-
-LaTeX Warning: Float too large for page by 180.5169pt on input line 730.
-
-File: Bilder/ModelSummary.png Graphic file (type png)
-<use Bilder/ModelSummary.png>
-Package pdftex.def Info: Bilder/ModelSummary.png  used on input line 732.
-(pdftex.def)             Requested size: 456.70624pt x 511.91249pt.
-
-Overfull \hbox (15.68849pt too wide) in paragraph at lines 732--733
-[][] 
+Overfull \hbox (32.29259pt too wide) in paragraph at lines 771--785
+\OT1/cmtt/m/n/12 fit \OT1/cmr/m/n/12 de-ren Ver-wen-dung im ein-fach-sten Fall 
+fol-gen-der-ma-en aus-sieht: \OT1/cmtt/m/n/12 fit(x=Trainingsdaten,
  []
 
+[40 <./Bilder/ModelSummary.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Suppressing empty link on input line 787.
 
+[41] [42]
+Overfull \hbox (3.70808pt too wide) in paragraph at lines 802--811
+\OT1/cmr/m/n/12 [[0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 61\OML/cmm/m/it/12 ; \OT1/
+cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 30\OML/cmm/m/it/12 ; \OT1/cmr/m/n
+/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\O
+ML/cmm/m/it/12 :\OT1/cmr/m/n/12 01\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/
+m/it/12 :\OT1/cmr/m/n/12 76\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12
+ :\OT1/cmr/m/n/12 95]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT
+1/cmr/m/n/12 31\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m
+/n/12 22\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5
+1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 41\OML/c
+mm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 01\OML/cmm/m/it
+/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 55]]$ Wo-bei je-weils 
+ein Wert
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 812--814
 
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[45] [46 <./Bilder/loss_history.png> <./Bilder/accuracy_history.png>]
+Kapitel 6.
+[47
 
- [33]
-chapter 5.
-[34]
-chapter 6.
-[35] [36] [37]
-Overfull \hbox (97.10127pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/it/12 Face re-co-gni-ti-on using Open-CV and Py-thon\OT1/cmr/m/n/1
-2 . https://www.superdatascience.com/blogs/opencv-
+]
+Kapitel 7.
+[48
+
+]
+Kapitel 8.
+[49
+
+] [50]
+Overfull \hbox (8.88002pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/it/12 Einf[]uhrung in Ke-ras\OT1/cmr/m/n/12 . https://datasolut.
+com/einfuehrung-in-keras/. Ein-sicht-
+ []
+
+[51
+
+]
+Overfull \hbox (101.42902pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/it/12 Face re-co-gni-ti-on using Open-CV and Py-thon\OT1/cmr/m/n
+/12 . https://www.superdatascience.com/blogs/opencv-
  []
 
 
-Overfull \hbox (38.85608pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/it/12 Integralbild\OT1/cmr/m/n/12 . htt-ps://de.wikipedia.org/wiki
-/Integralbild. Ein-sicht-nah-me: 22.03.2020.
- []
-
-[38]
-Overfull \hbox (151.76901pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/it/12 Opencv Do-ku-men-ta-ti-on\OT1/cmr/m/n/12 . htt-ps://docs.ope
-ncv.org/2.4/modules/contrib/doc/facerec/facerec[]tutorial.html.
+Overfull \hbox (43.18382pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/it/12 Integralbild\OT1/cmr/m/n/12 . htt-ps://de.wikipedia.org/wi
+ki/Integralbild. Ein-sicht-nah-me: 22.03.2020.
  []
 
 
-Overfull \hbox (140.87112pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/n/12 Will Ber-ger. \OT1/cmr/m/it/12 DE-EP LEAR-NING HAAR CAS-CA-DE
- EX-PLAI-NED\OT1/cmr/m/n/12 . http://www.willberger.org/cascade-
+Overfull \hbox (156.09676pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/it/12 Opencv Do-ku-men-ta-ti-on\OT1/cmr/m/n/12 . htt-ps://docs.o
+pencv.org/2.4/modules/contrib/doc/facerec/facerec[]tutorial.html.
  []
 
 
-Overfull \hbox (4.94403pt too wide) in paragraph at lines 797--797
+Overfull \hbox (190.36723pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/it/12 Opencv Do-ku-men-ta-ti-on\OT1/cmr/m/n/12 . htt-ps://docs.o
+pencv.org/2.4/modules/contrib/doc/facerec/facerec[]tutorial.html#local-
+ []
+
+
+Overfull \hbox (145.19887pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/n/12 Will Ber-ger. \OT1/cmr/m/it/12 DE-EP LEAR-NING HAAR CAS-CA-
+DE EX-PLAI-NED\OT1/cmr/m/n/12 . http://www.willberger.org/cascade-
+ []
+
+
+Overfull \hbox (9.27177pt too wide) in paragraph at lines 865--865
 \OT1/cmr/m/it/12 for Fa-ci-al Ex-pres-si-on Ana-ly-sis\OT1/cmr/m/n/12 . http://
 www.consortium.ri.cmu.edu/ckagree/.
  []
 
 
-Overfull \hbox (22.02635pt too wide) in paragraph at lines 797--797
+Overfull \hbox (26.3541pt too wide) in paragraph at lines 865--865
 \OT1/cmr/m/it/12 phy-sio-lo-gi-schen Da-ten\OT1/cmr/m/n/12 . https://www.hci.ia
 o.fraunhofer.de/de/Human-Centered-
  []
 
 
-Overfull \hbox (10.22566pt too wide) in paragraph at lines 797--797
+Overfull \hbox (14.5534pt too wide) in paragraph at lines 865--865
 \OT1/cmr/m/n/12 AI/feinfuehlige-technik/KI-gestuetzte-Emotionserkennung.html. E
 in-sicht-nah-
  []
 
 
-Overfull \hbox (140.46614pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/n/12 Johannes Kuhn. \OT1/cmr/m/it/12 Emo-tio-nen sind schwer de-fi
--nier-bar\OT1/cmr/m/n/12 . https://www.sueddeutsche.de/digital/smartphone-
+Overfull \hbox (144.79388pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/n/12 Johannes Kuhn. \OT1/cmr/m/it/12 Emo-tio-nen sind schwer de-
+fi-nier-bar\OT1/cmr/m/n/12 . https://www.sueddeutsche.de/digital/smartphone-
  []
 
 
-Overfull \hbox (19.2278pt too wide) in paragraph at lines 797--797
+Overfull \hbox (23.55554pt too wide) in paragraph at lines 865--865
 \OT1/cmr/m/n/12 software-emotionen-simulation-ki-1.4377004-2. Ein-sicht-nah-me:
 24.01.2020. 2019. 
  []
 
 
-Overfull \hbox (0.47243pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/n/12 Mateusz Opa-la. \OT1/cmr/m/it/12 Top Ma-chi-ne Lear-ning Fra-
-me-works Com-pa-red: Scikit-Learn,
+Overfull \hbox (4.80017pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/n/12 Mateusz Opa-la. \OT1/cmr/m/it/12 Top Ma-chi-ne Lear-ning Fr
+a-me-works Com-pa-red: Scikit-Learn,
  []
 
 
-Overfull \hbox (26.78833pt too wide) in paragraph at lines 797--797
-\OT1/cmr/m/it/12 Dlib, MLib, Ten-sor-flow, and Mo-re\OT1/cmr/m/n/12 . https://w
-ww.netguru.com/blog/top-machine-
- []
-
-
-Overfull \hbox (2.6642pt too wide) in paragraph at lines 797--797
+Overfull \hbox (6.99194pt too wide) in paragraph at lines 865--865
 \OT1/cmr/m/it/12 lernt sein\OT1/cmr/m/n/12 . https://mixed.de/kuenstliche-intel
 ligenz-emotionserkennung-will-
  []
 
 
-Overfull \hbox (14.36395pt too wide) in paragraph at lines 797--797
-[]\OT1/cmr/m/n/12 Nico Lit-zel Ste-fan Lu-ber. \OT1/cmr/m/it/12 Was ist Ke-ras?
- \OT1/cmr/m/n/12 https://www.bigdata-insider.de/was-
+Overfull \hbox (18.6917pt too wide) in paragraph at lines 865--865
+[][]\OT1/cmr/m/n/12 Nico Lit-zel Ste-fan Lu-ber. \OT1/cmr/m/it/12 Was ist Ke-ra
+s? \OT1/cmr/m/n/12 https://www.bigdata-insider.de/was-
  []
 
-[39] [40 <./Bilder/ModelSummary.png>] [41] [42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 802.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 802.
- (Praxisarbeit-template.aux
-(Titelseite.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 802.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 802.
+[52]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 870.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 870.
+ (Praxisarbeit-template.aux (Titelseite.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 870.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 870.
 Package rerunfilecheck Info: File `Praxisarbeit-template.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: E24EAD4DF8024530768D3B84A17BE03D;3858.
 Package logreq Info: Writing requests to 'Praxisarbeit-template.run.xml'.
 \openout1 = `Praxisarbeit-template.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40791 strings out of 492444
- 930210 string characters out of 3118868
- 1694749 words of memory out of 3000000
- 44126 multiletter control sequences out of 15000+200000
- 9805 words of font info for 35 fonts, out of 3000000 for 9000
+ 40003 strings out of 492444
+ 895094 string characters out of 3118868
+ 1524045 words of memory out of 3000000
+ 43287 multiletter control sequences out of 15000+200000
+ 13271 words of font info for 51 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 73i,12n,103p,10145b,2293s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not ex
+ 68i,12n,98p,2247b,2328s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.36} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.35} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.34} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1986,9 +1960,9 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
 <C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/A675866/AppData/Local/P
+/cm/cmbx12.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmcsc10.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/A675866/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/A675866/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
 Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
@@ -1996,16 +1970,14 @@ cmr10.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/A675866/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/A675866/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/A6
-75866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/A675866/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Praxisarbeit-template.pdf (48 pages, 4993191 bytes).
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/A675
+866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
+><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmti12.pfb><C:/Users/A675866/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb>
+Output written on Praxisarbeit-template.pdf (60 pages, 5030917 bytes).
 PDF statistics:
- 1006 PDF objects out of 1200 (max. 8388607)
- 363 named destinations out of 1000 (max. 500000)
- 537 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1093 PDF objects out of 1200 (max. 8388607)
+ 384 named destinations out of 1000 (max. 500000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 

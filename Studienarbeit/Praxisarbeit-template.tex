@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper]{report}
 \usepackage[utf8]{inputenc}
+\usepackage{float}
 \usepackage{csquotes}
 \usepackage[german]{babel}
 \usepackage{hyperref}
@@ -12,11 +13,6 @@
 \usepackage{pgfplots}
 %\usepackage{chngcntr}
 %\counterwithout{figure}{chapter}
-\renewcommand{\thefigure}{\Alph{figure}}
-
-
-
-
 \usepackage{caption}
 \DeclareCaptionFormat{citation}{%
    \ifx\captioncitation\relax\relax\else
@@ -89,9 +85,13 @@ Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift
 \end{acronym}
 \newpage
 %\renewcommand*{\chapterpagestyle}{empty}
+\renewcommand{\thefigure}{\Alph{figure}}
+\renewcommand{\thetable}{\Alph{figure}}
+
 \tableofcontents
-\newpage
 \listoffigures
+\listoftables
+\lstlistoflistings
 \newpage
 \chapter{Einleitung}
 \pagestyle{plain}
@@ -759,14 +759,10 @@ Die letzte der Tabelle zu entnehmende Information befindet sich in der Spalte \t
 
 \subsection{Modell}
 Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert und \ref{fig:Model Summary}
-\begin{figure}[h]
-\includegraphics[viewport=0 1177 300 1844]{Bilder/ModelSummary.png}
-\end{figure}
-\begin{figure}[h]
-\includegraphics[viewport=-14 150 300 1030]{Bilder/ModelSummary.png}
-\end{figure}
-\begin{figure}[h]
-\includegraphics[viewport=0 0 455 510]{Bilder/ModelSummary.png}
+
+\begin{figure}[H]
+\center
+\includegraphics[scale=0.35]{Bilder/ModelSummary.png}
 \caption{ Model Summary with several Layers and I/O Shapes }
 \label{fig:Model Summary}
 \end{figure}
