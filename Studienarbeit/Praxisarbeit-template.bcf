@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.7" bltxversion="3.14" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.6" bltxversion="3.13a" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -413,6 +413,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">ibidpage</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
     <bcf:option datatype="integer">maxnames</bcf:option>
@@ -829,15 +830,17 @@
   <bcf:sortingnamekeytemplate name="global">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
-      <bcf:part type="namepart" order="2">family</bcf:part>
     </bcf:keypart>
     <bcf:keypart order="2">
-      <bcf:part type="namepart" order="1">given</bcf:part>
+      <bcf:part type="namepart" order="1">family</bcf:part>
     </bcf:keypart>
     <bcf:keypart order="3">
-      <bcf:part type="namepart" order="1">suffix</bcf:part>
+      <bcf:part type="namepart" order="1">given</bcf:part>
     </bcf:keypart>
     <bcf:keypart order="4">
+      <bcf:part type="namepart" order="1">suffix</bcf:part>
+    </bcf:keypart>
+    <bcf:keypart order="5">
       <bcf:part type="namepart" order="1" use="0">prefix</bcf:part>
     </bcf:keypart>
   </bcf:sortingnamekeytemplate>
@@ -848,7 +851,6 @@
       <bcf:constant type="list" name="gender">sf,sm,sn,pf,pm,pn,pp</bcf:constant>
       <bcf:constant type="list" name="nameparts">family,given,prefix,suffix</bcf:constant>
       <bcf:constant type="list" name="optiondatatypes">boolean,integer,string,xml</bcf:constant>
-      <bcf:constant type="list" name="multiscriptforms">default,transliteration,transcription,translation</bcf:constant>
     </bcf:constants>
     <bcf:entrytypes>
       <bcf:entrytype>article</bcf:entrytype>
@@ -1919,60 +1921,6 @@
       <bcf:field>type</bcf:field>
       <bcf:field>venue</bcf:field>
     </bcf:entryfields>
-    <bcf:multiscriptfields>
-      <bcf:field>abstract</bcf:field>
-      <bcf:field>addendum</bcf:field>
-      <bcf:field>afterword</bcf:field>
-      <bcf:field>annotator</bcf:field>
-      <bcf:field>author</bcf:field>
-      <bcf:field>bookauthor</bcf:field>
-      <bcf:field>booksubtitle</bcf:field>
-      <bcf:field>booktitle</bcf:field>
-      <bcf:field>booktitleaddon</bcf:field>
-      <bcf:field>chapter</bcf:field>
-      <bcf:field>commentator</bcf:field>
-      <bcf:field>editor</bcf:field>
-      <bcf:field>editora</bcf:field>
-      <bcf:field>editorb</bcf:field>
-      <bcf:field>editorc</bcf:field>
-      <bcf:field>foreword</bcf:field>
-      <bcf:field>holder</bcf:field>
-      <bcf:field>institution</bcf:field>
-      <bcf:field>introduction</bcf:field>
-      <bcf:field>issuesubtitle</bcf:field>
-      <bcf:field>issuetitle</bcf:field>
-      <bcf:field>journalsubtitle</bcf:field>
-      <bcf:field>journaltitle</bcf:field>
-      <bcf:field>location</bcf:field>
-      <bcf:field>mainsubtitle</bcf:field>
-      <bcf:field>maintitle</bcf:field>
-      <bcf:field>maintitleaddon</bcf:field>
-      <bcf:field>nameaddon</bcf:field>
-      <bcf:field>note</bcf:field>
-      <bcf:field>organization</bcf:field>
-      <bcf:field>origlanguage</bcf:field>
-      <bcf:field>origlocation</bcf:field>
-      <bcf:field>origpublisher</bcf:field>
-      <bcf:field>origtitle</bcf:field>
-      <bcf:field>part</bcf:field>
-      <bcf:field>publisher</bcf:field>
-      <bcf:field>relatedstring</bcf:field>
-      <bcf:field>series</bcf:field>
-      <bcf:field>shortauthor</bcf:field>
-      <bcf:field>shorteditor</bcf:field>
-      <bcf:field>shorthand</bcf:field>
-      <bcf:field>shortjournal</bcf:field>
-      <bcf:field>shortseries</bcf:field>
-      <bcf:field>shorttitle</bcf:field>
-      <bcf:field>sortname</bcf:field>
-      <bcf:field>sortshorthand</bcf:field>
-      <bcf:field>sorttitle</bcf:field>
-      <bcf:field>subtitle</bcf:field>
-      <bcf:field>title</bcf:field>
-      <bcf:field>titleaddon</bcf:field>
-      <bcf:field>translator</bcf:field>
-      <bcf:field>venue</bcf:field>
-    </bcf:multiscriptfields>
     <bcf:constraints>
       <bcf:entrytype>article</bcf:entrytype>
       <bcf:entrytype>book</bcf:entrytype>
@@ -2201,21 +2149,23 @@
     <bcf:citekey order="17">netguru</bcf:citekey>
     <bcf:citekey order="18">Dlib</bcf:citekey>
     <bcf:citekey order="19">Keras</bcf:citekey>
-    <bcf:citekey order="20">Unsupervised</bcf:citekey>
-    <bcf:citekey order="21">Supervised</bcf:citekey>
-    <bcf:citekey order="22">willberger</bcf:citekey>
-    <bcf:citekey order="23">integral</bcf:citekey>
-    <bcf:citekey order="24">willberger</bcf:citekey>
+    <bcf:citekey order="20">Keras2</bcf:citekey>
+    <bcf:citekey order="21">Unsupervised</bcf:citekey>
+    <bcf:citekey order="22">Supervised</bcf:citekey>
+    <bcf:citekey order="23">willberger</bcf:citekey>
+    <bcf:citekey order="24">integral</bcf:citekey>
     <bcf:citekey order="25">willberger</bcf:citekey>
-    <bcf:citekey order="26">Eigenface</bcf:citekey>
-    <bcf:citekey order="27">Fisherface</bcf:citekey>
-    <bcf:citekey order="28">Eigenface</bcf:citekey>
-    <bcf:citekey order="29">CK</bcf:citekey>
-    <bcf:citekey order="30">FER-Challenge</bcf:citekey>
-    <bcf:citekey order="31">EmotionInSpeech</bcf:citekey>
-    <bcf:citekey order="32">MusicEmotion</bcf:citekey>
-    <bcf:citekey order="33">EmotionInSound</bcf:citekey>
-    <bcf:citekey order="34">EmotionInSound</bcf:citekey>
+    <bcf:citekey order="26">willberger</bcf:citekey>
+    <bcf:citekey order="27">Eigenface</bcf:citekey>
+    <bcf:citekey order="28">Fisherface</bcf:citekey>
+    <bcf:citekey order="29">Eigenface</bcf:citekey>
+    <bcf:citekey order="30">Recognizer</bcf:citekey>
+    <bcf:citekey order="31">CK</bcf:citekey>
+    <bcf:citekey order="32">FER-Challenge</bcf:citekey>
+    <bcf:citekey order="33">EmotionInSpeech</bcf:citekey>
+    <bcf:citekey order="34">MusicEmotion</bcf:citekey>
+    <bcf:citekey order="35">EmotionInSound</bcf:citekey>
+    <bcf:citekey order="36">EmotionInSound</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

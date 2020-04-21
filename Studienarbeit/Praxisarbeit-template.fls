@@ -1,0 +1,586 @@
+PWD c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit
+INPUT C:\Users\Kevin\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.tex
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.log
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\german.ldf
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\german.ldf
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\germanb.ldf
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifluatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hycolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hycolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\xcolor-patch.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\xcolor-patch.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hopatch.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hopatch.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\bitset.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\bitset.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\bigintcalc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\bigintcalc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifpdf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfint.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorerdf.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscore.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgfplotslibrary.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsliststructure.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsliststructureext.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.data.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.verb.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surfshading.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolormap.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolor.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsstackedplots.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsplothandlers.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplothandler.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplotimage.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.scaling.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscoordprocessing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.errorbars.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.markers.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsticks.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.paths.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lstautodedent\lstautodedent.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\lstautodedent\lstautodedent.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\dirtree\dirtree.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\dirtree\dirtree.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\dirtree\dirtree.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\dirtree\dirtree.tex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-natbib.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-natbib.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\alphabetic.bbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\alphabetic.bbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\authortitle-ibid.cbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\authortitle-ibid.cbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\german.lbx
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\german.lbx
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.aux
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.aux
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.pdf
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.bcf
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.bbl
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.bbl
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.bbl
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.tex
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.tex
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\DHBW_logo.jpg
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\DHBW_logo.jpg
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\DHBW_logo.jpg
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\DHBW_logo.jpg
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\DHBW_logo.jpg
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Atos_logo.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Atos_logo.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Atos_logo.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Atos_logo.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Atos_logo.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\Kevin\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.toc
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.toc
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.toc
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.lof
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.lof
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.lof
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\FaceRecognition.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\FaceRecognition.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\FaceRecognition.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\FaceRecognition.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\FaceRecognition.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\haar-cascade.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\haar-cascade.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\haar-cascade.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\haar-cascade.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\haar-cascade.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\RGB.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\RGB.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\RGB.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\RGB.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\RGB.png
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI1.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI1.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI1.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI2.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\InputGUI3.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\InputGUI3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust1.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust2.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust3.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust4.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust4.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust4.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust4.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust4.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust5.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust5.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust5.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust5.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust5.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust6.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust6.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust6.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust6.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust6.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust7.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust7.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust7.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust7.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust7.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust8.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust8.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust8.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust8.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust8.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust9.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust9.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust9.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust9.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust9.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust10.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust10.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust10.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust10.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust10.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust11.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust11.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust11.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust11.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\Disgust11.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmcsc10.tfm
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\OrganizingTheDataset.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\OrganizingTheDataset.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\OrganizingTheDataset.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Code\ClassifierHandler.py
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\ModelSummary.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\loss_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\loss_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\loss_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\loss_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\loss_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\accuracy_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\accuracy_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\accuracy_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\accuracy_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Bilder\accuracy_history.png
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Titelseite.aux
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.out
+INPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.run.xml
+OUTPUT c:\Users\Kevin\Documents\OpenCVClone\Studienarbeit\Praxisarbeit-template.run.xml
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
