@@ -1,0 +1,785 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{Keras2}{misc}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://datasolut.com/einfuehrung-in-keras/}
+      \field{note}{Einsichtnahme:15.03.2020}
+      \field{title}{Einführung in Keras}
+    \endentry
+    \entry{Eigenface}{misc}{}
+      \field{labelalpha}{17}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.superdatascience.com/blogs/opencv-face-recognition}
+      \field{note}{Einsichtnahme: 23.03.2020}
+      \field{title}{Face recognition using OpenCV and Python}
+      \field{year}{2017}
+    \endentry
+    \entry{integral}{misc}{}
+      \field{labelalpha}{17}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://de.wikipedia.org/wiki/Integralbild}
+      \field{note}{Einsichtnahme: 22.03.2020}
+      \field{title}{Integralbild}
+      \field{year}{2017}
+    \endentry
+    \entry{Dlib}{misc}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{1}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://dlib.net/}
+      \field{note}{Einsichtnahme:07.03.2020}
+      \field{title}{Dlib C++ Library}
+      \field{year}{2019}
+    \endentry
+    \entry{Fisherface}{misc}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec\_tutorial.html}
+      \field{note}{Einsichtnahme: 23.03.2020}
+      \field{title}{Opencv Dokumentation}
+      \field{year}{2019}
+    \endentry
+    \entry{Recognizer}{misc}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraalpha}{3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec\_tutorial.html\#local-binary-patterns-histograms}
+      \field{note}{Einsichtnahme: 01.04.2020}
+      \field{title}{Opencv Dokumentation}
+      \field{year}{2019}
+    \endentry
+    \entry{willberger}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=489219f94e510e948ad736cd2dd88545}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{489219f94e510e948ad736cd2dd88545}
+      \strng{fullhash}{489219f94e510e948ad736cd2dd88545}
+      \strng{bibnamehash}{489219f94e510e948ad736cd2dd88545}
+      \strng{authorbibnamehash}{489219f94e510e948ad736cd2dd88545}
+      \strng{authornamehash}{489219f94e510e948ad736cd2dd88545}
+      \strng{authorfullhash}{489219f94e510e948ad736cd2dd88545}
+      \field{labelalpha}{Ber18}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://www.willberger.org/cascade-haar-explained/}
+      \field{note}{Einsichtnahme: 22.03.2020}
+      \field{title}{DEEP LEARNING HAAR CASCADE EXPLAINED}
+      \field{year}{2018}
+    \endentry
+    \entry{CK}{misc}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5026993934c9ee18842362cd4d17b55e}{%
+           family={Cohn},
+           familyi={C\bibinitperiod},
+           given={Jeffrey\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45496c6a7530cfbfb4f3218a2602b77e}{%
+           family={Kanade},
+           familyi={K\bibinitperiod},
+           given={Takeo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03f21fd83ed3b25ce1c7ef18a13aba61}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yingli},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{075b9254cc56ae422df00a04f3a53ba2}
+      \strng{fullhash}{075b9254cc56ae422df00a04f3a53ba2}
+      \strng{bibnamehash}{075b9254cc56ae422df00a04f3a53ba2}
+      \strng{authorbibnamehash}{075b9254cc56ae422df00a04f3a53ba2}
+      \strng{authornamehash}{075b9254cc56ae422df00a04f3a53ba2}
+      \strng{authorfullhash}{075b9254cc56ae422df00a04f3a53ba2}
+      \field{labelalpha}{CKT00}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://www.consortium.ri.cmu.edu/ckagree/}
+      \field{note}{Einsichtnahme:07.03.2020}
+      \field{title}{Comprehensive Database for Facial Expression Analysis}
+      \field{year}{2000}
+    \endentry
+    \entry{Frauenhofer}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f34738d13943bab878d07cb33c917adc}{%
+           family={Diederichs},
+           familyi={D\bibinitperiod},
+           given={Dr.\bibnamedelimi Frederik},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f34738d13943bab878d07cb33c917adc}
+      \strng{fullhash}{f34738d13943bab878d07cb33c917adc}
+      \strng{bibnamehash}{f34738d13943bab878d07cb33c917adc}
+      \strng{authorbibnamehash}{f34738d13943bab878d07cb33c917adc}
+      \strng{authornamehash}{f34738d13943bab878d07cb33c917adc}
+      \strng{authorfullhash}{f34738d13943bab878d07cb33c917adc}
+      \field{labelalpha}{Die20}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.hci.iao.fraunhofer.de/de/Human-Centered-AI/feinfuehlige-technik/KI-gestuetzte-Emotionserkennung.html}
+      \field{note}{Einsichtnahme:24.01.2020}
+      \field{title}{KI-gestützte Emotionserkennung im Fahrzeug aus physiologischen Daten}
+      \field{year}{2020}
+    \endentry
+    \entry{Unsupervised}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b5b64b68ffe25db966e757f3d5821c75}{%
+           family={Giuseppe},
+           familyi={G\bibinitperiod},
+           given={Bonaccorsor},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Birmingham}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{b5b64b68ffe25db966e757f3d5821c75}
+      \strng{fullhash}{b5b64b68ffe25db966e757f3d5821c75}
+      \strng{bibnamehash}{b5b64b68ffe25db966e757f3d5821c75}
+      \strng{authorbibnamehash}{b5b64b68ffe25db966e757f3d5821c75}
+      \strng{authornamehash}{b5b64b68ffe25db966e757f3d5821c75}
+      \strng{authorfullhash}{b5b64b68ffe25db966e757f3d5821c75}
+      \field{labelalpha}{Giu19}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Auflage 1}
+      \field{isbn}{978-1789349276}
+      \field{title}{Hands-On Unsupervised Learning with Python}
+      \field{year}{2019}
+    \endentry
+    \entry{FER-Challenge}{misc}{}
+      \name{author}{28}{}{%
+        {{un=0,uniquepart=base,hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed3093ca2067edee4f9f8c32ad0dfb00}{%
+           family={Carrier},
+           familyi={C\bibinitperiod},
+           given={Pierre-Luc},
+           giveni={P\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de888487a30f49e96f975b467864545c}{%
+           family={Hamner},
+           familyi={H\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=847cee9758d796d99e9a8e46a56db7b3}{%
+           family={Cukierski},
+           familyi={C\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d1ea1358c52c890f2489fec3ccf1c45}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Yichuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1be21aa8e658cf643587014a63293626}{%
+           family={Thaler},
+           familyi={T\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21625086a5f2ed7349d554e6b3a0f646}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Dong-Hyun},
+           giveni={D\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99d818bd721f161cfa96d2747becaf80}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yingbo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7b52c8a03748063f0136cc155fdf070}{%
+           family={Ramaiah},
+           familyi={R\bibinitperiod},
+           given={Chetan},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=85ce886826d841c645b365bd25cd6d9d}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Fangxiang},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a45f6a7b0c42214e53fbf91fcd0df8ac}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ruifan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc39f0d03180551c2e4552ef7a78c8b9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaojie},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4483e9e3b53edd64b5b4c01008abf8a1}{%
+           family={Athanasakis},
+           familyi={A\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8feae4ec394a5f6905c74b1a7abff875}{%
+           family={Shawe-Taylor},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc3ee783b17de32940b8dde28ee2e80a}{%
+           family={Milakov},
+           familyi={M\bibinitperiod},
+           given={Maxim},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b3ffb15f84b531490a5f5c88c53d04c}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21e1e2ac468c3ac86a8505729f0d9aa1}{%
+           family={Ionescu},
+           familyi={I\bibinitperiod},
+           given={Radu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcc6ee17e48ce93987889c98efabe82a}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Marius},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a9767624b8b563a546eab24b73c169e}{%
+           family={Grozea},
+           familyi={G\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0bc66fe902c838c216bd3175dfeb045b}{%
+           family={Bergstra},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f410bb828039e3ab9a9b2ac52e7ff66}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Jingjing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e85bfdbced362e263956ce3aa2a4eac}{%
+           family={Romaszko},
+           familyi={R\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9528f027cfc353138c890ffbe0ed79da}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Unicer}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{1995b8661fc81f9bf1dfd0fae4672b40}
+      \strng{bibnamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorbibnamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{1995b8661fc81f9bf1dfd0fae4672b40}
+      \field{labelalpha}{Goo+13}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Challenges in Representation Learning: A report on three machine learning contests}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1307.0414\%7D
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1307.0414%5C%7D
+      \endverb
+    \endentry
+    \entry{Supervised}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=14cf93a9a2ccb8c8e3c56060d302aaa5}{%
+           family={Johnston},
+           familyi={J\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c95cb9d4bd7c0a3d4dca4937c271a07a}{%
+           family={Mathur},
+           familyi={M\bibinitperiod},
+           given={Ishita},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Birmingham}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd}%
+      }
+      \strng{namehash}{95665994a16d5cdfc544aac0f43c380b}
+      \strng{fullhash}{95665994a16d5cdfc544aac0f43c380b}
+      \strng{bibnamehash}{95665994a16d5cdfc544aac0f43c380b}
+      \strng{authorbibnamehash}{95665994a16d5cdfc544aac0f43c380b}
+      \strng{authornamehash}{95665994a16d5cdfc544aac0f43c380b}
+      \strng{authorfullhash}{95665994a16d5cdfc544aac0f43c380b}
+      \field{labelalpha}{JM19}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Auflage 1}
+      \field{isbn}{978-1789955835}
+      \field{title}{Applied Supervised Learning with Python}
+      \field{year}{2019}
+    \endentry
+    \entry{SZ}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a54c35ba9a872fb96e73e4b07b08fa9a}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \strng{fullhash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \strng{bibnamehash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \strng{authorbibnamehash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \strng{authornamehash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \strng{authorfullhash}{a54c35ba9a872fb96e73e4b07b08fa9a}
+      \field{labelalpha}{Kuh19}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.sueddeutsche.de/digital/smartphone-software-emotionen-simulation-ki-1.4377004-2}
+      \field{note}{Einsichtnahme:24.01.2020}
+      \field{title}{Emotionen sind schwer definierbar}
+      \field{year}{2019}
+    \endentry
+    \entry{FaceRec}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d754d966b6ba6a7f6f6a2a9a2cd9e5e9}{%
+           family={Leeland},
+           familyi={L\bibinitperiod},
+           given={Katherine\bibnamedelima B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nova Science Publishers INC}%
+      }
+      \strng{namehash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \strng{fullhash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \strng{bibnamehash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \strng{authorbibnamehash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \strng{authornamehash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \strng{authorfullhash}{d754d966b6ba6a7f6f6a2a9a2cd9e5e9}
+      \field{labelalpha}{Lee08}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1. Aufl.}
+      \field{isbn}{978-16045646625}
+      \field{title}{Face Recongnition: New Research}
+      \field{year}{2008}
+    \endentry
+    \entry{HandbookFaceRec}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=408352791a18146bf59fcc7568333f34}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Anil\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           suffix={Stan\bibnamedelimb Z.and\bibnamedelima Jain},
+           suffixi={S\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim J\bibinitperiod},
+           suffixun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media}%
+      }
+      \strng{namehash}{408352791a18146bf59fcc7568333f34}
+      \strng{fullhash}{408352791a18146bf59fcc7568333f34}
+      \strng{bibnamehash}{408352791a18146bf59fcc7568333f34}
+      \strng{authorbibnamehash}{408352791a18146bf59fcc7568333f34}
+      \strng{authornamehash}{408352791a18146bf59fcc7568333f34}
+      \strng{authorfullhash}{408352791a18146bf59fcc7568333f34}
+      \field{labelalpha}{Li05}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0387405957}
+      \field{title}{Handbook of Face Recognition}
+      \field{year}{2005}
+    \endentry
+    \entry{netguru}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=21efa8e12dc359e7665deefad7b625dc}{%
+           family={Opala},
+           familyi={O\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{21efa8e12dc359e7665deefad7b625dc}
+      \strng{fullhash}{21efa8e12dc359e7665deefad7b625dc}
+      \strng{bibnamehash}{21efa8e12dc359e7665deefad7b625dc}
+      \strng{authorbibnamehash}{21efa8e12dc359e7665deefad7b625dc}
+      \strng{authornamehash}{21efa8e12dc359e7665deefad7b625dc}
+      \strng{authorfullhash}{21efa8e12dc359e7665deefad7b625dc}
+      \field{labelalpha}{Opa18}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.netguru.com/blog/top-machine-learning-frameworks-compared}
+      \field{note}{Einsichtnahme:07.03.2020}
+      \field{title}{Top Machine Learning Frameworks Compared: Scikit-Learn, Dlib, MLib, Tensorflow, and More}
+      \field{year}{2018}
+    \endentry
+    \entry{EmotionInSound}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=56675287f8c6d638df3f5b98e67c8b9c}{%
+           family={Popova},
+           familyi={P\bibinitperiod},
+           given={Anastasiya\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b168791eabf5d4c34763e1a2331aed7}{%
+           family={Rassadin},
+           familyi={R\bibinitperiod},
+           given={Alexandr\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64ed321012569a695c768db74b7b91ab}{%
+           family={Ponomarenko},
+           familyi={P\bibinitperiod},
+           given={Alexander\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cham, Deutschland}%
+      }
+      \list{publisher}{1}{%
+        {Springer Verlag}%
+      }
+      \strng{namehash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \strng{fullhash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \strng{bibnamehash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \strng{authorbibnamehash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \strng{authornamehash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \strng{authorfullhash}{5ff67f8e6e5b8b84366f4d63c18cdc38}
+      \field{labelalpha}{PRP17}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3319666037}
+      \field{title}{Emotion Recognition in Sound}
+      \field{year}{2017}
+    \endentry
+    \entry{EmotionInSpeech}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c669222ea48a7f3b7922d17e4c551ec2}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={K.\bibnamedelimi Sreenivasa},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9101825d4c88dc6a9fc79876bf78b8c7}{%
+           family={Koolagudi},
+           familyi={K\bibinitperiod},
+           given={Shashidhar\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Deutschland}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media}%
+      }
+      \strng{namehash}{3781c2ce758f9168c8ff6035ab98e477}
+      \strng{fullhash}{3781c2ce758f9168c8ff6035ab98e477}
+      \strng{bibnamehash}{3781c2ce758f9168c8ff6035ab98e477}
+      \strng{authorbibnamehash}{3781c2ce758f9168c8ff6035ab98e477}
+      \strng{authornamehash}{3781c2ce758f9168c8ff6035ab98e477}
+      \strng{authorfullhash}{3781c2ce758f9168c8ff6035ab98e477}
+      \field{labelalpha}{RK12}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1. Auflage}
+      \field{isbn}{978-1461451433}
+      \field{title}{Emotion Recognition using Speech Features}
+      \field{year}{2012}
+    \endentry
+    \entry{mixedArticle}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=505f9b87d0d412f0db6cc20b965e42a4}{%
+           family={Schreiner},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \strng{fullhash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \strng{bibnamehash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \strng{authorbibnamehash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \strng{authornamehash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \strng{authorfullhash}{505f9b87d0d412f0db6cc20b965e42a4}
+      \field{labelalpha}{Sch19}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://mixed.de/kuenstliche-intelligenz-emotionserkennung-will-gelernt-sein/}
+      \field{note}{Einsichtnahme:24.01.2020}
+      \field{title}{Künstliche Intelligenz: Emotionserkennung will gelernt sein}
+      \field{year}{2019}
+    \endentry
+    \entry{IEEE}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5e47c686b076742c7dda88d3d8c0058a}{%
+           family={Saranya},
+           familyi={S\bibinitperiod},
+           given={R\bibnamedelima Benedict},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ceaa7278cfcfa4d37f377e09bba6e30}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi Satheesh},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Coimbatore - India}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \strng{fullhash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \strng{bibnamehash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \strng{authorbibnamehash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \strng{authornamehash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \strng{authorfullhash}{83f22f3e2f412238f3563bb7c5d0f978}
+      \field{labelalpha}{SK17}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1509037698}
+      \field{title}{Geometric shaped facial feature extraction for face recognition}
+      \field{year}{2017}
+    \endentry
+    \entry{Keras}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4d71cec0e3603cc9bd8336d8152832db}{%
+           family={Stefan\bibnamedelima Luber},
+           familyi={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Nico\bibnamedelima Litzel},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d71cec0e3603cc9bd8336d8152832db}
+      \strng{fullhash}{4d71cec0e3603cc9bd8336d8152832db}
+      \strng{bibnamehash}{4d71cec0e3603cc9bd8336d8152832db}
+      \strng{authorbibnamehash}{4d71cec0e3603cc9bd8336d8152832db}
+      \strng{authornamehash}{4d71cec0e3603cc9bd8336d8152832db}
+      \strng{authorfullhash}{4d71cec0e3603cc9bd8336d8152832db}
+      \field{labelalpha}{Ste18}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.bigdata-insider.de/was-ist-keras-a-726546}
+      \field{note}{Einsichtnahme:24.01.2020}
+      \field{title}{Was ist Keras?}
+      \field{year}{2018}
+    \endentry
+    \entry{Projektmanagement}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=df9022382af5b732a5350477f335c3da}{%
+           family={Urs},
+           familyi={U\bibinitperiod},
+           given={Schneider\bibnamedelimb Patrickand\bibnamedelima Witschi},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a87d19f8ff020aedcd2b169f10bdac1}{%
+           family={Roger},
+           familyi={R\bibinitperiod},
+           given={Wüst},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Sebastopol}%
+      }
+      \list{publisher}{1}{%
+        {"Springer Gabler"}%
+      }
+      \strng{namehash}{928dafa3ebed178f8509fe339b6403de}
+      \strng{fullhash}{928dafa3ebed178f8509fe339b6403de}
+      \strng{bibnamehash}{928dafa3ebed178f8509fe339b6403de}
+      \strng{authorbibnamehash}{928dafa3ebed178f8509fe339b6403de}
+      \strng{authornamehash}{928dafa3ebed178f8509fe339b6403de}
+      \strng{authorfullhash}{928dafa3ebed178f8509fe339b6403de}
+      \field{labelalpha}{UR18}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Auflage 4}
+      \field{isbn}{978-3662578773}
+      \field{title}{Handbuch Projektmanagement: Agil – Klassisch – Hybrid}
+      \field{year}{2018}
+    \endentry
+    \entry{MusicEmotion}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=dc4d44f6814797864181d8ee2756517f}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yi-Hsuan},
+           giveni={Y\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59f3bb5f830ffcbabc22d9835cbc1ccd}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Homer\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Boca Raton Florida}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press,}%
+      }
+      \strng{namehash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \strng{fullhash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \strng{bibnamehash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \strng{authorbibnamehash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \strng{authornamehash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \strng{authorfullhash}{7156e8ac653202d5144cdffdfa9ba3f8}
+      \field{labelalpha}{YC11}
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1466508927}
+      \field{title}{Music Emotion Recognition}
+      \field{year}{2011}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
