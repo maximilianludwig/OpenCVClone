@@ -89,10 +89,6 @@ Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Maximilian Ludwig
 Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Kevin Wrona
 \newpage
 \section*{Abstract}
-\section*{Abkürzungen}
-\begin{acronym}[Bash]
-% \acro{VCS}{Version Control System}
-\end{acronym}
 \newpage
 %\renewcommand*{\chapterpagestyle}{empty}
 \renewcommand{\thefigure}{\Alph{figure}}
@@ -394,66 +390,56 @@ Werden die drei Kanäle wieder miteinander verbunden entsteht das Ausgangsbild. 
 \let\cleardoublepage\relax
 
 \chapter{Stand-Alone Lösung mit Schwerpunkt OpenCV}
-Während der weiteren Ausarbeitung des Konzeptes und der darauf basierenden Umsetzung sind letztendlich zwei verschiedene Lösungen entstanden. Aufgrund von Problemen die innerhalb des Entwicklungsprozesses im Zusammenhang mit dem Hardwarekonzept aufgetreten sind, konnte das Projekt so wie es geplant war nicht zu Ende gebracht werden. Da diese Lösung jedoch als Grundlage für die letztendlich finale Lösung diente, wird sowohl das Konzept als auch die Umsetzung der ersten Lösung genauer erläutert.
+Während der weiteren Ausarbeitung des Konzeptes und der darauf basierenden Umsetzung sind letztendlich zwei verschiedene Lösungen entstanden. Aufgrund von Problemen, die innerhalb des Entwicklungsprozesses im Zusammenhang mit dem Hardwarekonzept aufgetreten sind, konnte das Projekt so wie es geplant war nicht zu Ende gebracht werden. Da dieser Ansatz jedoch als Grundlage für die letztendlich finale Lösung diente, wird sowohl das Konzept als auch die Umsetzung der ersten Lösung nachfolgend genauer erläutert.
 
 \section{Konzept}
-Nachfolgend wird das in der Planungsphase entwickelte Konzept zur Emotionserkennung unter verschiedenen Aspekten wie der Architektur und der Kommunikation erläutert.
+Im Folgenden wird das in der Planungsphase entwickelte Konzept zur Emotionserkennung unter verschiedenen Aspekten, wie der Architektur und der Kommunikation, erläutert.
 
 \subsection{Interaktionskonzept}
-Von außen betrachtet, steht zuerst die Planung eines Interaktionskonzeptes an, in welcher Form der Nutzer die Möglichkeit hat, Input zur Verarbeitung zu liefern und an Output zu gelangen. Dem Anwender soll es möglich sein schnell und verständlich mit dem Produkt zu interagieren, deshalb ist eine geeignete Benutzeroberfläche mit zwei wesentlichen Interaktionsoptionen erforderlich, den aktuellen Video-Stream einer internen oder externen Kamera als Input zur Emotionsanalyse verwenden und das Ergebnis der analysierten Sequenzen ausgeben zu lassen. Um dies zu erreichen, soll die Bildbverarbeitungsbibliothek OpenCV verwendet werden, mit der sowohl der Zugriff auf alle verfügbaren Kameraeingabegeräte, als auch die Darstellung von Bildern und Text in einer grafischen Benutzeroberfläche (GUI) in Form eines Fensters möglich ist. Die vom Nutzer gelieferten Videosequenzen sollen entsprechend bearbeitet werden, um anschließend eine Emotion zu erkennen und den entstandenen Output an die durch OpenCV generierte Oberfläche weiterzugeben. In welcher konkreten Form der Output dem Nutzer letztendlich dargestellt wird, als Grafik, einfache Textausgabe oder audiovisuell ist noch zu entscheiden.\newline
-Zusammenfassend kann man also sagen, dass der Nutzer aufgrund der Übersichtlichkeit und der Einfachheit halber lediglich mit der von OpenCV generierten Oberfläche interagiert und sich zu keinem Zeitpunkt mit den dahinterliegenden Komponenten der Emotionserkennung befassen muss.\newline
-Es wird sich auch die Option vorbehalten, den Input über eine Client-Applikation an einen Server zu liefern und dem Nutzer den Output in der Clientanwendung zurückzugeben, solange es den Anforderungen der benutzerfreundlichen Interaktionsmöglichkeit genügt. Um die Komplexität des Projektes weiterhin auf die wesentlichen Bestandteile der Emotionserkennung zu beschränken und nicht unnötig zu erhöhen, wird diese Möglichkeit jedoch vorerst nicht weiter berücksichtigt.
+Von außen betrachtet steht zuerst die Planung eines Interaktionskonzeptes an, in welcher Form der Nutzer die Möglichkeit hat, Input zur Verarbeitung zu liefern und an Output zu gelangen. Dem Anwender soll es möglich sein schnell und verständlich mit dem Produkt zu interagieren, weshalb eine geeignete Benutzeroberfläche mit zwei wesentlichen Interaktionsoptionen erforderlich ist. Der aktuelle Video-Stream einer internen oder externen Kamera sollte als Input zur Emotionsanalyse verwenden werden und das Ergebnis der analysierten Sequenzen soll ausgegeben werden können. Um dies zu erreichen soll die Bildbverarbeitungsbibliothek OpenCV verwendet werden, mit der sowohl der Zugriff auf alle verfügbaren Kameraeingabegeräte als auch die Darstellung von Bildern und Text in einer grafischen Benutzeroberfläche (GUI) in Form eines Fensters möglich ist. Die vom Nutzer gelieferten Videosequenzen sollen entsprechend bearbeitet werden, um anschließend eine Emotion zu erkennen und den entstandenen Output an die durch OpenCV generierte Oberfläche weiterzugeben. In welcher konkreten Form der Output dem Nutzer letztendlich dargestellt wird, als Grafik, einfache Textausgabe oder audiovisuell, ist noch zu entscheiden.\newline
+Zusammenfassend kann man also sagen, dass der Nutzer aufgrund der Übersichtlichkeit lediglich mit der von OpenCV generierten Oberfläche interagieren kann und sich zu keinem Zeitpunkt mit den dahinterliegenden Komponenten der Emotionserkennung befassen muss.\newline
 
 \subsection{Architektur}
 
 \subsubsection{Programmierumgebung}
-Aufgrund der Vorkenntnisse und Relevanz innerhalb des Studiums soll die Programmiersprache Python in aktuellster Version (3.6.9) vorrangig verwendet werden, jedoch kann unter gegeben Umständen auch die Programmiersprache C++ eingesetzt werden, was noch zu prüfen ist. Auf eine bestimmte IDE wie PyCharm, Emacs oder Visual Studio Code wird sich an dieser Stelle nicht festgelegt, da dies jedem Entwickler selbst zu überlassen ist. Diesbezüglich sind nur Einschränkungen aufgrund der gewählten Rechnerarchitektur und der Programmiersprache zu berücksichtigen.\newline
-Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek für Bildverarbeitung OpenCV und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum trainieren oder vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotion anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
+Aufgrund der Vorkenntnisse und Relevanz innerhalb des Studiums soll die Programmiersprache Python in aktuellster Version (3.6.9) vorrangig verwendet werden, jedoch kann unter gegebenen Umständen womöblich auch die Programmiersprache C++ eingesetzt werden, was noch zu prüfen ist. Auf eine bestimmte IDE wie PyCharm, Emacs oder Visual Studio Code wird sich an dieser Stelle nicht festgelegt, da dies jedem Entwickler selbst zu überlassen ist. Diesbezüglich sind nur Einschränkungen aufgrund der gewählten Rechnerarchitektur und der Programmiersprache zu berücksichtigen.\newline
+Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek OpenCV zur Bildverarbeitung und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum trainieren oder vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotionen anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
 
 \subsubsection{Hardware}
-Der Einfachheit halber wird als grundlegende Komponente ein handelsüblicher Laptop zum Entwickeln genutzt.  Außerdem wird dabei auf das OpenSource Betriebssystem Ubuntu 18.04.4 LTS in der 64-bit Variante zurückgegriffen. Als zugrunde liegende Ressourcen stehen ein 8 GigaByte Arbeitsspeicher sowie ein Intel Core i5-4210 Quadcore Prozessor mit einer Taktfrequenz von 4 x 2,60 GHz zur Verfügung. Des Weiteren kann die dedizierte Grafikkarte GeForce 820M mit einem Grafikkartenspeicher von 2046 MB verwendet werden. Der Festplattenspeicher von 500 GB kann im Umfang dieser Arbeit vernachlässigt werden, da es im Zusammenhang mit Gesichts- bzw. Emotionserkennung primär darauf ankommt, wie viel Rechenleistung zur Verfügung steht und nicht wie groß die Speicherkapazität des Laufwerks ist. Um das rechenintensive Trainieren des Modells zur Emotionserkennung in akzeptabler Zeit zu garantieren, soll die Rechenleistung des Prozessors und der Grafikkarte vollständig genutzt werden können.
+Der Einfachheit halber wird zum Entwickeln als grundlegende Komponente ein handelsüblicher Laptop genutzt. Dabei wird außerdem auf das Open-Source Betriebssystem Ubuntu 18.04.4 LTS in der 64-bit Variante zurückgegriffen. Als zugrundeliegende Ressourcen stehen ein 8 Gigabyte großer Arbeitsspeicher sowie ein Intel Core i5-4210 Quadcore Prozessor mit einer Taktfrequenz von 4 x 2,60 GHz zur Verfügung. Des Weiteren kann die dedizierte Grafikkarte GeForce 820M mit einem Grafikkartenspeicher von 2046 MB verwendet werden. Der Festplattenspeicher von 500 GB kann im Umfang dieser Arbeit vernachlässigt werden, da es im Zusammenhang mit Gesichts- bzw. Emotionserkennung primär darauf ankommt, wie viel Rechenleistung zur Verfügung steht und nicht wie groß die Speicherkapazität des Laufwerks ist. Um das rechenintensive Trainieren des Modells zur Emotionserkennung in akzeptabler Zeit zu garantieren, soll die Rechenleistung des Prozessors und der Grafikkarte vollständig genutzt werden können.
 
 \section{Umsetzung}
-In diesem Kapitel wird die Umsetzung der auf dem entwickelten Konzept basierenden Lösung näher erläutert. Es handelt sich dabei um den Stand-Alone Laptop mit installiertem Ubuntu 18.04.4 LTS wobei der Input und der Output auf OpenCV GUIs basiert.
+In diesem Kapitel wird die Umsetzung der auf dem entwickelten Konzept basierenden Lösung näher erläutert. Es handelt sich dabei um den Stand-Alone Laptop mit installiertem Ubuntu 18.04.4 LTS, wobei der Input und der Output auf OpenCV GUIs basiert.
 
 \subsection{Input GUI}
-Als Einstieg in das Themengebiet Emotionserkennung bzw. Gesichtserkennung bietet sich an, sich zuerst mit den Grundlagen der Bildverarbeitung und den Grundlagen von OpenCV vertraut zu machen. Wie bereits im Konzept beschrieben, soll es dem User möglich sein, mithilfe der Webcam und einer grafischen Oberfläche, welche mit OpenCV programmiert wird, ein Bild als Input zu liefern. Wie man in Abbildung \ref{fig:Input GUI 1} sehen kann, wird im ersten Schritt die grafische Oberfläche erstellt und der Video Stream der Webcam in der Oberfläche angezeigt.
-\lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam als Output]{Code/InputGUI1.py}
+Als Einstieg in das Themengebiet Emotionserkennung bzw. Gesichtserkennung ergibt es Sinn, sich zuerst mit den Grundlagen der Bildverarbeitung und den Grundlagen von OpenCV vertraut zu machen. Aufgrund der aufgestellten Anforderungen ist es außerdem notwendig, eine grafische Oberfläche zu implementieren, mit der der Nutzer interagieren kann. Wie bereits in dem Konzept beschrieben, soll es dem User daher möglich sein, mithilfe der Webcam und einer grafischen Oberfläche, welche mit OpenCV programmiert wird, ein Bild als Input zu liefern. Wie man in Abbildung \ref{fig:Input GUI 1} sehen kann, wird im ersten Schritt die grafische Oberfläche erstellt und der Video Stream der Webcam in der Oberfläche angezeigt. Der zugehörige Codeausschnitt kann dem Anhang \ref{lst:Code Input GUI 1} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/InputGUI1.png}
 \caption{GUI mit Video Stream der Webcam als Output}
 \label{fig:Input GUI 1}
 \end{figure}
-Nachdem man nun auf den Video Stream der Webcam zugreifen und diesen wiedergeben kann, gilt es den relevanten Bildausschnitt, die sogenannte Region Of Interest (ROI), zu identifizieren. Da wir uns im Umfeld der Gesichts- und Emotionserkennung befinden, sind für uns alle Bereiche relevant, die ein menschliches Gesicht enthalten. Standardmäßig stellt OpenCV einige Modelle zur Objekterkennung zur Verfügung, welche problemlos genutzt werden können. Um nun ein vortrainiertes Modell zur Gesichtserkennung von OpenCV einzubinden, kann man folgende Zeile an den Anfang des Codes schreiben:\newline
+Nachdem man nun auf den Video Stream der Webcam zugreifen und diesen wiedergeben kann, gilt es den relevanten Bildausschnitt, die sogenannte Region Of Interest (ROI), zu identifizieren. Da wir uns im Umfeld der Gesichts- und Emotionserkennung befinden, sind für uns alle Bereiche relevant, die ein menschliches Gesicht enthalten. Standardmäßig stellt OpenCV einige Modelle zur Objekterkennung zur Verfügung, welche problemlos genutzt werden können. Um so ein vortrainiertes OpenCV-Modell zur Gesichtserkennung einzubinden, kann man folgende Zeile an den Anfang des Codes schreiben:\newline
 \lstinputlisting[style=custompython, numbers=none, linerange=3-3, caption=Einbinden eines vortrainierten OpenCV-Modells zur Gesichtserkennung]{Code/InputGUI2.py}
-Mithilfe der Methode \texttt{detectMultiScale} des eingebundenen Modells, können nun die Koordinaten sowie die Höhe und die Breite von jedem in dem Bild gefundenen Gesicht extrahiert werden. Aufgrund dieser Informationen können wir den bisherigen Code nun so erweitern, dass ein Rechteck um jedes gefundene Gesicht im Video Stream der Webcam gezeichnet wird und über die grafische Oberfläche ausgegeben wird. dies sieht dann folgendermaßen aus:\newline
-\lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam und markierten Gesichtern als Output]{Code/InputGUI2.py}
-Wie die durch den Code generiert grafischen Oberfläche aussieht, lässt sich der Abbildung \ref{fig:Input GUI 2} entnehmen.
+Mithilfe der Methode \texttt{detectMultiScale} des eingebundenen Modells, können nun die Koordinaten sowie die Höhe und die Breite von jedem in dem Bild gefundenen Gesicht extrahiert werden. Aufgrund dieser Informationen können wir den bisherigen Code nun so erweitern, dass ein Rechteck um jedes im Video Stream der Webcam gefundene Gesicht gezeichnet wird und über die grafische Oberfläche sichtbar gemacht wird. Das Resultat des entstandenen Codes \ref{lst:Code Input GUI 2} kann der Abbildung \ref{fig:Input GUI 2} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/InputGUI2.png}
 \caption{GUI mit Video Stream der Webcam und markierten Gesichtern als Output}
 \label{fig:Input GUI 2}
 \end{figure}
-Nun lässt sich noch darüber diskutieren, ob es weitere besonders zu berücksichtigende ROIs gibt. Im Zusammenhang mit Emotionen können unter anderem die Augen und der Mund eine besondere Rolle spielen, sodass nachfolgend einmal beispielhaft das Hinzufügen eines weiteren Modells zur Erkennung der Augen in jedem bereits entdeckten Gesicht:
-\lstinputlisting[style=custompython, numbers=none, linerange=4-4, caption=Einbinden eines vortrainierten OpenCV-Modells zur Augenerkennung]{Code/InputGUI3.py}
-Um nun alle Augen in einem Bild zu erkennen, kann nun wieder die Methode \texttt{detectMultiScale} des Modells genutzt werden. Dem nachfolgenden Codeschnipsel kann man nun entnehmen, wie um alle Augen, die sich in dem Bildausschnitt befinden in dem auch ein Gesicht erkannt wurde, ein grünes Rechteck gezeichnet wird.
-\lstinputlisting[style=custompython, numbers=none, linerange=9-18, showspaces=false, autodedent, caption=Zeichnen von Rechtecken um alle erkannten Augen und Gesichter]{Code/InputGUI3.py}
-Somit sind wir nun in der Lage, alle relevanten Bereiche zu identifizieren und zu markieren. Um diese relevanten Regionen nun als input zum Vorhersagen einer Emotion für ein Modell nutzen zu können, müssen die entsprechenden Bereiche jedoch ersteinmal abgespeichert werden. Um eine Vergleichbarkeit der Bilder untereinander und des zu testenden Bildes zu den trainierten Bildern zu gewährleisten, sollten diese alle das gleiche Format besitzen. Wie bereits in der Theorie erwähnt, ist es außerdem sinnvoll, entsprechende Ausschnitte nicht im Farbmodus abzuspeichern, sondern lediglich als Grayscale-Grafik. Erweitert man den bereits entstandenen Code erneut um die erleuterten Aspekte, sieht dies so aus:
-\lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam und markierten Gesichtern und Augen als Output]{Code/InputGUI3.py}
-Das daraus resultierende Ergebnis kann man der Abbildung \ref{fig:Input GUI 3} entnehmen.
+Nun lässt sich noch darüber diskutieren, ob es weitere besonders zu berücksichtigende ROIs gibt. Im Zusammenhang mit Emotionen können unter anderem die Augen und der Mund eine besondere Rolle spielen, sodass nachfolgend beispielhaft das Hinzufügen eines Modells zur Erkennung der Augen in jedem bereits entdeckten Gesicht gezeigt wird. Dazu muss zusätzlich zum OpenCV-\texttt{CascadeClassifier haarcascade\_frontalface\_default.xml} der \texttt{CascadeClassifier haarcascade\_eye.xml} eingebunden werden. Um nun alle Augen in einem Bild zu erkennen, kann wieder die Methode \texttt{detectMultiScale} des Modells genutzt werden. Dem nachfolgenden Bildausschnitt \ref{fig:Input GUI 3} kann man nun entnehmen, wie um alle Augen, die sich in dem Bildausschnitt befinden in dem auch ein Gesicht erkannt wurde, ein grünes Rechteck gezeichnet wird.
 \begin{figure}[h]
-\includegraphics[width=\linewidth]{Bilder/InputGUI3.png}
-\caption{GUI mit Video Stream der Webcam und markierten Gesichtern und Augen als Output}
-\label{fig:Input GUI 3}
+  \includegraphics[width=\linewidth]{Bilder/InputGUI3.png}
+  \caption{GUI mit Video Stream der Webcam und markierten Gesichtern und Augen als Output}
+  \label{fig:Input GUI 3}
 \end{figure}
-Somit ist es dem Nutzer möglich, schnell und unkompliziert Bilder mit der Webcam zu machen und dort enthaltene Gesichter so zu speichern, dass sie als Input zum Vorhersagen einer Emotion genutzt werden können.
+Somit sind wir nun in der Lage, alle relevanten Bereiche zu identifizieren und zu markieren. Um diese relevanten Regionen nun als Input für ein Modell zum Vorhersagen einer Emotion nutzen zu können, müssen die entsprechenden Bereiche jedoch ersteinmal abgespeichert werden. Um die Vergleichbarkeit der Bilder untereinander und die Vergleichbarkeit des zu testenden Bildes zu den trainierten Bildern zu gewährleisten, sollten diese des gleichen Formats sein. Wie bereits in der Theorie erwähnt, ist es außerdem sinnvoll entsprechende Ausschnitte nicht im Farbmodus abzuspeichern, sondern lediglich als Grayscale-Grafik. Die Erweiterung des bereits entstandenen Codes um die erleuterten Aspekte kann man am Code \ref{lst:Code Input GUI 3} sehen. Somit ist es dem Nutzer möglich, schnell und unkompliziert Bilder mit der Webcam zu machen und dort enthaltene Gesichter so zu speichern, dass sie als Input zum Vorhersagen einer Emotion genutzt werden können.
 
 \subsection{Dataset}
-Zum Trainieren eines Modells zur Emotionserkennung, wird das sogenannte Cohn-Kanade Dataset zur Analyse von Emotionen verwendet.\footcite[Vgl.][]{CK} In dem verwendeten Dataset sind ca. 10000 Grayscale-Bilder enthalten, welche die in \ref{tab:ckemotions} zu sehenden Emotionen:
+Zum Trainieren eines Modells zur Emotionserkennung wird das Cohn-Kanade Dataset zur Analyse von Emotionen verwendet.\footcite[Vgl.][]{CK} In dem verwendeten Dataset sind ca. 10000 Grayscale-Bilder enthalten, welche die in \ref{tab:ckemotions} zu sehenden Emotionen umfassen:
 \begin{table}[h]
 \centering
 \begin{tabular}[t]{l|c}
-Emotion & N \\
+Emotion & Anzahl nutzbarer Bilder \\
 \hline
 Anger & 45 \\
 Contempt & 18 \\
@@ -467,7 +453,7 @@ Surprise & 83 \\
 \caption{Emotionen mit jeweiliger Anzahl an Bildern}
 \label{tab:ckemotions}
 \end{table}
-Es fällt auf, dass sich die dargestellte Anzahl von ca. 325 nutzbaren Bilder stark von der bereits erwähnten Anzahl von 10000 Bildern unterscheidet. Dies liegt daran, dass das Dataset ursprünglich für die Analyse von Emotionen und nicht direkt für die Emotionserkennung entwickelt wurde. Was das kann genau hast, wird durch die Abbildung \ref{fig:Disgust} verdeutlicht.
+Es fällt auf, dass sich die dargestellte Anzahl von ca. 325 nutzbaren Bilder stark von der bereits erwähnten Anzahl von 10000 Bildern unterscheidet. Das liegt daran, dass das Dataset ursprünglich für die Analyse von Emotionensverläufen und nicht direkt für die Emotionserkennung an sich entwickelt wurde. Was das genau heißt, wird durch die Abbildung \ref{fig:Disgust} verdeutlicht.
 \begin{figure}[h]
 	\begin{minipage}[b]{.2\linewidth} % [b] => Ausrichtung an \caption
 		\includegraphics[width=\linewidth]{Bilder/Disgust1.png}
@@ -516,58 +502,8 @@ Es fällt auf, dass sich die dargestellte Anzahl von ca. 325 nutzbaren Bilder st
 	\label{fig:Disgust}
 \end{figure}
 
-Jeder Datensatz beinhaltet mehrere Bilder, die den Verlauf einer Emotion von Neutral bis hin zur Emotion darstellen. Da dieser Verlauf für die Emotionserkennung allenfalls für die Klassifizierung innerhalb der jeweiligen Emotion relevant wäre und somit im Umfang dieser Arbeit nicht betrachtet wird, wird nur das jeweils letzte Bild dieses Verlaufs, also die vollständig ausgeprägte Emotion, zum Trainieren des Modells genutzt. Somit ergibt sich der Unterschied von der Anzahl der jeweils letzten Bilder der Verläufe, ca. 325, und der Anzahl der Gesamtbilder aller Verläufe, ca. 10000.
-Zur Verzeichnisstruktur des Datasets kann sagen, dass es grundsätzlich zwei verschiedene Ordner gibt. In einem Ordner befinden sich alle Bilder, also die Verläufe der Emotionen und in dem anderen befinden sich mit der gleichen Struktur die dazugehörigen Emotionen. Stellt man die Struktur der beiden Ordner beispielhaft als Verzeichnisbaum dar, sieht dies folgendermaßen aus:
-\setlength{\DTbaselineskip}{20pt}
-\DTsetlength{1em}{1.5em}{0.2em}{1pt}{4pt}
-\renewcommand*\DTstylecomment{\rmfamily\color{commentgreen}\textsc}
-\renewcommand*\DTstyle{\ttfamily\textcolor{red}}
-\begin{figure}
-\begin{minipage}[b]{.5\linewidth}
-\dirtree{%
-.1 images.
-.2 S005\DTcomment{Person 1}.
-.3 001.
-.2 S010\DTcomment{Person 2}.
-.3 001.
-.3 002.
-.3 003.
-.2 S011\DTcomment{Person 3}.
-.3 001.
-.3 002.
-.2 S014\DTcomment{Person 4}.
-.3 001.
-.3 002.
-.3 003.
-.3 004.
-.3 005.
-.2 \ldots.
-}
-\end{minipage}
-\begin{minipage}[b]{.5\linewidth}
-\dirtree{%
-.1 emotions.
-.2 S005\DTcomment{Person 1}.
-.3 001.
-.2 S010\DTcomment{Person 2}.
-.3 001.
-.3 002.
-.3 003.
-.2 S011\DTcomment{Person 3}.
-.3 001.
-.3 002.
-.2 S014\DTcomment{Person 4}.
-.3 001.
-.3 002.
-.3 003.
-.3 004.
-.3 005.
-.2 \ldots.
-}
-\end{minipage}
-\caption{fig:Test}
-\end{figure}
-Wie man den Verzeichnisbäumen entnehmen kann, ist die Struktur in beiden Ordnern identisch. In der ersten Ebene befinden sich Ordner jeweils mit 'S' aufgeteilt nach Personen. Innerhalb jeder dieser Personenordner gibt es einen oder mehrere weitere Ordner. Diese Ordner auf der 2. Ebene sind dreistellig aufsteigend numeriert und beinhalten jeweils einen Emotionsverlauf. Im Sachzusammenhang bedeutet dies, dass jede Person eine oder mehrere verschiedene Emotionsverläufe darstellt. Die Syntax der Dateinamen in den aufsteigend numerierten Ordner, die letztendlich den Emotionsverlauf beinhalten, ist \texttt{<Personenordner>\_<Emotionsverlaufsordner>\_<Pos. im Verlauf>.png} wobei die Position im Verlauf 8-stellig ist. Nimmt man die in Abbildung \ref{fig:Disgust} als Grundlage, könnten die einelnen Dateinamen zu den Bildern wie im Verzeichnisbaum \ref{fig:Tree Emotionsverlauf} aussehen.
+Jeder Datensatz beinhaltet mehrere Bilder, die den Verlauf einer Emotion von Neutral bis hin zur jeweiligen Emotion darstellen. Da dieser Verlauf für die Emotionserkennung allenfalls für die Klassifizierung in Ausprägungen innerhalb einer einzelnen Emotion relevant wäre und somit im Umfang dieser Arbeit nicht betrachtet wird, wird nur das jeweils letzte Bild dieses Verlaufs, also die vollständig ausgeprägte Emotion, zum Trainieren des Modells genutzt. Somit ergibt sich der Unterschied von der Anzahl der jeweils letzten Bilder der Verläufe, ca. 325, und der Anzahl der Gesamtbilder aller Verläufe, ca. 10000.
+Zur Verzeichnisstruktur des Datasets kann man sagen, dass es grundsätzlich zwei verschiedene Ordner gibt. In einem Ordner befinden sich alle Bilder, also die Verläufe der Emotionen und in dem anderen befinden sich mit der gleichen Struktur die dazugehörigen Emotionen in Textdateien. Die Darstellungen der beiden Strukturen als Verzeichnisbäume können der Anlage \ref{fig:Struktur CK Dataset} entnommen werden. Wie man den Verzeichnisbäumen entnehmen kann, ist die Struktur in beiden Ordnern identisch. In der ersten Ebene befinden sich Ordner jeweils mit 'S' aufgeteilt nach Personen. Innerhalb jeder dieser Personenordner gibt es einen oder mehrere weitere Ordner. Diese Ordner auf der 2. Ebene sind dreistellig aufsteigend numeriert und beinhalten jeweils einen Emotionsverlauf. Im Sachzusammenhang bedeutet dies, dass jede Person eine oder mehrere verschiedene Emotionsverläufe darstellt. Die Syntax der Dateinamen in den aufsteigend numerierten Ordner, die letztendlich den Emotionsverlauf beinhalten, ist \texttt{<Personenordner>\_<Emotionsverlaufsordner>\_<Pos. im Verlauf>.png} wobei die Position im Verlauf 8-stellig ist. Nimmt man die in Abbildung \ref{fig:Disgust} gezeigten Bilder als Grundlage, könnten die einelnen Dateinamen wie im Verzeichnisbaum \ref{fig:Tree Emotionsverlauf} aussehen.
 \begin{figure}
 \dirtree{%
 .1 images.
@@ -589,9 +525,9 @@ Wie man den Verzeichnisbäumen entnehmen kann, ist die Struktur in beiden Ordner
 \caption{Struktur Emotionsverlauf}
 \label{fig:Tree Emotionsverlauf}
 \end{figure}
-Aus der dargestellten Struktur des Ordners in dem sich sämtliche Bilder befinden und den jeweiligen Dateinamen lassen sich keinerlei Rückschlüsse auf die dargestellten Emotionen ziehen. Um herauszufinden welche Emotion durch welchen Emotionsverlauf dargestellt wird, muss man in das entsprechende Verzeichnis in dem Ordner mit den gelabelten Emotionen wechseln. Dort befindet sich dann eine Textdatei, die den selben Dateinamen hat, wie das letzte Bild aus dem dazugehörigen Emotionsverlauf. In dieser Datei befindet sich dann eine Fließkommazahl, die für die jeweilige Emotion in Tabelle \ref{tab:ckemotions} steht. Um nun herauszufinden welche Emotion durch den in \ref{fig:Tree Emotionsverlauf} dargestellt wird, schaut man in das Verzeichnis \texttt{emotions/S005/001/}, in dem sich die Datei \texttt{S005\_001\_00000011.txt} befindet. In dieser Datei würde dann \texttt{3.0000000e+00} stehen, was sich gemäß der Tabelle mit \texttt{Disgust} gleichsetzen lässt.\newline
-Um später ein vernüftiges superviesed learning auf Grundlage des Dataset durchzuführen, wird eine eigene Verzeichnisstruktur erstellt, die jedes letzte Bild eines Emotionsverlaufs sortiert nach Emotion beinhaltet. Der folgenden Code automatisiert das überarbeiten und sortieren des Datasets und erweitert dieses um die Emotion \texttt{Neutral}, da jedes erste Bild eines Emotionsverlaufs als neutrale Ausgangslage dient.
-\lstinputlisting[style=custompython, caption=Dataset sortieren und überarbeiten]{Code/OrganizingTheDataset.py}
+Aus der dargestellten Struktur des Ordners in dem sich sämtliche Bilder befinden und den jeweiligen Dateinamen lassen sich keinerlei Rückschlüsse auf die dargestellten Emotionen ziehen. Um herauszufinden welche Emotion durch welchen Emotionsverlauf dargestellt wird, muss man in das entsprechende Verzeichnis innerhalb des Ordners mit den gelabelten Emotionen schauen. Dort befindet sich dann eine Textdatei, die den selben Dateinamen hat, wie das letzte Bild aus dem dazugehörigen Emotionsverlauf. In dieser Datei befindet sich dann eine Fließkommazahl, die für die jeweilige Emotion in Tabelle \ref{tab:ckemotions} steht. Um nun herauszufinden welche Emotion durch den in Abbildung \ref{fig:Tree Emotionsverlauf} gezeigten Emotionsverlauf dargestellt wird, schaut man in das Verzeichnis \texttt{emotions/S005/001/}, in dem sich die Datei \texttt{S005\_001\_00000011.txt} befindet. In dieser Datei würde dann \texttt{3.0000000e+00} stehen, was sich gemäß der Tabelle mit \texttt{Disgust} gleichsetzen lässt.\newline
+Um später ein vernüftiges superviesed learning auf Grundlage des Datasets durchführen zu können, wird eine eigene Verzeichnisstruktur erstellt, die sortiert nach Emotionen jedes letzte Bild eines Emotionsverlaufs beinhaltet. Zusätzlich wird die Emotion Neutral hinzugefügt, da jedes erste Bild eines Emotionsverlaufs als neutrale Ausgangslage dient. Der entwickelte Algorithmus zum Überarbeiten und Sortieren des Datasets kann dem Code \ref{lst:Organising The Dataset} im Anhang entnommen werden. 
+
 Das überarbeitete und sortierte Dataset, welches nun als neue Grundlage für die Stand-Alone Lösung dient, sieht dann so aus:
 \begin{figure}
 	\dirtree{%
@@ -840,8 +776,7 @@ psychologischer Sicht in der Literatur behandelt wurde. Zwar gibt es Fachbücher
 
 \section{Alternative Ansätze zur Umsetzung von Emotionserkennung}
 In diesem Abschnitt nun werden verschiedene alternative Ansätze dargestellt und expliziert, die dazu verwendet werden können um Emotionen zu erkennen.
-Dieses Unterkapitel beschäftigt sich mit alternativen Ansätzen zu den bereits explizierten Basisemotionen. Diese sind wie bereits erwähnt umstritten, was die Frage zulässt warum diese überhaupt
-verwendet werden sollten. Ein weiterer kreativer Ansatz zur Erkennung von Emotionen wäre die Analyse der Stimmlage.
+Dieses Unterkapitel beschäftigt sich mit alternativen Ansätzen zu den bereits explizierten Basisemotionen. Diese sind wie bereits erwähnt umstritten, was die Frage zulässt warum diese überhaupt verwendet werden sollten. Ein weiterer kreativer Ansatz zur Erkennung von Emotionen wäre die Analyse der Stimmlage.
 Dieser Ansatz beruft sich darauf, dass das Sprachzentrum eines Menschen einer der wichtigsten Aspekte der Kommunikation und somit auch der Preisgabe von Informationen über den emotionalen Zustand eines Individuums ist.
 \footcite[Vgl. ][Abstract]{EmotionInSpeech}
 Dieser Ansatz ist jedoch nicht zielführend, da hier hauptsächlich die Stimme analysiert wird. Von einer Stimme kann nun auf eine Emotion geschlossen werden. Für den Usecase ist dieser Ansatz allerdings ungeeignet, aus folgenden Gründen:\newline
@@ -867,4 +802,69 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
 \newpage
 \pagestyle{empty}
 
+\begin{appendix}
+  \section*{Verwendeter Code}
+  
+  \lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam als Output, label=lst:Code Input GUI 1]{Code/InputGUI1.py}
+  \newpage
+  \lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam und markierten Gesichtern als Output, label=lst:Code Input GUI 2]{Code/InputGUI2.py}
+  \newpage
+  \lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam und markierten Gesichtern und Augen als Output, label=lst:Code Input GUI 3]{Code/InputGUI3.py}
+  \newpage
+  \lstinputlisting[style=custompython, caption=Dataset sortieren und überarbeiten, label=lst:Organising The Dataset]{Code/OrganizingTheDataset.py}
+  \newpage
+
+\section*{Verzichnisstrukturen}
+\setlength{\DTbaselineskip}{20pt}
+\DTsetlength{1em}{1.5em}{0.2em}{1pt}{4pt}
+\renewcommand*\DTstylecomment{\rmfamily\color{commentgreen}\textsc}
+\renewcommand*\DTstyle{\ttfamily\textcolor{red}}
+\begin{figure}[h]
+\begin{minipage}[b]{.5\linewidth}
+\dirtree{%
+.1 images.
+.2 S005\DTcomment{Person 1}.
+.3 001.
+.2 S010\DTcomment{Person 2}.
+.3 001.
+.3 002.
+.3 003.
+.2 S011\DTcomment{Person 3}.
+.3 001.
+.3 002.
+.2 S014\DTcomment{Person 4}.
+.3 001.
+.3 002.
+.3 003.
+.3 004.
+.3 005.
+.2 \ldots.
+}
+\end{minipage}
+\begin{minipage}[b]{.5\linewidth}
+\dirtree{%
+.1 emotions.
+.2 S005\DTcomment{Person 1}.
+.3 001.
+.2 S010\DTcomment{Person 2}.
+.3 001.
+.3 002.
+.3 003.
+.2 S011\DTcomment{Person 3}.
+.3 001.
+.3 002.
+.2 S014\DTcomment{Person 4}.
+.3 001.
+.3 002.
+.3 003.
+.3 004.
+.3 005.
+.2 \ldots.
+}
+\end{minipage}
+\caption{Verzeichnisstrukturen des Cohn-Kanade Datasets}
+\label{fig:Struktur CK Dataset}
+\end{figure}
+
+\end{appendix}
 \end{document}
