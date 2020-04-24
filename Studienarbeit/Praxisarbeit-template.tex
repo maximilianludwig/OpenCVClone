@@ -403,7 +403,7 @@ Zusammenfassend kann man also sagen, dass der Nutzer aufgrund der Übersichtlich
 
 \subsubsection{Programmierumgebung}
 Aufgrund der Vorkenntnisse und Relevanz innerhalb des Studiums soll die Programmiersprache Python in aktuellster Version (3.6.9) vorrangig verwendet werden, jedoch kann unter gegebenen Umständen womöblich auch die Programmiersprache C++ eingesetzt werden, was noch zu prüfen ist. Auf eine bestimmte IDE wie PyCharm, Emacs oder Visual Studio Code wird sich an dieser Stelle nicht festgelegt, da dies jedem Entwickler selbst zu überlassen ist. Diesbezüglich sind nur Einschränkungen aufgrund der gewählten Rechnerarchitektur und der Programmiersprache zu berücksichtigen.\newline
-Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek OpenCV zur Bildverarbeitung und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum trainieren oder vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotionen anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
+Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek OpenCV zur Bildverarbeitung und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum Trainieren oder Vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotionen anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
 
 \subsubsection{Hardware}
 Der Einfachheit halber wird zum Entwickeln als grundlegende Komponente ein handelsüblicher Laptop genutzt. Dabei wird außerdem auf das Open-Source Betriebssystem Ubuntu 18.04.4 LTS in der 64-bit Variante zurückgegriffen. Als zugrundeliegende Ressourcen stehen ein 8 Gigabyte großer Arbeitsspeicher sowie ein Intel Core i5-4210 Quadcore Prozessor mit einer Taktfrequenz von 4 x 2,60 GHz zur Verfügung. Des Weiteren kann die dedizierte Grafikkarte GeForce 820M mit einem Grafikkartenspeicher von 2046 MB verwendet werden. Der Festplattenspeicher von 500 GB kann im Umfang dieser Arbeit vernachlässigt werden, da es im Zusammenhang mit Gesichts- bzw. Emotionserkennung primär darauf ankommt, wie viel Rechenleistung zur Verfügung steht und nicht wie groß die Speicherkapazität des Laufwerks ist. Um das rechenintensive Trainieren des Modells zur Emotionserkennung in akzeptabler Zeit zu garantieren, soll die Rechenleistung des Prozessors und der Grafikkarte vollständig genutzt werden können.
@@ -526,63 +526,19 @@ Zur Verzeichnisstruktur des Datasets kann man sagen, dass es grundsätzlich zwei
 \label{fig:Tree Emotionsverlauf}
 \end{figure}
 Aus der dargestellten Struktur des Ordners in dem sich sämtliche Bilder befinden und den jeweiligen Dateinamen lassen sich keinerlei Rückschlüsse auf die dargestellten Emotionen ziehen. Um herauszufinden welche Emotion durch welchen Emotionsverlauf dargestellt wird, muss man in das entsprechende Verzeichnis innerhalb des Ordners mit den gelabelten Emotionen schauen. Dort befindet sich dann eine Textdatei, die den selben Dateinamen hat, wie das letzte Bild aus dem dazugehörigen Emotionsverlauf. In dieser Datei befindet sich dann eine Fließkommazahl, die für die jeweilige Emotion in Tabelle \ref{tab:ckemotions} steht. Um nun herauszufinden welche Emotion durch den in Abbildung \ref{fig:Tree Emotionsverlauf} gezeigten Emotionsverlauf dargestellt wird, schaut man in das Verzeichnis \texttt{emotions/S005/001/}, in dem sich die Datei \texttt{S005\_001\_00000011.txt} befindet. In dieser Datei würde dann \texttt{3.0000000e+00} stehen, was sich gemäß der Tabelle mit \texttt{Disgust} gleichsetzen lässt.\newline
-Um später ein vernüftiges superviesed learning auf Grundlage des Datasets durchführen zu können, wird eine eigene Verzeichnisstruktur erstellt, die sortiert nach Emotionen jedes letzte Bild eines Emotionsverlaufs beinhaltet. Zusätzlich wird die Emotion Neutral hinzugefügt, da jedes erste Bild eines Emotionsverlaufs als neutrale Ausgangslage dient. Der entwickelte Algorithmus zum Überarbeiten und Sortieren des Datasets kann dem Code \ref{lst:Organising The Dataset} im Anhang entnommen werden. 
-
-Das überarbeitete und sortierte Dataset, welches nun als neue Grundlage für die Stand-Alone Lösung dient, sieht dann so aus:
-\begin{figure}
-	\dirtree{%
-	.1 sorted\_set.
-	.2 anger.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 contempt.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 disgust.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 fear.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 happy.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 neutral.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 sadness.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	.2 surprise.
-	.3 1.png.
-	.3 2.png.
-	.3 \ldots.
-	}
-\caption{Struktur überarbeitetes Dataset}
-\label{fig:Tree Sorted Set}
-\end{figure}
+Um später ein vernüftiges superviesed learning auf Grundlage des Datasets durchführen zu können, wird eine eigene Verzeichnisstruktur erstellt, die sortiert nach Emotionen jedes letzte Bild eines Emotionsverlaufs beinhaltet. Zusätzlich wird die Emotion Neutral hinzugefügt, da jedes erste Bild eines Emotionsverlaufs als neutrale Ausgangslage dient. Der entwickelte Algorithmus zum Überarbeiten und Sortieren des Datasets und die daraus resultierende neue Verzeichnisstruktur kann dem Code \ref{lst:Organising The Dataset} und der Abbildung \ref{fig:Tree Sorted Set} im Anhang entnommen werden.
 
 \subsection{Training}
-OpenCV stellt verschiedene Klassifizierer zur Verfügung, jedoch wird sich in diesem Abschnitt immer auf das Supervised Learning des FisherFaceRecognizer bezogen, welcher mit dem im vorherigen Schritt präparierten Dataset trainiert wird. Da das Dataset schon sortiert und vorbereitet wurde, ist es nun sehr leicht eine Methode zu schreiben, die ein Array mit Trainingsdaten und ein Array mit den zugehörigen Labels liefert. Aufgrund der Verzeichnisstruktur des Datasets kann man über alle Emotionsordner iterieren und alle Grayscale-Bilder in das Array mit den Trainingsdaten einlesen und die jeweilige Emotion in das Array mit den Labels einlesen. Dabei ist jedoch zu beachten, dass die Labels Integer-Werte aufsteigend mit 0 beginnend sein müssen. Das heißt, die Ordnernamen, welche die Emotionen als Text sind, müssen in Integer-Werte konvertiert werden, indem man z.B. den jeweiligen Index in dem Emotions-Array \lstinputlisting[style=custompython, numbers=none, linerange=5-5, caption=Emotions-Array]{Code/ClassifierHandler.py} nimmt. Setzt man dies um, entsteht folgender Code:
-\lstinputlisting[style=custompython, numbers=none, linerange=8-17, caption=Trainingsdaten als Arrays extrahieren]{Code/ClassifierHandler.py}
-Da wir nun die erforderlichen Arrays mit Trainingsdaten und Labeln erzeugen können, beschäftigen wir uns als nächstes mit dem zu trainierenden Klassifizierer, dem sogenannten FisherFaceRecognizer. Im folgenden werden zwei Methoden dargestellt, mit denen dieser erzeugt und trainiert werden kann.
-\lstinputlisting[style=custompython, numbers=none, linerange=19-24, caption=Methoden zum Erstellen und Trainieren eines FisherFaceRecognizer]{Code/ClassifierHandler.py}
-Da nun alle erforderlichen Einzelschritte definiert sind, können wir diese nun zusammenfügen. \lstinputlisting[style=custompython, numbers=none, linerange=55-57, caption=Erstellen und Trainieren eines FisherFaceRecognizer]{Code/ClassifierHandler.py}
-Wie dem Code zu entnehmen ist, stellt die \texttt{FisherFaceRecognizer}-Klasse die Methoden \texttt{create()} und \texttt{train(InputArray data, InputArray labels)} zur Verfügung, sodass der Großteil der Komplexität des gesamten Trainingsprozesses bei dem Vorbereiten des Datasets liegt.
+Zum Trainieren eines Modells stellt OpenCV verschiedene Klassifizierer zur Verfügung, jedoch wird sich in diesem Abschnitt immer auf das Supervised Learning des FisherFaceRecognizer bezogen, welcher mit dem im vorherigen Schritt präparierten Dataset trainiert wird. Da das Dataset schon sortiert und vorbereitet wurde, ist es nun sehr leicht eine Methode zu schreiben, die ein Array mit Trainingsdaten und ein Array mit den zugehörigen Labels liefert. Aufgrund der Verzeichnisstruktur des Datasets kann man über alle Emotionsordner iterieren und dabei alle Grayscale-Bilder in das Array mit den Trainingsdaten einlesen und die jeweilige Emotion in das Array mit den Labeln einlesen. Dabei ist jedoch zu beachten, dass die Labels bzw. die Emotionen als Integer-Werte beginnend mit 0 und aufsteigend dargestellt werden müssen. Das heißt, die Ordnernamen, welche den Emotionen als Text entsprechen, müssen in Integer-Werte konvertiert werden, indem man z.B. den jeweiligen Index der Emotion in dem globalen Emotions-Array \ref{lst:Emotions-Array} nimmt.
+\lstinputlisting[style=custompython, numbers=none, linerange=5-5, caption=Emotions-Array, label=lst:Emotions-Array]{Code/ClassifierHandler.py}
+Die vollständige Methode zum Extrahieren der Trainigsdatem ist im Anhang unter \ref{lst:Trainingsdaten extrahieren} gelistet. 
+Da wir nun die erforderlichen Arrays mit Trainingsdaten und Labeln erzeugen können, beschäftigen wir uns als nächstes mit dem zu trainierenden Klassifizierer, dem sogenannten FisherFaceRecognizer. Die \texttt{FisherFaceRecognizer}-Klasse stellt die statische Methode \texttt{create()} und die Methode \texttt{train(InputArray data, InputArray labels)} zur Verfügung welche im Code \ref{lst:Classifier Handler} zum Trainieren benutzt werden. Es fällt somit deutlich auf, dass die Komplexität des eigentlichen Trainierens im Vergleich zur Vorbereitung des Datasets wesentlich geringer ist.
 
 \subsection{Testing}
-Das Testen des im vorherigen Schritt trainierten Modells kann aufgrund der Vorarbeit ebenfalls sehr schnell implementiert werden. Aufgrund der wie sich später herausstellte sehr geringen Datengrundlage und der Should-Anforderung gemäß MoSCoW Priorisierung, dass die Wahrscheinlichkeit zu Erkennung der richtigen Emotion über 50\% liegen soll, wird anstatt der üblichen Aufteilung des Datasets in Trainings- und Testdaten das komplette Dataset als Trainingsdaten genutzt. Daraus ergibt sich dann, dass ein anderes Verfahren zum Testen des Klassifiziers gefunden werden muss. Somit wird zum Testen des Modells eine grafische Oberfläche erstellt, die im speziellen als Echtzeitanalyse der Emotionen fungiert. Hierzu kann ein Großteil des Codes genutzt werden, der als Vorarbeit im Bereich der Input GUI implementiert wurde. Der Ablauf eines konkreten Tests ist dann das Starten der Oberfläche, welche den Video Stream der Webcam ausgibt und gleichzeitig jedes Einzelbild vom Modell analysieren lässt. Dies geschieht wie ebenfalls bereits beschrieben durch das Ausschneiden des Gesichtes und das anschließende konvertieren in das Grayscaleformat sowie daraufhin das wesentliche Vorhersagen einer Emotion. Das Gesicht wird dann mit einem Rechteck markiert und darüber wird die vorhergesagte Emotion ausgegeben. Verändert man den Code der Input GUI nur geringfügig und erweitert ihn um das Vorhersagen der Emotion und das Schreiben der vorhergesagten Emotion auf den Output Video Stream, dann erhält man folgendes Ergebnis:
-\lstinputlisting[style=custompython, numbers=none, linerange=26-50, caption=Klassifizierer mit der Input GUI testen]{Code/ClassifierHandler.py}
+Das Testen des im vorherigen Schritt trainierten Modells kann aufgrund der Vorarbeit ebenfalls mit sehr geringem Zeitaufwand implementiert werden. Aufgrund der, wie sich später herausstellte, sehr geringen Datengrundlage und der Should-Anforderung gemäß MoSCoW Priorisierung, dass die Wahrscheinlichkeit zur Erkennung der richtigen Emotion über 50\% liegen soll, wird anstatt der üblichen Aufteilung des Datasets in Trainings- und Testdaten das komplette Dataset als Trainingsdaten genutzt. Daraus ergibt sich dann, dass ein anderes Verfahren zum Testen des Klassifiziers gefunden werden muss. Somit wird zum Testen des Modells eine grafische Oberfläche erstellt, die im speziellen als Echtzeitanalyse der Emotionen fungiert. Hierzu kann ein Großteil des Codes genutzt werden, der als Vorarbeit bei der Entwicklung der Input GUI implementiert wurde. Der Ablauf eines konkreten Tests ist dann das Starten der Oberfläche, welche den Video Stream der Webcam ausgibt und gleichzeitig jedes Einzelbild vom Modell analysieren lässt. Dies geschieht, wie ebenfalls bereits beschrieben, durch das Ausschneiden des Gesichtes und das anschließende Konvertieren in das Grayscale-Format sowie daraufhin das Vorhersagen einer Emotion. Das Gesicht wird dann mit einem Rechteck markiert und darüber wird die vorhergesagte Emotion ausgegeben. Verändert man den Code der Input GUI nur geringfügig und erweitert ihn um das Vorhersagen der Emotion und das Schreiben der vorhergesagten Emotion auf den Output Video Stream, dann erhält man den im Anhang \ref{lst:Test mit Input GUI} gezeigten Code.
 
 \subsection{Optimierung der Lösung}
-Durch das Testen des Modells konnte festgestellt werden, dass trotz der vergrößerten Menge an Daten zum Trainieren, die Genauigkeit der Vorhersagen deutlich unter 50\% liegt. Aufgrund dieser Tatsache wird versucht, den Trainingsprozess zu optimieren. Die Möglichkeiten zum komplexen Konfigurieren eines Modells in OpenCV sind begrenzt, so dass das Konfigurieren eines Modells, welches wesentlich mehr Features der Emotion analysiert als zuvor, erschwert wird. Außerdem würde sich dann die Tatsache bemerkbar mahcen, dass OpenCV keine Möglichkeit bietet, die  Rechenleistungen der CPU und der GPU zu kombinieren. Daraus würde sich ein sehr langwieriger Trainingsprozess ergeben, was nicht mehr den Anforderungen entspricht. Daher wird zunächst versucht, den Prozess in eine extra dafür vorgesehene Bibiliothek auszulagern, wobei die Entscheidung auf die Keras-API des Tensorflow-Frameworks gefallen ist. Auf die genaue funktionsweise von Keras wird in einem späteren Kapitel näher eingegangen. An dieser Stelle bleibt dann nur noch zu bemerken, dass die Installation von Keras und das Einbinden benötigter Komponenten erfolgreich durchgeführt werden konnte, jedoch die Ausführen der benötigten Komponenten wegen einer nicht unterstützten Prozessorarchitektur bzw. eines nicht unterstützten Chipsets nicht möglich war. Aufgrund der benötigten Ressourcen und der mit Tensorflow kompatiblen Architektur wurde sich deshalb für eine Server-Client-Architektur entschieden, wobei der Server in einer uns zur Verfügung gestellten Cloudumgebung gehostet wird.
+Durch das Testen des Modells konnte festgestellt werden, dass trotz der vergrößerten Menge an Daten zum Trainieren, die Genauigkeit der Vorhersagen mit ca. 20\% deutlich unter den in den Anforderungen definierten 50\% liegt. Aufgrund dieser Tatsache wird versucht den Trainingsprozess zu optimieren. Die Möglichkeiten zum komplexen Konfigurieren eines Modells in OpenCV sind begrenzt, sodass eine Konfiguration, die wesentlich mehr Features der Emotion als zuvor analysiert, erschwert wird. Außerdem würde sich dann die Tatsache bemerkbar mahcen, dass OpenCV keine Möglichkeit bietet, die  Rechenleistungen der CPU und der GPU zu kombinieren. Daraus würde sich ein sehr langwieriger Trainingsprozess ergeben, was nicht mehr den definierten Anforderungen entsprechen würde. Daher wird zunächst versucht, den Prozess in eine extra dafür vorgesehene Bibiliothek auszulagern, wobei die Entscheidung auf die Keras-API gefallen ist. Keras selbst dient in unserem Fall als Schnittstelle zum Tensorflow-Framework. Auf die genaue funktionsweise von Keras wird in einem späteren Kapitel näher eingegangen. An dieser Stelle bleibt nur noch zu bemerken, dass die Installation von Keras und das Einbinden benötigter Komponenten zwar erfolgreich durchgeführt werden konnte, jedoch die Ausführen der benötigten Komponenten aufgrund einer nicht unterstützten Prozessorarchitektur bzw. eines nicht unterstützten Chipsets, nicht möglich war. Aufgrund der benötigten Ressourcen und der mit Tensorflow kompatiblen Architektur wurde sich deshalb für eine Server-Client-Architektur entschieden.
 
 \chapter{Server-Client Lösung}
 Basierend auf den Erfahrungen, die während des Entwicklunsprozesses der Stand-Alone Lösung gewonnen werden konnten, werden das Konzept und dementsprechend auch die Umsetzung überarbeitet und optimiert. Nachfolgend wird die damit finale Lösung genauer erläutert.
@@ -595,15 +551,14 @@ Zusätzlich zu den bereits erwähnten Gründen für die Entscheidung der Program
 Außerdem stellt sich nun die Frage, mit welcher Entwicklungsumgebung gearbeitet wird. Da nun auf einer Cloud-Infrastruktur entwickelt wird, sind die reinen grafischen Umgebungen wie Visual Studio Code oder PyCharm nicht zu empfehlen. Aufgrund vieler Vorteile, die dem entsprechenden Kapitel zu entnehmen sind und der ebenfalls bereits erwähnten Relevanz innerhalb des Studiums wird zum weiteren Entwickeln die Open-Source Webapplikation Jupyter Notebook verwendet. Da über das Webinterface insbesondere das Debugging vereinfacht wird, kann vor allem der Entwicklungsprozess signifikant beschleunigt werden. Der Einheitlichkeit halber wird die Clientanwendung ebenfalls mithilfe von Jupyter Notebook entwickelt, wobei diese in der finalen Version durch minimale Anpassungen auch problemlos ohne Jupyter Notebook ausführbar gemacht werden kann. OpenCV, die Programmbibliothek für Bildverarbeitung und Keras, die Deep-Learning-Bibliothek, werden weiterhin für die bereits beschriebenen Zwecke verwendet.
 
 \subsection{Hardware}
-
+Der Server wird in Cloudumgebung gehostet, die Infrastructure as a Service (IaaS) für Wissenschaft und Bildung bereitstellt. Hier ist besonders hervorzuheben, dass durch die Cloudumgebung eine hohe Flexibilität bezüglich der Skalierbarkeit gewährleistet ist. Hinsichtlich der verfügbaren Ressourcen wird ein Paket gewählt, das 4 virtuelle CPUs sowie 16 Gigabyte Hauptspeicher beinhaltet. Sollte im Verlauf der Umsetzung auffallen, dass die standardmäßig zur Verfügung gestellten Ressourcen nicht ausreichen, können diese bis zu 16 vCPUs und bis zu 32 Gigabyte RAM erweitert werden. Die vordefinierte Größe der Festplatte von 12 GB sollte für den Umfang des Projektes ausreichen, jedoch kann auch hier die Kapazität um bis zu 50 Gibibytes erhöht werden. Weiterhin wird auf das Betriebssystem Ubuntu 18.04 gesetzt, da so ein Großteil der zuvor gewonnen Erfahrung genutzt werden kann.
 
 \section{Umsetzung}
 Trotz der aufgetretenen Komplikationen bei der Entwicklung einer Stand-Alone Lösung muss an dieser Stelle erwähnt werden, dass große Teile, gerade im Bereich des Inputs und Outputs wiederverwendet werden. Die auf Grundlage der Stand-Alone Version entwickelte Server-Client Lösung wird nachfolgend genauer erläutert.
 
 \subsection{Dataset}
-Im Zuge der vertieften Recherche nach Keras und der direkten Verwendung im Bereich Gesichts- und Emotionserkennung wurde ein besseres Dataset gefunden, als bisher verwendet wurde. Das Dataset gehört zu einer Open-Source Facial Expression Recognition auf Kaggle.\footcite[Vgl.][]{FER-Challenge} Kaggle ist eine Online-Community deren Hauptzweck es ist, Data-Science-Wettbewerbe auszuschreiben, an denen jeder interessierte teilnehmen kann. Außerdem ermöglicht die Platform Datensätze zu finden und zu veröffentlichen und ggf. Modelle auszuprobieren oder ebenfalls zu veröffentlichen. Vereinfacht kann mann sagen, dass Kaggle ein virtueller Treffpunkt für Data-Scientists in den Bereichen Maschinelles Lernen und KI-Entwicklung ist.\newline
-Betrachten wir nun das im Projekt verwendete Dataset.
-Das Dataset umfasst 35887 Datensätze, die allesamt gelabelt sind. Dabei wird das Set in Trainingsdaten, Public-Testdaten und Private-Testdaten unterteilt, wobei 80\% aller Werte auf das Trainingsset entfallen und jeweils 10\% auf die Testsets. Die Unterteilung der Testdaten in Public und Private ist dabei nur im direkten Zusammenhang mit dem Kaggle-Wettbewert von Relevanz, da ein Set zum Testen des Modells für die Entwickler selbst ist und das Andere, um einen Sieger der Challenge auszumachen. Da wir mit unserem Modell nicht an der Facial Emotion Recognition Challenge teilnehmen, können wir die beiden Testsets zu einem großen zusammenfassen. Damit erhalten wir 28709 Datensätze zum Trainieren des Modells und 7178 Datensätze zum Testen. Aufgrund der Menge an Daten werden diese nicht wie beim anderen Dataset in einer Ordnerstruktur mit entsprechend vielen Bilddateien zur Verfügung gestellt, sondern als Comma-Separated-Values (.csv). Dabei handelt es sich um eine Art Tabelle, deren Struktur beispielhaft der Tabelle \ref{tab:FER2013} zu entnehmen ist.
+Im Zuge der vertieften Recherche zu Keras und der direkten Verwendung im Bereich Gesichts- und Emotionserkennung konnte ein besseres Dataset als zuvor gefunden werden. Das Dataset gehört zu einer Open-Source Facial Expression Recognition auf der Plattform Kaggle.\footcite[Vgl.][]{FER-Challenge} Kaggle ist eine Online-Community deren Hauptzweck es ist, Data-Science-Wettbewerbe auszuschreiben, an denen jeder interessierte teilnehmen kann. Außerdem wird durch die Plattform ermöglicht, Datensätze zu finden und zu veröffentlichen und ggf. Modelle auszuprobieren oder ebenfalls zu veröffentlichen. Vereinfacht kann mann sagen, dass Kaggle ein virtueller Treffpunkt für Data-Scientists in den Bereichen maschinelles Lernen und KI-Entwicklung ist.\newline
+Betrachten wir nun das im Projekt verwendete Dataset. Das Dataset umfasst 35887 Datensätze, die allesamt gelabelt sind. Dabei wird das Set in Trainingsdaten, Public-Testdaten und Private-Testdaten unterteilt, wobei 80\% aller Werte auf das Trainingsset entfallen und jeweils 10\% auf die beiden Testsets. Die Unterteilung der Testdaten in Public und Private ist dabei nur im direkten Zusammenhang mit dem Kaggle-Wettbewert von Relevanz, da ein Set zum Testen des Modells für die Entwickler selbst vorgesehen ist und das Andere, um einen Sieger der Challenge auszumachen. Da wir mit unserem Modell nicht an der Facial Emotion Recognition Challenge teilnehmen, können wir die beiden Testsets zu einem großen zusammenfassen. Damit erhalten wir 28709 Datensätze zum Trainieren des Modells und 7178 Datensätze zum Testen. Aufgrund der Menge an Daten werden diese nicht wie beim anderen Dataset in einer Ordnerstruktur mit entsprechend vielen Bilddateien zur Verfügung gestellt, sondern als Comma-Separated-Values in einer CSV-Datei. Dabei handelt es sich um eine Art Tabelle, deren Struktur der nachfolgenden Tabelle \ref{tab:FER2013} zu entnehmen ist.
 \begin{table}[h]
 \centering
 \begin{tabular}[t]{c|l|c}
@@ -642,7 +597,9 @@ Wert & Emotion & $H_n$ & $h_n$ \\
 \caption{Zuordnung und Häufigkeiten der Emotionen}
 \label{tab:feremotions}
 \end{table}
+Die Grafik \ref{fig:visualisierungferemotions} stellt eine visualisierte Häufigkeitsverteilung der angegebenen absoluten Häufigkeiten dar.
 \begin{figure}[h]
+  \centering
 \begin{tikzpicture}
 	\begin{axis}[
 	  ybar,
@@ -651,8 +608,8 @@ Wert & Emotion & $H_n$ & $h_n$ \\
 	  bar width=20pt,
 	  nodes near coords,
 	  symbolic x coords ={Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral},
-	  x tick label style={rotate=45,anchor=north east},
-	  title = {Häufigkeitsverteilung der Emotionen}
+	  x tick label style={rotate=45,anchor=north east}%,
+	  %title = {Häufigkeitsverteilung der Emotionen}
 	  ]
 	  \addplot[fill=blue] coordinates {
 		(Angry,4953)
@@ -665,25 +622,19 @@ Wert & Emotion & $H_n$ & $h_n$ \\
 	  };
 	\end{axis}
   \end{tikzpicture}
+  \caption{Häufigkeitsverteilung der Emotionen}
+  \label{fig:visualisierungferemotions}
 \end{figure}
-Betrachten wir nun die anderen Spalten. In der Spalte \texttt{pixels} befinden sich die eigentlichen Bilddaten als Pixelwerte, die lediglich mit einem Leerzeichen getrennt in einem String dargestellt werden. In Tabelle \ref{tab:FER2013} wird nur ein kleiner Ausschnitt der insgesamt 2304 Pixelwerte pro Datensatz angezeigt, wobei jedes Pixel Werte von 0 bis 255 annehmen kann. Die Anzahl von 2304 Pixeln ergibt sich durch die Länge und die Breite der Bilder von jeweils 48 Pixel mal 48 Pixel. Bevor man die Bilddaten in Form des Strings aus Pixeln für das Modell nutzen kann, müssen diese erst entsprechend formatiert und ungeformt werden, aber dazu später mehr.  
-Die letzte der Tabelle zu entnehmende Information befindet sich in der Spalte \texttt{Usage}. Dort wird jedem Datensatz zugeordnet, ob er im Zuge des Wettbewerbes zum Trainieren, zum privaten Testen oder zum öffentlichen Testen verwendet wird.
+Betrachten wir nun die anderen Spalten. In der Spalte \texttt{pixels} befinden sich die eigentlichen Bilddaten als Pixelwerte, die lediglich mit einem Leerzeichen getrennt in einem String dargestellt werden. In Tabelle \ref{tab:FER2013} wird nur ein kleiner Ausschnitt der insgesamt 2304 Pixelwerte pro Datensatz angezeigt. Aus der Darstellung der Bilder im Grayscale-Format ergeben sich die in der Theorie bereits erläuterten Pixelwerte von 0 bis 255. Die Anzahl von 2304 Pixeln ergibt sich durch die Länge und die Breite der Bilder von jeweils 48 Pixel mal 48 Pixel. Bevor man die Bilddaten in Form des Strings aus Pixeln für das Modell nutzen kann, müssen diese erst entsprechend formatiert und ungeformt werden, aber dazu später mehr. Die letzte der Tabelle zu entnehmende Information befindet sich in der Spalte \texttt{Usage}. Dort wird jedem Datensatz zugeordnet, ob er im Zuge des Wettbewerbes zum Trainieren, zum privaten Testen oder zum öffentlichen Testen verwendet wird.
 
 \subsection{Modell}
-Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert und \ref{fig:Model Summary}
-
-\begin{figure}[H]
-\center
-\includegraphics[scale=0.35]{Bilder/ModelSummary.png}
-\caption{ Model Summary with several Layers and I/O Shapes }
-\label{fig:Model Summary}
-\end{figure}
+Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert. Die komplette Struktur des Modells kann der Abbildung \ref{fig:Model Summary} im Anhang entnommen werden.
+%TODO
 
 \subsection{Trainieren des Modells}
-Sobald das beschriebene Modell kreiert wurde, kann mit dem wesentlichen Teil, dem Trainieren, fortgefahren werden. Ein definiertes Modell besitzt in Keras die Funktion \texttt{fit} deren Verwendung im einfachsten Fall folgendermaßen aussieht: \texttt{fit(x=Trainingsdaten, y=Trainingslabels)}, wobei \texttt{x} und \texttt{y} in diesem Fall Numpy-Arrays sind. Die Trainingsdaten und die entsprechenden Labels erhalten wir aus dem Dataset, jedoch müssen diese noch in das erforderliche Format, eine Matrix bzw. ein Numpy-Array konvertiert werden. Dazu müssen die bereits erwähnten Zeichenketten von Pixeln in eine Matrix der Form 48 Pixel x 48 Pixel gebracht werden, wobei wiederum jedes Pixel als eindimensionales Array mit einem Element dargestellt wird. Sollten an dieser Stelle Farbbilder mit dem Format 48 Pixel x 48 Pixel als Input genutzt werden, hätte man anstatt der Struktur \texttt{(48, 48, 1)} Daten der Struktur \texttt{(48, 48, 3)} entsprechend der drei RGB-Werte. Optional können der Methode \texttt{fit} Validierungsdaten als Tupel mit zwei Numpy-Arrays, den Validierungsdaten und den zugehörigen Labels, übergeben werden. Diese müssen lediglich vorher analog zu den Trainingsdaten in ein passendes Format konvertiert werden.
-Der Methode \texttt{fit} zum Trainieren des Modells können außerdem einige optionale Parameter mitgegeben werden, die im Zusammenhang mit den den Validierungsdaten besonders für die Optimierung des Modells, dem Hyperparameter-Tuning, wichtig sind.\newline
-Als Rückgabewert liefert die angesprochene Methode ein History-Objekt, in welchem Daten wie Loss und Accuracy der Trainingsdaten und ggf. Loss und Accuracy der Validierungsdaten während des Trainingsprozesses aufgezeichnet wurden. Das History-Objekt existiert jedoch nur innerhalb der Laufzeit des Python-Skripts und wird nicht zusammen mit dem Modell über die API-Methode \texttt{save(path="modelToSave.model")} abgespeichert. Um sich die History eines Modells jederzeit anzeigen ausgeben und ggf. visualisieren zu können, werden die aufgezeichneten Daten zusätlich zum Modell im JSON-Format abespeichert und können bei Bedarf über entprechende Bibliotheken wieder geladen und in ein Dictionary konvertiert werden.\newline
-Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdaten mithilfe der Bibliothek \texttt{matplotlib} können der Abbildung \ref{fig:Visualize History} entnommen werden.
+Sobald das beschriebene Modell kreiert wurde, kann mit dem wesentlichen Teil, dem Trainieren, fortgefahren werden. Ein definiertes Modell besitzt in Keras die Methode \texttt{fit}, deren Verwendung im einfachsten Fall folgendermaßen aussieht: \texttt{fit(x=Trainingsdaten, y=Trainingslabels)}, wobei \texttt{x} und \texttt{y} in diesem Fall Numpy-Arrays sind. Die Trainingsdaten und die entsprechenden Labels erhalten wir aus dem Dataset, jedoch müssen diese noch in das erforderliche Format, eine Matrix bzw. ein Numpy-Array konvertiert werden. Dazu müssen die bereits erwähnten Pixeln in der Zeichenkette in eine Matrix der Form 48 Pixel x 48 Pixel gebracht werden, wobei wiederum jedes Pixel als eindimensionales Array mit einem Element dargestellt wird. Sollten an dieser Stelle Farbbilder mit dem Format 48 Pixel x 48 Pixel als Input genutzt werden, hätte man anstatt der Struktur \texttt{(48, 48, 1)} entsprechend der drei RGB-Werte Daten der Struktur \texttt{(48, 48, 3)}. Optional können der Methode \texttt{fit} Validierungsdaten als Tupel mit zwei Numpy-Arrays, den Validierungsdaten und den zugehörigen Labels, übergeben werden. Diese müssen lediglich vorher analog zu den Trainingsdaten in ein passendes Format gebracht werden. Der Methode \texttt{fit} zum Trainieren des Modells können außerdem einige optionale Parameter mitgegeben werden, die im Zusammenhang mit den Validierungsdaten besonders für die Optimierung des Modells, dem Hyperparameter-Tuning, wichtig sind.\newline
+Als Rückgabewert liefert die angesprochene Methode ein History-Objekt, in welchem Daten wie Loss und Accuracy der Trainingsdaten und ggf. Loss und Accuracy der Validierungsdaten während des Trainingsprozesses aufgezeichnet wurden. Das History-Objekt existiert jedoch nur innerhalb der Laufzeit des Python-Skripts und wird nicht zusammen mit dem Modell über die API-Methode \texttt{save(path="modelToSave.model")} abgespeichert. Um sich die History eines Modells jederzeit anzeigen, ausgeben und ggf. visualisieren zu können, werden die aufgezeichneten Daten zusätlich zum Modell im JSON-Format abespeichert und können bei Bedarf über entprechende Bibliotheken wieder geladen und in ein Dictionary konvertiert werden.\newline
+Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdaten mithilfe der Bibliothek \texttt{matplotlib} können der Abbildung \ref{fig:Visualize History} im Anhang entnommen werden.
 \begin{figure}[h]
 	\begin{minipage}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{Bilder/loss_history.png}
@@ -696,19 +647,17 @@ Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdate
 \end{figure}
 
 \subsection{Testen des Modells}
-Beim Testen des Modells benötigt man analog zum Trainieren eines Modells mehrere Datensätze und deren jeweiligen Label. Anhand der Datensätze lässt man sich nun vom Trainierten Modell die Label vorhersagen und gleicht sie mit den tatsächlichen Labeln ab, um eine Genauigkeit zu ermitteln. Voraussetzung dafür ist, dass die Testdaten dem selben Format wie die Trainingsdaten, also einer \texttt{(48, 48, 1)}-Matrix, entsprechen. Mithilfe der Keras API-Methode \texttt{predict}, der man die gesamten Trainingsdaten auf einmal übergeben kann, kann man sich auf Grundlage des Modells die Label vorhersagen lassen. Die konkrete Rückgabe der Methode ist ein Array dessen Anzahl der Elemente der Anzahl an Trainingsdaten entspricht, wobei wiederum jedes Element selbst ein Array ist, dessen Länge der Anzahl an möglichen Emotionen entspricht. Übergibt man beispielsweise 10 Testdatensätze und das Modell wurde mit 4 Emotionen trainiert, erhält man ein zweidimensionales Array, welches 10 Arrays der Länge 4 enthält. In den inneren Feldern sind für jede Emotion Werte zwischen 0 und 1 enthalten, welche zusammen 1 ergeben. Vereinfacht gesagt wird für jede Emotion die als Input gegeben wird, die prozentuale Übereinstimmung mit jeder möglichen Emotion zurückgegeben bzw. die Wahrscheinlichkeit zu jeder möglichen Emotion vorhergesagt. Dies könnten beispielhaft so aussehen: \texttt{[0.05690899, 0.09713534, 0.5027235,  0.04000191, 0.29613075, 0.00709949]}. Möchte man zu einem Input eine einzige Emotion vorhersagen, ist es sinnvoll, die dem Maximum des Arrays entsprechende Emotion zurückzugeben. Nimmt man die in Tabelle \ref{tab:feremotions} definierte Zuordnung von Emotionen als Grundlage, entspricht das Maximum des Arrays dem Index 2, wobei dieser Wert wiederum der Emotion \texttt{Fear} zugeordnet ist.\newline
-Gleicht man die vorhergesagten Emotionen mit den tatsächlichen Emotionen ab kann man eine statistische Auswertung über der Gesamtmenge aller Daten vornehmen, z.B. dass die Wahrscheinlichkeit einer richtigen Vorhersage bei 40\% liegt, oder den Anteil der richtigen Zuordnung jeder einzelnen Emotion, z.B. \texttt{[0.1, 0.2, 0.05, 0.15, 0.91, 0.34]}. Dem letzteren Beispiel kann man entnehmen, dass das Modell sehr gut geeignet ist, die Emotion die dem Wert 4 entspricht zu erkennen, jedoch sehr schlecht darin ist, alle anderen Emotionen zu erkennen. Beide Daten werden während des Testprozesses berechnet und sind bei der späteren Optimierung des Modells hilfreich.
+Beim Testen des Modells benötigt man analog zum Trainieren eines Modells mehrere Datensätze und deren jeweilige Label. Um eine Genauigkeit zu ermitteln, lässt man sich die Label des Testsets vom trainierten Modell vorhersagen und gleicht diese mit den tatsächlichen Labeln ab. Voraussetzung dafür ist, dass die Testdaten dem selben Format wie die Trainingsdaten, also einer \texttt{(48, 48, 1)}-Matrix, entsprechen. Mithilfe der Keras API-Methode \texttt{predict}, der man die gesamten Trainingsdaten auf einmal übergeben kann, kann man sich auf Grundlage des Modells die Labels vorhersagen lassen. Die konkrete Rückgabe der Methode ist ein Array, dessen Anzahl der Elemente der Anzahl an Trainingsdaten entspricht. Dabei ist wiederum jedes Element selbst ein Array, dessen Länge der Anzahl an möglichen Emotionen entspricht. Übergibt man beispielsweise 10 Testdatensätze und das Modell wurde mit 4 Emotionen trainiert, erhält man ein zweidimensionales Array, welches 10 Arrays der Länge 4 enthält. In den inneren Feldern sind für jede Emotion Werte zwischen 0 und 1 enthalten. Da diese einer Art Wahrscheinlichkteit entsprechen ergeben sie kumiliert den Wert 1. Vereinfacht gesagt wird für jede Emotion die als Input gegeben wird, die prozentuale Übereinstimmung mit jeder möglichen Emotion zurückgegeben bzw. die Wahrscheinlichkeit zu jeder möglichen Emotion vorhergesagt. Dies könnte beispielhaft so aussehen: \texttt{[0.05690899, 0.09713534, 0.5027235,  0.04000191, 0.29613075, 0.00709949]}. Möchte man zu einem Input eine einzige Emotion vorhersagen, ist es sinnvoll, die dem Maximum des Arrays entsprechende Emotion zurückzugeben. Nimmt man die in Tabelle \ref{tab:feremotions} definierte Zuordnung von Emotionen als Grundlage, entspricht das Maximum des Arrays dem Index 2, wobei dieser Wert wiederum der Emotion \texttt{Fear} zugeordnet ist.\newline
+Gleicht man die vorhergesagten Emotionen mit den tatsächlichen Emotionen ab, kann man eine statistische Auswertung über der Gesamtmenge aller Daten vornehmen, z.B. dass die Wahrscheinlichkeit einer richtigen Vorhersage bei 40\% liegt. Außerdem ist es möglich, den Anteil der richtigen Zuordnung jeder einzelnen Emotion, z.B. \texttt{[0.1, 0.2, 0.05, 0.15, 0.91, 0.34]} zu ermitteln. Dem letzteren Beispiel kann man entnehmen, dass das Modell sehr gut geeignet ist, die Emotion die dem Wert 4 entspricht zu erkennen, jedoch sehr schlecht darin ist, alle anderen Emotionen zu erkennen. Beide Daten werden während des Testprozesses berechnet und sind bei der späteren Optimierung des Modells hilfreich.
 
 \subsection{Optimierung des Modells}
+%TODO
 
 \subsection{Webserver}
-Einer der wesentlichen Unterschiede zu der zuvor entwickelten Lösung ist die Architektur. Es läuft nicht mehr alles lokal auf einem Rechner, sondern es zwischen Server und Client unterschieden. Alles was das Modell direkt betrifft, also das Trainieren, Testen und Vorhersagen geschieht auf dem Server, wo auch das Modell selbst existiert. 
-
-
-Um mit dem Client interagieren zu können, wird das Webframework Flask verwendet, welches konkret als Webserver dient. Da Flask in Python geschrieben ist, wird die Implementierung von Endpunkten in Verbindung mit den bereits implementierten Funktionalitäten stark vereinfacht.\newline
-Die Interaktion zwischen Server und Client ist sehr überschaubar und es wird lediglich ein einziger Endpunkt auf der Serverseite benötigt. Dieser Endpunkt nimmt mittels der \texttt{POST}-Methode ein vom Client geliefertes, grob vorbearbeitetes Bild entgegen. Dieses Bild wird dann auf dem Server so formatiert, dass mithilfe eines bereits trainierten Modells eine Emotionsvorhersage getroffen werden kann. Das Ergebnis wird dann an den Client zurückgeliefert und kann dort in einen entsprechenden Kontext wie die reine Ausgabe oder die Analyse eines Pokerfaces weiterverwendet werden.\newline
-Damit der Server Vohersagen mithilfe eines Modells machen und Bilder archivieren kann, müssen zur Initialisierung das Modell geladen werden und entsprechende Ordnerstrukturen angelegt werden, sofern sie nicht vorhanden sind. Danach kann der Webserver gestartet werden, um Verbindungen vom Client über einen vordefinierten Port entgegenzunehmen. Sobald ein Client ein Bild ein den Server übergibt, wird dieses gespeichert bzw. archiviert. Da nicht sichergestellt ist, dass der Client ausschließlich Bilder auf denen nur ein Gesichtsausschnitt zu sehen ist und der Größe  48 Pixel x 48 Pixel entsprechen, muss dies zunächst serverseitig geprüft und ggf. angepasst werden.  
-Die allgemeine Vorgehensweise ist dabei, zuerst ein Gesicht zu erkennen und dieses danach auf 48 Pixel x 48 Pixel zuzuschneiden. Damit das Modell eine optimale Vorhersage geben kann, muss der Ausschnitt des extrahierten Gesichtes ggf. noch in ein Graustufenformat konvertiert werden. Um nun einen validen Input für das Modell zu generieren, muss das Image-Objekt noch in einen Pixel-String bzw. in eine Matrixrepräsentation der Form \texttt{(48, 48, 1)} gebracht werden. Jetzt kann auf dem bei der Initialisierung geladenen Modell die bereits erläuterte Methode \texttt{predict} aufgerufen und die Vorhersagewerte an den Client zurückgegeben werden.
+Einer der wesentlichen Unterschiede zu der zuvor entwickelten Lösung ist die Architektur. Es läuft nicht mehr alles lokal auf einem Rechner, sondern es wird zwischen Server und Client unterschieden. Alles was das Modell direkt betrifft, also das Trainieren, Testen und Vorhersagen geschieht auf dem Server, wo auch das Modell selbst existiert. Um mit dem Client interagieren zu können, wird das Webframework Flask verwendet, welches konkret als Webserver dient. Da Flask in Python geschrieben ist, wird die Implementierung von Endpunkten in Verbindung mit den bereits implementierten Funktionalitäten sehr stark vereinfacht.\newline
+Die Interaktion zwischen Server und Client ist sehr überschaubar und es wird lediglich ein einziger Endpunkt auf der Serverseite benötigt. Dieser Endpunkt nimmt mittels der \texttt{POST}-Methode ein vom Client geliefertes, grob vorbearbeitetes Bild entgegen. Dieses Bild wird dann auf dem Server so formatiert, dass mithilfe eines bereits trainierten Modells eine Emotionsvorhersage getroffen werden kann. Das Ergebnis wird dann an den Client zurückgeliefert und kann dort in einen entsprechenden Kontext, wie die reine Ausgabe oder die Analyse eines Pokerfaces, gesetzt und weiterverwendet werden.\newline
+Damit der Server mithilfe eines Modells Vohersagen machen und Bilder archivieren kann, wird zur Initialisierung das Modell geladen und entsprechende Ordnerstrukturen, sofern sie nicht vorhanden sind, angelegt werden. Danach kann der Webserver gestartet werden, um Verbindungen vom Client über einen vordefinierten Port entgegenzunehmen. Sobald ein Client ein Bild an den Server übergibt, wird dieses gespeichert bzw. archiviert. Da nicht sichergestellt ist, dass der Client ausschließlich Bilder der Größe 48 Pixel x 48 Pixel mit einem Gesichtsausschnitt  sendet, werden diese zunächst serverseitig geprüft und ggf. überarbeitet werden.  
+Die allgemeine Vorgehensweise ist dabei, zuerst ein Gesicht zu erkennen und dieses danach auf 48 Pixel x 48 Pixel zuzuschneiden. Damit das Modell eine optimale Vorhersage geben kann, wird der Ausschnitt des extrahierten Gesichtes ggf. noch in ein Graustufenformat konvertiert werden. Um nun einen validen Input für das Modell zu generieren, wird das Image-Objekt in einen Pixel-String bzw. in eine Matrixrepräsentation der Form \texttt{(48, 48, 1)} gebracht. Jetzt kann auf dem bei der Initialisierung geladenen Modell die bereits erläuterte Methode \texttt{predict} aufgerufen werden. Der Rückgabewert dieser Funktion bzw. die Vorhersagewerte der einzelnen Emotionen werden dann an den Client zurückgegeben.
 
 \subsection{Client}
 Der Hauptzweck des Clientanwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht. \newline
@@ -813,8 +762,13 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
   \newpage
   \lstinputlisting[style=custompython, caption=Dataset sortieren und überarbeiten, label=lst:Organising The Dataset]{Code/OrganizingTheDataset.py}
   \newpage
-
-\section*{Verzichnisstrukturen}
+  \lstinputlisting[style=custompython, numbers=none, linerange=8-17, caption=Trainingsdaten als Arrays extrahieren, label=lst:Trainingsdaten extrahieren]{Code/ClassifierHandler.py}
+  \newpage
+  \lstinputlisting[style=custompython, caption=Skript zum Trainieren und Testen eines FisherFaceRecognizer, label=lst:Classifier Handler]{Code/ClassifierHandler.py}
+  \newpage
+  \lstinputlisting[style=custompython, numbers=none, linerange=26-50, caption=Klassifizierer mit der Input GUI testen, label=lst:Text mit Input GUI]{Code/ClassifierHandler.py}
+  \newpage
+\section*{Verzeichnisstrukturen}
 \setlength{\DTbaselineskip}{20pt}
 \DTsetlength{1em}{1.5em}{0.2em}{1pt}{4pt}
 \renewcommand*\DTstylecomment{\rmfamily\color{commentgreen}\textsc}
@@ -866,5 +820,51 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
 \label{fig:Struktur CK Dataset}
 \end{figure}
 
+\begin{figure}
+	\dirtree{%
+	.1 sorted\_set.
+	.2 anger.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 contempt.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 disgust.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 fear.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 happy.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 neutral.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 sadness.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	.2 surprise.
+	.3 1.png.
+	.3 2.png.
+	.3 \ldots.
+	}
+\caption{Struktur überarbeitetes Dataset}
+\label{fig:Tree Sorted Set}
+\end{figure}
+\section*{Sonstiges}
+\begin{figure}[h]
+  \center
+  \includegraphics[scale=0.35]{Bilder/ModelSummary.png}
+  \caption{ Model Summary with several Layers and I/O Shapes }
+  \label{fig:Model Summary}
+  \end{figure}
 \end{appendix}
 \end{document}
