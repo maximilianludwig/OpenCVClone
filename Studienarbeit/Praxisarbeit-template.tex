@@ -262,74 +262,20 @@ Eines der größten Vorteile dieser Bibliothek besteht in der ausführlichen Dok
 
 \subsubsection{Keras}
 Die Open-Source Bibliothek Keras wurde im Vergleich zu Dlib im Jahre 2015 von dem Google-Programmierer François Chollet in der Programmiersprache Python entwickelt.\footcite[Vgl.]{Keras}
+Das ursprüngliche Ziel von Keras war es eine Abstraktionsschicht für das Framework Theano zu bilden, um die Handhabung zu vereinfachen. Mit der Veröffentlichung von TensorFlow im November 2015 wurde Keras im folgenden Monat weiter entwickelt um auch TensorFlow als Backend verwenden zu können. Schlussendlich konnte Keras die Frameworks TensorFlow, Theano und das Microsoft Cognitive Toolkit (kurz: CNTK) einbinden und beliebig austauschen.\footcite[Vgl.]{Keras3} Allerdings stoppte im September 2017 die Weiterentwicklung an Theano
+\footcite[Vgl.]{Theano}
+ waraufhin Keras zunehmend an TensorFlow gebunden wurde.\footcite[Vgl.]{Keras4} Schlussendlich wurde mit Keras 2.3, welches im September 2019 veröffentlicht wurde, die multi-backend Version eingestellt.\footcite[Vgl.]{Keras5} Aus diesem Grund wird Keras überwiegend mit dem Framework TensorFlow verwendet.
+\newline
 Bei der Entwicklung von Keras stand die Benutzerfreundlichkeit als eines der wichtigsten Prinzipien im Mittelpunkt. Dem gefolgt bietet Keras eine schnelle und leichte Erstellung neuronaler Netze. Durch ein ausführliches Feedback können Fehler durch den Benutzer schnell ausfindig gemacht und behoben werden. Ein weiteres Designprinzip von Keras ist die Modularität, mithilfe derer man verschiedene Module beliebig konfigurieren und miteinander kombinieren kann. Zudem bietet die Open-Source Bibliothek die Unterstützung von rekurrenten und konvolutionalen Netzwerken, sowie die Unterstützung der GPUs und CPUs, welches für die Umsetzung dieses Projektes von Vorteil waren.\footcite[Vgl.]{Keras2}
 Zuletzt steht hinter Keras eine große aktive Community, welche zahlreiche Tutorials und Hilfestellungen für verschiedenste Problemstellungen liefert.
 
 
 \subsubsection{Unterschiede}
 
-
-%\begin{table}[]
-%\begin{tabular}{llllllllllllllllll}
-%\multicolumn{1}{c}{{\ul \textbf{Software}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Creator}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Initial \\ Release\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Software \\ Licence\end{tabular}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Open Source}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Platform}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Written in}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{Interface}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{OpenMP support}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{OpenCL support}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}CUDA\\ support\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Automatic\\ differentiation\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Has pretrained\\ models\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Recurrent\\ nets\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Convolutional \\ nets\end{tabular}}} &
-%  \multicolumn{1}{c}{{\ul \textbf{RBM/DBNs}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Parallel execution \\ (multi node)\end{tabular}}} &
-%  \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Actively\\ Developed\end{tabular}}} \\
-%Keras &
-%  Francois Chollet &
-%  2015 &
-%  MIT license &
-%  Yes &
-%  \begin{tabular}[c]{@{}l@{}}Linux, macOS,\\ Windows\end{tabular} &
-%  Python &
-%  Python, R &
-%  \begin{tabular}[c]{@{}l@{}}Only if using \\ Theano as backend\end{tabular} &
-%  \begin{tabular}[c]{@{}l@{}}Can use Theano,\\ Tensorflow or \\ PlaidML as backends\end{tabular} &
-%  Yes &
-%  Yes &
-%  Yes &
-%  Yes &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes \\
-%Dlib &
-%  Davis King &
-%  2002 &
-%  Boost Software License &
-%  Yes &
-%  Cross-Platform &
-%  C++ &
-%  C++ &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes &
-%  Yes &
-%  No &
-%  Yes &
-%  Yes &
-%  Yes &
-%  
-%\end{tabular}
-%\end{table}
 Zusammenfassend kann gesagt werden, dass Dlib eine mächtige Bibliothek für die Umsetzung verschiedenster Aufgaben ist. Die ausführliche Dokumentation bietet eine große Hilfestellung. Jedoch folgt aus dem Angebot der zahlreichen Features auch eine längere Einarbeitung, bis die Anforderungen produktiv umgesetzt werden können.\newline
-Keras hingegen bietet durch dessen benutzerfreundliche Entwicklung und den zahlreichen Tutorials eine schnelle erste Umsetzung der Aufgaben. Durch die Modularität und der aktiven Community können viele öffentliche Lösungen genutzt und für die eigenen Anforderungen abgeändert werden. 
+Keras hingegen bietet durch dessen benutzerfreundliche Entwicklung und den zahlreichen Tutorials eine schnelle erste Umsetzung der Aufgaben. Durch die Modularität und der aktiven Community können viele öffentliche Lösungen genutzt und für die eigenen Bedürfnisse abgeändert werden. 
 Aus diesem Grund und aufgrund der Unterstützung der rekurrenten und konvolutionalen Netzwerken wurde sich für die Verwendung von Keras als Open-Source Bibliothek in diesem Projekt entschieden.
+
 
 \subsection{Supervised vs. Unsupervised Learning}
 In diesem Abschnitt werden die beiden Ansätze des Supervised bzw. des Unsupervised Learnings evaluiert. Dabei sollen jedoch beide Begriffe nicht noch ausführlich beleuchtet werden. Es ist lediglich zu erwähnen, dass Supervised Learning Algorithmen im Gegensatz zu Unsupervised mit Datensätzen arbeiten, die Labels beinhalten, und so einen Datensatz kategorisieren. Grundlegende Informationen zu den einzelnen Vorgehensweisen können aus den Büchern "Hands-On Unsupervised Learning with Python" von Giuseppe Bonaccorso und "Applied Supervised Learning with Python" von Benjamin Johnston und Ishita Mathur entnommen werden. Nun gilt es zu klären, ob sich für die zugrundeliegende Aufgabe ein Supervised oder Unsupervised Ansatz eher anbietet. Ein Unsupervised Learning Algorithmus würde sich vor allem anbieten, wenn Zusammenhänge zwischen einzelnen Datensätzen gefunden werden sollen, die vielleicht nicht von Anfang an bekannt oder bewusst sind.
@@ -682,8 +628,8 @@ $$ \forall e_{i} \in Emotion : (avg - e_{i} ) \leq \epsilon \Rightarrow Pokerfac
  $ \epsilon$ ist hierbei die Toleranz in der sich eine Abweichung der Emotion begeben darf.
 
 \chapter{Ergebnis}
-Außerdem werden die aufgrund des erstellten Konzeptes entwickelten Lösungsansätze und Lösungen erläutert. Dazu werden die definierten Anforderungen vor allem auch im Bezug auf das trainierte Modell zum klassifizieren von den vordefinierten Emotionen und das Verifizieren und Testen dieses Modells auf Erfüllung geprüft.\newline
-Eine grundlegende Anforderung ist, dass die Emotionen nicht zufällig erkannt werden. Hier kann schon gesagt werden, dass diese Anforderung schon in frühen Projektphasen erfüllt werden konnte und die Genauigkeit der richtigen Zuordnung der Testdaten bei 55,71\% liegt. Somit ist davon auszugehen, dass vorhandene Emotionen auf ca. jedem zweiten Bild richtig klassifiziert wird, was aus unserer Sicht auch in der Praxis mit neuen (Test-)Daten realistisch ist. Ergänzt man die Tabelle \ref{tab:feremotions} der Häufigkeitsverteilung der Emotionen mit der Genauigkeit der Zuordnung der Testdaten zu den einzelnen Emotionen ergibt sich folgende Tabelle \ref{tab:genauigkeitemotions}.
+Außerdem werden die aufgrund des erstellten Konzeptes entwickelten Lösungsansätze und Lösungen erläutert. Dazu werden die definierten Anforderungen vor allem auch im Bezug auf das trainierte Modell zum Klassifizieren von den vordefinierten Emotionen und das Verifizieren und Testen dieses Modells auf Erfüllung geprüft.\newline
+Eine grundlegende Anforderung ist, dass die Emotionen nicht zufällig erkannt werden. Hier kann gesagt werden, dass diese Anforderung schon in frühen Projektphasen erfüllt werden konnte und die Genauigkeit der richtigen Zuordnung der Testdaten bei 55,71\% liegt. Somit ist davon auszugehen, dass vorhandene Emotionen im Durchschnitt auf ca. jedem zweiten Bild richtig klassifiziert werden. Dies kann in der Praxis anhand von eigenen Tests nur so bestätigt werden. Ergänzt man die Tabelle \ref{tab:feremotions} der Häufigkeitsverteilung der Emotionen mit der Genauigkeit der Zuordnung der Testdaten zu den einzelnen Emotionen ergibt sich folgende Tabelle \ref{tab:genauigkeitemotions}.
 \begin{table}[h]
   \centering
   \begin{tabular}[t]{c|c|c|c|c}
@@ -701,10 +647,9 @@ Eine grundlegende Anforderung ist, dass die Emotionen nicht zufällig erkannt we
   \caption{Genauigkeit der Zuordnung der Testdaten zu den einzelnen Emotionen}
   \label{tab:genauigkeitemotions}
 \end{table} 
-Bei Betrachtung der zwei Ansätze zur Erkennung eines Pokerfaces können sowohl der langzeitorientierte als auch der kurzzeitorientierte Algorithmus bei der Implementierung in der Clientanwendungen zwischen Pokerface und kein Pokerface unterscheiden. Durch ausführliche Praxistests kann die grundsätzliche Richtigkeit für beide Algorithmen validiert werden. Die letzte Must-Anforderung, ist die Implementierung einer benutzerfreundlichen Interaktionsmöglichkeit um Input, also Bilder zu liefern und Output darzustellen, wobei der im Projektumfang definiert Output lediglich die Information darstellt, ob ein Pokerface vorhanden ist oder nicht. Dabei konnte die erste Teilanforderung schon in ersten Entwürfen erfüllt werden, da ohne besondere Interaktion des Anwenders die Bilder der Webcam bzw. des Video-Streams automatisiert als Input genutzt wurde. Da die am Anfang erstellte OpenCV-Anwendung auch als Grundlage für die finale Version diente, wird die Teilanforderung dort ebenfalls erfüllt. Durch die einfache Textausgabe auf dem gespiegelten Video-Stream in der Clientanwendung, ob ein Pokerface vorhanden ist oder nicht, wird auch die zweite Teilanforderung, dass ein Output darzustellen ist, erfüllt.\newline
-Dadurch dass die Genauigkeit zur Erkennung der richtigen Emotion bei über 50\% liegt, gilt auch die erste Anforderung der Should-Klassifizierung als erfüllt. Die genannte Genauigkeit ergibt sich aus den in Tabelle \ref{tab:genauigkeitemotions} dargestellten Daten. Hierbei ist zu bemerken, dass aufgrund der signifikant geringen Anzahl an Daten zu der Emotion \texttt{Disgust} entschieden wurde, im Umfang des Projektes lediglich die restlichen sechs Emotionen zu berücksichtigen. Da somit zwischen mehr als fünf verschiedenen Emotionen differenziert wird, gilt auch die zweite Anforderung der Should-Kriterien als erfüllt. Wie ebenfalls in den Anforderungen definiert, soll die Erkennung einer Emotion und eines Pokerfaces innerhalb eines Pokerspielzuges eines Spielers, also innerhalb 20 Sekunden erfolgen. Nach ausgiebigen Praxistests der Clientanwendugn kommt man zu dem Ergebnis, dass die Bilder bei einer guten Netzwerkverbindung zum Server in nahezu Echtzeit analysiert und Ergebnisse an den Client zurückgesendet werden. Da für zuverlässige Aussagen bezüglich des Pokerfaces in beiden Algorithmen Referenzwerte gesammelt werden müssen, liegt je nach Konfiguration der Anzahl der Referenzwerte und der Zeitdifferenz zwischen den Referenzwerten die Zeit zwischen ca. fünf und zehn Sekunden. Da beide Algorithmen auf dem Client laufen und die Analyse der Emotionen nahezu in Echtzeit erfolgen, ist die Dauer der Erkennung eines Pokerfaces nach Programmstart ca. 11 Sekunden und die reine Dauer zur Erkennung eines Pokerfaces bei unter einer Sekunde. Somit gilt auch die letzte Should-Anforderung als erfüllt.\newline
-Wie bereits mehrfach erwähnt, werden Bilder in nahezu Echtzeit analysiert, sodass die erste Anforderung nach der Could-Klassifikation ebenfalls als erfüllt gilt.
-Eine weitere Anforderung in dieser Kategorie ist das Trainieren des Modells innerhalb eines Arbeitstages. Bei den ersten Modellen, welche auf dem Dataset der FER-Challenge über 50 bis 100 Epochen trainiert wurden, lag die Trainingsdauer mit ca. 14 Stunden bei deutlich über einem Arbeitstag. Bei der optimierung des Modells und dem Feintuning der Hyperparameter Batchsize und Epochs konnte die Genauigkeit des Modells erheblich gesteigert werden, wobei sich als Nebeneffekt die Trainingsdauer signifikant auf ca. 30 Minuten verbessert hat. Somit wurde mit der Optimierung des Modells auch indirekt die angesprochene Anforderung erfüllt. Da einzelne Bilder des Video-Streams der Webcam als Input zur Analyse dienen und diese automatisiert an den Server übermittelt werden, sowie auch der Output mit der Information, ob ein Pokerface vorhanden ist oder nicht, automatisiert in der GUI ausgegeben wird, sind von Seiten des Nutzers keinerlei Interaktionen erforderlich. Dieser muss lediglich die Anwendung, also das Jupyter Notebook bzw. das Python-Skript ausführen. Da dem Nutzer keine Auswahlmöglichkeiten zur Interaktion gegeben werden, wird für die reine Bedienung der Oberfläche kein technissches Wissen benötigt, jedoch sollte zum Starten des Skriptes ein geringes technisches Verständnis vorhanden sein. Da diese Anforderung als Could-Anforderung definiert ist, kann diese nur zu einem Großteil erfüllt werden, was jedoch kein Problem darstellt.\newline
+Bei Betrachtung der zwei Ansätze zur Erkennung eines Pokerfaces ist festzustellen, dass bei der Implementierung der Clientanwendung sowohl der langzeitorientierte als auch der kurzzeitorientierte Algorithmus zwischen Pokerface und kein Pokerface unterscheiden kann. Durch ausführliche Praxistests kann die grundsätzliche Funktionstüchtigkei für beide Algorithmen validiert werden. Die letzte Must-Anforderung ist die Implementierung einer benutzerfreundlichen Interaktionsmöglichkeit, um Input zu liefern und Output darzustellen. Dabei stellt der im Projektumfang definierte Output lediglich die Information dar, ob ein Pokerface vorhanden ist oder nicht. Die erste Teilanforderung wurde schon in den ersten Entwürfen erfüllt werden, da ohne besondere Interaktion des Anwenders die Bilder der Webcam bzw. des Video-Streams automatisiert als Input genutzt wurden. Da die am Anfang erstellte OpenCV-Anwendung auch als Grundlage für die finale Version dient, wird die Teilanforderung dort ebenfalls erfüllt. Durch die einfache Textausgabe auf dem gespiegelten Video-Stream in der Clientanwendung, ob ein Pokerface vorhanden ist oder nicht, wird auch die zweite Teilanforderung, dass ein Output darzustellen ist, erfüllt.\newline
+Dadurch dass die Genauigkeit zur Erkennung der richtigen Emotion bei über 50\% liegt, gilt auch die erste Anforderung der Should-Klassifizierung als erfüllt. Die genannte Genauigkeit ergibt sich aus den in Tabelle \ref{tab:genauigkeitemotions} dargestellten Daten. Hierbei ist zu bemerken, dass aufgrund der signifikant geringen Anzahl an Daten zu der Emotion \texttt{Disgust} entschieden wurde, im Umfang des Projektes lediglich die restlichen sechs Emotionen zu berücksichtigen. Da somit zwischen mehr als fünf verschiedenen Emotionen differenziert wird, gilt auch die zweite Anforderung der Should-Kriterien als erfüllt. Wie ebenfalls in den Anforderungen definiert, soll die Erkennung einer Emotion und eines Pokerfaces innerhalb eines Pokerspielzuges eines Spielers, also innerhalb von 20 Sekunden erfolgen. Nach ausgiebigen Praxistests der Clientanwendugn kommt man zu dem Ergebnis, dass die Bilder bei einer guten Netzwerkverbindung zum Server in nahezu Echtzeit analysiert und die Ergebnisse an den Client zurückgesendet werden. Da für zuverlässige Aussagen bezüglich des Pokerfaces in beiden Algorithmen Referenzwerte gesammelt werden müssen, liegt je nach Konfiguration der Anzahl der Referenzwerte und der Zeitdifferenz zwischen den Referenzwerten die Zeit, die bis zum ersten Erkennen eines Pokerfaces vergeht, zwischen ca. fünf und zehn Sekunden. Da beide Algorithmen auf dem Client laufen und die Analyse der Emotionen nahezu in Echtzeit erfolgen, ist die Dauer der Erkennung eines Pokerfaces nach Programmstart ca. 11 Sekunden und die reine Dauer zur Erkennung eines Pokerfaces bei unter einer Sekunde. Somit gilt auch die letzte Should-Anforderung als erfüllt.\newline
+Wie bereits mehrfach erwähnt, werden Bilder in nahezu Echtzeit analysiert, sodass die erste Anforderung nach der Could-Klassifikation ebenfalls als erfüllt gilt. Eine weitere Anforderung in dieser Kategorie ist das Trainieren des Modells innerhalb eines Arbeitstages. Bei den ersten Modellen, welche auf dem Dataset der FER-Challenge über 50 bis 100 Epochen trainiert wurden, lag die Trainingsdauer mit ca. 14 Stunden bei deutlich über einem Arbeitstag. Bei der Optimierung des Modells und dem Feintuning der Hyperparameter Batchsize und Epochs konnte die Genauigkeit des Modells erheblich gesteigert werden, wobei sich als Nebeneffekt die Trainingsdauer auf ca. 30 Minuten signifikant verbessert hat. Somit wurde mit der Optimierung des Modells auch indirekt die zuvor angesprochene Anforderung erfüllt. Da einzelne Bilder des Video-Streams der Webcam als Input zur Analyse dienen und diese automatisiert an den Server übermittelt werden, sowie auch der Output mit der Information, ob ein Pokerface vorhanden ist oder nicht, automatisiert in der GUI ausgegeben wird, sind von Seiten des Nutzers keinerlei Interaktionen erforderlich. Dieser muss lediglich die Anwendung, also das Jupyter Notebook bzw. das Python-Skript ausführen. Da dem Nutzer keine Auswahlmöglichkeiten zur Interaktion gegeben werden, wird für die reine Bedienung der Oberfläche kein technissches Wissen benötigt, jedoch sollte zum Starten des Skriptes ein geringes technisches Verständnis vorhanden sein. Da diese Anforderung als Could-Anforderung definiert ist, kann diese nur zu einem Großteil erfüllt werden, was jedoch aufgrund der Klassifizierung kein Problem darstellt.\newline
 Das Ziel des Projektes ist nicht die Analyse von ganzen Videos. Da immer einzelne Emotionen auf einzelnen Bildern analysiert werden, kann man hier zwar von der eingeschränkten Erfüllung der Anforderung sprechen, jedoch ist es nicht möglich, direkt ein Video zu analysieren. So wie bei der Anforderung, dass das Modell bei jeder Belichtung valide Ergebnisse liefern soll, handelt es sich um Anforderungen der Won't-Klassifizierung. Daher stellt es kein Problem dar, dass zur Analyse von Emotionen auf Bildern zumindest eine mäßige Belichtung notwendig ist, wobei für zuverlässige Ergebnisse verschiedene Belichtungseinstellung getestet werden sollten.
 
 \let\cleardoublepage\relax
