@@ -89,16 +89,9 @@ Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Maximilian Ludwig
 Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Kevin Wrona
 \newpage
 \section*{Abstract}
-
-Aufgabe
-Ziel 
-Vorgehen
-Ergebnisse
-
-
 Aufgabe dieser Studienarbeit ist es eine Emotionsanalyse durchführen zu können. Zur Veranschaulichung wird diese Thematik anhand des Anwendungsbeispiels der Pokerface-Erkennung realisiert.
 Ziel ist es dabei, dass eine möglichst genaue Vorhersage der Emotionen gemacht werden kann, die es wiederum ermöglicht eine Aussage darüber zu treffen, ob eine Person ein Pokerface aufgesetzt hat, oder nicht.
-Um dies umzusetzen wird eine künstliche Intelligenz entwickelt, genauer gesagt ein neuronales Netz. Die Testdaten dieses Netzes sind dabei 35.887  verschiedene Gesichtsbilder der FER (Facial Expression Recognition) Challenge von Kaggle. Dadurch kann das trainierte Modell eine Genauigkeit in der Emotionsvorhersage von 55,71\% erzielen. Die Erkennung eine Pokerfaces wird davon jedoch kaum beeinträchtigt, weshalb das Ziel ein Pokerface zu erkennen nicht verfehlt wurde.
+Um dies umzusetzen wird eine künstliche Intelligenz entwickelt, genauer gesagt ein neuronales Netz. Die Testdaten dieses Netzes sind dabei 35.887  verschiedene Gesichtsbilder der FER (Facial Expression Recognition) Challenge von Kaggle. Dadurch kann das trainierte Modell eine Genauigkeit in der Emotionsvorhersage von 55,71\% erzielen. die Rate der rcichtig erkannten Pokerfaces zu testen ist jedoch nicht so einfach. Diese kann nur durch ausprobieren festgestellt werden. Die Erkennung eine Pokerfaces wird davon jedoch kaum beeinträchtigt, weshalb das Ziel ein Pokerface zu erkennen nicht verfehlt wurde.
 
 
 \newpage
@@ -587,7 +580,8 @@ Betrachten wir nun die anderen Spalten. In der Spalte \texttt{pixels} befinden s
 
 \subsection{Modell}
 Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert. Die komplette Struktur des Modells kann der Abbildung \ref{fig:Model Summary} im Anhang entnommen werden.
-%TODO
+Wie zu sehen ist, ist das Modell ein einfaches Convolutional Neural Network. 
+Wie der Grafik zu entnehmen ist sind die Eingabedaten 48 x 48 Pixel große Bilder, die wiederum durch drei sequentielle Schichten von Convolutional Layern und Pooling Layern verarbeitet werden. Jede dieser drei Schichten weist dabei wiederum drei Conv2D-Layer auf. Diese sind in Keras die convolutional Layer. Jeder von diesen hat dabei 32 Filter als Verarbeitungsparameter, die wiederum eine Größe von 3 x 3 Pixeln aufweisen. Auf diese drei Conv2D-Layer kommt jeweils ein Pooling Layer. Dieser verwendet die Max. Pooling Strategie und hat eine größe von 2 x 2 Pixeln. Dadurch halbieren sich die Größen der Eingabebilder jeweils von 48 x 48 Pixeln auf 24 x 24 bzw. 12 x 12 und 6 x 6. Der Anschließende Flatten-Layer formatiert die 6 x 6 Bilder und die jeweiligen 32 Filter um, sodass die darauffolgenden Dense-Layer (Vollständig verbundene Layer) die Bilder verarbeiten können. Die drei Dense-Layer Verdichten die Ausgabeneuronen so, dass am Ende für jede Emotion die vorhergesagt werden kann ein Neuron als Ausgabeknoten übrig ist. 
 
 \subsection{Trainieren des Modells}
 Sobald das beschriebene Modell kreiert wurde, kann mit dem wesentlichen Teil, dem Trainieren, fortgefahren werden. Ein definiertes Modell besitzt in Keras die Methode \texttt{fit}, deren Verwendung im einfachsten Fall folgendermaßen aussieht: \texttt{fit(x=Trainingsdaten, y=Trainingslabels)}, wobei \texttt{x} und \texttt{y} in diesem Fall Numpy-Arrays sind. Die Trainingsdaten und die entsprechenden Labels erhalten wir aus dem Dataset, jedoch müssen diese noch in das erforderliche Format, eine Matrix bzw. ein Numpy-Array konvertiert werden. Dazu müssen die bereits erwähnten Pixeln in der Zeichenkette in eine Matrix der Form 48 Pixel x 48 Pixel gebracht werden, wobei wiederum jedes Pixel als eindimensionales Array mit einem Element dargestellt wird. Sollten an dieser Stelle Farbbilder mit dem Format 48 Pixel x 48 Pixel als Input genutzt werden, hätte man anstatt der Struktur \texttt{(48, 48, 1)} entsprechend der drei RGB-Werte Daten der Struktur \texttt{(48, 48, 3)}. Optional können der Methode \texttt{fit} Validierungsdaten als Tupel mit zwei Numpy-Arrays, den Validierungsdaten und den zugehörigen Labels, übergeben werden. Diese müssen lediglich vorher analog zu den Trainingsdaten in ein passendes Format gebracht werden. Der Methode \texttt{fit} zum Trainieren des Modells können außerdem einige optionale Parameter mitgegeben werden, die im Zusammenhang mit den Validierungsdaten besonders für die Optimierung des Modells, dem Hyperparameter-Tuning, wichtig sind.\newline
@@ -708,11 +702,12 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
 \newpage
 \pagestyle{empty}
 
-\chapter*{Anhang}
 %\begin{appendix}
-%\renewcommand\thefigure{Appendix.\arabic{figure}}
-
-  \section*{Verwendeter Code}
+%\renewcommand\thefigure{{App}.\Alph{figure}}
+%\renewcommand\thetable{{App}.\Roman{table}}
+%\renewcommand\thelstlisting{{App}.\arabic{lstlisting}}
+\chapter*{Anhang}
+\section*{Verwendeter Code}
   
   \lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam als Output, label=lst:Code Input GUI 1]{Code/InputGUI1.py}
   \newpage
