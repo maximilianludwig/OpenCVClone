@@ -103,7 +103,7 @@ Um dies umzusetzen wird eine künstliche Intelligenz entwickelt, genauer gesagt 
 
 \newpage
 %\renewcommand*{\chapterpagestyle}{empty}
-\renewcommand{\thefigure}{\Alph{chapter}.\alph{figure}}
+\renewcommand{\thefigure}{\Alph{chapter}.\Alph{figure}}
 \renewcommand{\thetable}{\Roman{chapter}.\Roman{table}}
 
 \tableofcontents
@@ -708,7 +708,10 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
 \newpage
 \pagestyle{empty}
 
-\begin{appendix}
+\chapter*{Anhang}
+%\begin{appendix}
+%\renewcommand\thefigure{Appendix.\arabic{figure}}
+
   \section*{Verwendeter Code}
   
   \lstinputlisting[style=custompython, caption=Code für GUI mit Video Stream der Webcam als Output, label=lst:Code Input GUI 1]{Code/InputGUI1.py}
@@ -823,5 +826,5 @@ Der generelle Ansatz anhand von Musik die Emotion eines Individuums abzulesen is
   \caption{ Model Summary with several Layers and I/O Shapes }
   \label{fig:Model Summary}
   \end{figure}
-\end{appendix}
+%\end{appendix}
 \end{document}
