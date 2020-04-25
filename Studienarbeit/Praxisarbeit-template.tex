@@ -31,6 +31,26 @@
 \usepackage{lstautodedent}
 \usepackage{dirtree}
 
+\makeatletter
+\newcommand{\sectionauthor}[1]{%
+  {\parindent0pt\vspace*{-5pt}%
+  \large{Author --- }
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt} }
+  \@afterheading%
+}
+\makeatother
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \large{Author --- }
+  \linespread{1.1}\large\scshape#1%
+  \par\nobreak\vspace*{35pt} }
+  \@afterheading%
+}
+\makeatother
+
 \usepackage[backend=biber,
 bibstyle=alphabetic, 
 citestyle=authortitle-ibid,
@@ -89,6 +109,7 @@ Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Maximilian Ludwig
 Ort	\hspace{2cm}		Datum\hspace{3,5 cm}				    Unterschrift Kevin Wrona
 \newpage
 \section*{Abstract}
+\sectionauthor{1329241}
 Aufgabe dieser Studienarbeit ist es eine Emotionsanalyse durchführen zu können. Zur Veranschaulichung wird diese Thematik anhand des Anwendungsbeispiels der Pokerface-Erkennung realisiert.
 Ziel ist es dabei, dass eine möglichst genaue Vorhersage der Emotionen gemacht werden kann, die es wiederum ermöglicht eine Aussage darüber zu treffen, ob eine Person ein Pokerface aufgesetzt hat, oder nicht.
 Um dies umzusetzen wird eine künstliche Intelligenz entwickelt, genauer gesagt ein neuronales Netz. Die Trainings und Testdaten dieses Netzes sind dabei $35887 $ verschiedene Gesichtsbilder der FER (Facial Expression Recognition) Challenge von Kaggle. Analysiert werden die Emotionen ''Hapiness'', ''Sadness'', ''Fear'', ''Surprise'', ''Anger'', ''Neutral''. Mittels dieser Daten kann das trainierte Modell eine Genauigkeit in der Emotionsvorhersage von 55,71\% erzielen. die Rate der richtig erkannten Pokerfaces zu testen ist jedoch nicht so einfach, weshalb hierzu keine Daten in dieser Arbeit ermittelt wurden. Lediglich durch Ausprobieren ist es möglich die Genauigkeit der Pokerface-Erkennung festzustellen. Das Erkennen eines Pokerfaces ist mit der hier entwickelten Lösung jedoch möglich genauso wie eine Verwendung in der Praxis. 
@@ -105,6 +126,7 @@ Um dies umzusetzen wird eine künstliche Intelligenz entwickelt, genauer gesagt 
 \lstlistoflistings
 \newpage
 \chapter{Einleitung}
+\chapterauthor{1329241}
 \pagestyle{plain}
 \setcounter{page}{1}
 ''Several researchers have stated that facial expression recognition appears to play one of the most important roles in human communication'' 
@@ -144,13 +166,16 @@ Wie bereits erwähnt, ist dieses Einsatzszenario das Fallbeispiel dieser Arbeit.
 Das nun folgende Kapitel thematisiert die konkrete Aufgabenstellung der Arbeit sowie eine Anforderungsanalyse mittels MoSCoW-Priorisierung. 
 
 \section{Aufgabenstellung}
+\sectionauthor{1329241}
 Das Projekt selber wird an der DHBW in Mannheim unter der Betreuung von Prof. Dr. Eckhard Kruse durchgeführt. Wie eingangs erwähnt, soll mittels künstlicher Intelligenz erkannt werden, welche Emotion vorliegt. Zur Umsetzung dieser Aufgabe wird eine Bilderkennungssoftware angefertigt, welche ein übermitteltes Bild anhand vorhandener Emotionen analysiert. Sollte durch die Software keine Emotionsänderung erkannt werden, wird dem Anwender das Vorhandensein eines Pokerfaces zurückgegeben. Wie bereits in der Einleitung beschrieben, sind diverse Einsatzmöglichkeiten vorhanden, an die das Werkzeug leicht angepasst werden kann.
 
 \section{Usecase}
+\sectionauthor{1329241}
 Wie bereits erwähnt, ist der hier behandelte Use Case das Pokerspiel selber. An diesem soll ermittelt werden, inwieweit sich Emotionen oder das Abhandensein von Emotionen vorhersagen lassen. Dieses Fallbeispiel wurde gewählt, da es unter anderem das naheliegendste ist und ein simples und leicht zu konstruierendes Szenario impliziert. Dabei soll mithilfe einer Kamera ein Bild von einem Pokerspieler aufgenommen werden und dann mittels dem hier entworfenen Prototypen verarbeitet und analysiert werden. Am Ende soll dann eine Vorhersage der Emotionen getätigt werden, die dem Photographen zur Verfügung gestellt wird.
 
 
 \section{MoSCoW Priorisierung}
+\sectionauthor{1329241 - 8774695 - 2356667}
 Diese Arbeit soll methodisch mit der MoSCoW-Priorisierung bearbeitet werden. Diese Art der Priorisierung teilt die zu bearbeitenden Anforderungen in vier Kategorien ein:
 \footcite[vgl.][90]{Projektmanagement}
 \begin{itemize}
@@ -190,11 +215,13 @@ Dabei sollen die einzelnen Anforderungen entsprechend ihrer Priorität abgearbei
 \let\cleardoublepage\relax
 
 \chapter{Stand der Technik}
+\chapterauthor{1329241}
 In diesem Abschnitt soll der aktuelle Forschungs- und Entwicklungsstand im Bereich Emotionserkennung thematisiert werden. Jedoch muss dafür erst einmal eine Unterscheidung der Begrifflichkeiten Emotionserkennung und Gesichtserkennung erfolgen, da beide Gebiete Überschneidungen haben, jedoch inhaltlich und von ihren Zielen verschieden sind.
 
 \section{Gesichtserkennung vs. Emotionserkennung}
 
 \subsection{Gesichtserkennung}
+\sectionauthor{1329241}
 Gesichtserkennung ist eine Disziplin der Informatik in der es darum geht Gesichter wieder zu erkennen, und gegebenenfalls verschiedenen Personen zuzuordnen. Dabei lässt sich der Prozess der Gesichtserkennung in vier Phasen einteilen, Face ''detection'', ''alignment'', ''feature extraction'' und ''matching'', wie anhand von Grafik \ref{fig:Face Recognition} sichtbar ist.
 \footcite[Vgl. ][2]{HandbookFaceRec}
 \begin{figure}[h]
@@ -214,6 +241,7 @@ In der letzten Phase, dem Matching, geht es darum, die gewonnen Daten mit den in
 Die Anwendungsgebiete von Software, die Gesichtserkennung ermöglicht, ist mannigfaltig. Sie reicht von Applikationen die ein Gerät wie ein Smartphone entsperren, wenn das Gesicht des Besitzers als Match ausgegeben wurde, bis hin zur Anwendung in Verbrechensbekämpfung. In jedem dieser Szenarien wird dabei der oben beschriebene Ablauf durchgegangen und abhängig vom zu liefernden Ergebnis eine Abschlussaktion vorgenommen.
 
 \subsection{Emotionserkennung}
+\sectionauthor{1329241}
 In diesem Unterkapitel nun sollen Emotionen an sich thematisiert werden, da diese maßgeblich sind für das zu entwickelnde Tool. Eine Definition von Emotionserkennung ist per se nicht schwer zu geben. Prinzipiell beschäftigt sich Emotionserkennung mit der Analyse von Gesichtern und den Emotionen, die diese Gesichter darstellen. Jedoch ist der Begriff der Emotionen nicht ganz so einfach zu definieren, wie im Folgenden erläutert wird: 
 
 %\begin{itemize}
@@ -223,7 +251,7 @@ In diesem Unterkapitel nun sollen Emotionen an sich thematisiert werden, da dies
 %\end{itemize}
 
 \subsubsection{Emotionen}
-
+\sectionauthor{1329241}
 %\begin{itemize}
 %\item Def. von Emotionen
 %\end{itemize}
@@ -236,24 +264,29 @@ Die hier genannten Emotionen lassen sich gut anhand von Bildern erlernen, da die
 freudiges Gesicht oder ein überraschtes, als ein Gesicht mit dem emotionalen Ausdruck Akzeptanz. Zudem sind die gewählten Emotionen häufig bei dem Test Usecase dieser Arbeit anzutreffen, dem Texas Hold'em Poker.
 
 \subsubsection{Abgrenzung zur Gesichtserkennung}
+\sectionauthor{1329241}
 Der grundlegende Unterschied zwischen Emotions- und Gesichtserkennung liegt nun darin, dass bei der Emotionserkennung selber nicht die agierende Person im Vordergrund steht, sondern die Aktion die sie ausführt. Bei der Gesichtserkennung hingegen spielt lediglich die Rolle wer eine Aktion ausführt und ob es einen Treffer in der Datenbank gibt, oder nicht. Wegen dieser Unterschiede ist auch die technische Realisierung eines Prototypen, vor allem im Bezug auf die Architektur,  durchaus unterschiedlich. Dies ist jedoch ebenso von den unterschiedlichen Anwendungsszenarien der beiden Verfahren bedingt.
 Denn diese sind ebenso verschieden. Während Gesichtserkennung eher in den Bereich IT-Security oder aber Social Media (Snapchat Filter) eingesetzt wird, ist Emotionserkennung eher Informationsgenerierend.
 Zum Beispiel können durch Emotionserkennung Informationen zugänglich werden, wie das Befinden eines Individuums ist, ob emotional betroffen ist, oder aber nicht emotional betroffen wirken möchte und ein Pokerface aufsetzt.
 Wegen dieser signifikanten Unterschiede kann daher trotz der Gemeinsamkeiten nicht gesagt werden, dass Emotionserkennung eine Unterkategorie von Gesichtserkennung ist.
 
 \subsubsection{Wann ist ein Gesicht ein Pokerface?}
+\sectionauthor{1329241}
 \label{pokerface}
 Bis zu diesem Teil der Arbeit wurde schon immer wieder das Wort Pokerfaces verwendet ohne es formal zu definieren. Jedoch ist es für die Arbeit wichtig, eine konkrete Definition für diesen Begriff zu geben, da ansonsten die Anforderungen an die Arbeit nicht korrekt bewertet werden könnten. Da es mehrere Ansätze gibt ein Pokerface zu definieren, wird dies in diesem Abschnitt nachgeholt. Zum einem gibt es den trivialen Ansatz, dass ein Pokerface dann vorliegt, wenn ein Subjekt keinerlei Emotion in seinem Gesicht zu erkennen gibt. Dies würde einer neutralen Emotion entsprechen. Dieser Fall kann auch vergleichsweise einfach behandelt werden, da diese neutrale Emotion auch in die Basisemotionen mit aufgenommen wurde in dieser Arbeit. Das bedeutet, dass beispielsweise ein neuronales Netz auch diese Arten von Gesichtern klassifizieren könnte. \newline
 Der zweite Ansatz ist weniger intuitiv, jedoch ebenso wichtig. Es kann durchaus angenommen werden, dass z.B. ein sehr erfahrener Pokerspieler weiß, dass man ein Pokerface einfach identifizieren kann, und demnach alleine dadurch Informationen gewinnen kann. Um dem entgegenzuwirken könnte ein solcher Spieler eine andere Art Pokerface verwenden. Es wäre denkbar, dass ein Spieler versucht sein Gesichtsausdruck permanent gleich zu halten, indem er eben dauerhaft lacht oder lächelt, dauerhaft betrübt, wütend, ängstlich, etc. aussieht. Dieser Ansatz ist weniger intuitiv als der erste und könnte demnach auch weniger schnell erkannt werden. Im Verlaufe der Arbeit wird mit der zweiten Definition gearbeitet.
 
 \section{Emotionserkennung mithilfe von Deep Learning}
+\sectionauthor{8774695}
 In dem nun folgenden Kapitel wird erörtert, wie das Ziel des Prototypen dieser Arbeit - das Erkennen eines Pokerfaces - mittels eines neuronalen Netzes umgesetzt werden kann. Dabei wird weniger auf die generellen Eigenschaften von neuronalen Netzen Bezug genommen, als auf die in dieser Arbeit spezifischen Aspekte. Diese sind vor allem verschiedene Ansätze und Möglichkeiten mittels Machine Learning eine Emotionserkennungssoftware zu erstellen.
 
 \subsection{Machine Learning - Frameworks}
+\sectionauthor{8774695}
 Um die gegebene Aufgabenstellung der Erkennung von Emotionen mittels der Analyse eines Gesichtes umsetzen zu können, musste ein entsprechendes Framework Anwendung finden, welches den Anforderungen gerecht wird. Maschinelles Lernen gehört in der heutigen Softwareentwicklung zu den beliebtesten Themen, wodurch dieses schnelle, regelmäßige Änderungen und Weiterentwicklungen erfährt. Dementsprechend werden auf dem Markt auch zahllose kostenlose wie auch kostenpflichtige Frameworks angeboten. Darunter fallen OpenCV, Tensorflow oder Pandas. Möchte man nun das geeignete Framework für das eigene Projekt ausfindig machen, muss man das gegebene Angebot nach einigen Kriterien filtern. Als erstes stellt sich die Frage, was für eine Art von Applikation man umsetzen möchte. Soll das Projekt Texte analysieren oder wie im Falle dieses Projektes die Emotionen aus einem gegebenen Bild? Welche Programmiersprache wird innerhalb des Projektes eingesetzt? Zudem sind Informationen zur Lizenz und dem Support wichtig, sowie insbesondere die Community.\newline
 Nach entsprechender erster Selektion musste sich schlussendlich zwischen Dlib und Keras entschieden werden, welche für die Umsetzung der Anforderungen dieses Projektes am besten geeignet schienen. Beide Frameworks werden in den folgenden beiden Unterkapitel dem Leser kurz vorgestellt und anschließend wird ein Fazit gezogen, welches der beiden für dieses Projekt am geeignetsten war.
 
 \subsubsection{Dlib}
+\sectionauthor{8774695}
 Dlib ist nach dessen Entwickler Davis King ein modernes C++ Toolkit, welches Machine-Learning Algorithmen und Tools zur Entwicklung komplexer Software enthält, um Probleme aus der echten Welt lösen zu können.\footcite[Vgl.]{netguru}
 \newline
 Dlib selbst wurde in der Programmiersprache C++ entwickelt und kann durch eine Anbindung auch für Python Projekte eingesetzt werden. Die Software-Bibliothek kann unter den Bedingungen der Boost-Lizenz frei genutzt werden und ist durch entsprechende APIs des jeweiligen Betriebssystems plattformunabhängig. Ein weiterer Vorteil bietet die Unabhängigkeit der Bibliothek von anderen Bibliotheken. %Von Wikipedia (Vlt. andere Quelle suchen)
@@ -261,6 +294,7 @@ Dlib ist seit dem Jahr 2002 in Entwicklung und bietet dementsprechend unzählige
 Eines der größten Vorteile dieser Bibliothek besteht in der ausführlichen Dokumentation für sämtliche Klassen und Funktionen, wie es nicht häufig der Fall ist für vergleichbare Open-Source Projekte.\footcite[Vgl.]{Dlib}
 
 \subsubsection{Keras}
+\sectionauthor{8774695}
 Die Open-Source Bibliothek Keras wurde im Vergleich zu Dlib im Jahre 2015 von dem Google-Programmierer François Chollet in der Programmiersprache Python entwickelt.\footcite[Vgl.]{Keras}
 Das ursprüngliche Ziel von Keras war es eine Abstraktionsschicht für das Framework Theano zu bilden, um die Handhabung zu vereinfachen. Mit der Veröffentlichung von TensorFlow im November 2015 wurde Keras im folgenden Monat weiter entwickelt um auch TensorFlow als Backend verwenden zu können. Schlussendlich konnte Keras die Frameworks TensorFlow, Theano und das Microsoft Cognitive Toolkit (kurz: CNTK) einbinden und beliebig austauschen.\footcite[Vgl.]{Keras3} Allerdings stoppte im September 2017 die Weiterentwicklung an Theano
 \footcite[Vgl.]{Theano}
@@ -271,13 +305,14 @@ Zuletzt steht hinter Keras eine große aktive Community, welche zahlreiche Tutor
 
 
 \subsubsection{Unterschiede}
-
+\sectionauthor{8774695}
 Zusammenfassend kann gesagt werden, dass Dlib eine mächtige Bibliothek für die Umsetzung verschiedenster Aufgaben ist. Die ausführliche Dokumentation bietet eine große Hilfestellung. Jedoch folgt aus dem Angebot der zahlreichen Features auch eine längere Einarbeitung, bis die Anforderungen produktiv umgesetzt werden können.\newline
 Keras hingegen bietet durch dessen benutzerfreundliche Entwicklung und den zahlreichen Tutorials eine schnelle erste Umsetzung der Aufgaben. Durch die Modularität und der aktiven Community können viele öffentliche Lösungen genutzt und für die eigenen Bedürfnisse abgeändert werden. 
 Aus diesem Grund und aufgrund der Unterstützung der rekurrenten und konvolutionalen Netzwerken wurde sich für die Verwendung von Keras als Open-Source Bibliothek in diesem Projekt entschieden.
 
 
 \subsection{Supervised vs. Unsupervised Learning}
+\sectionauthor{1329241}
 In diesem Abschnitt werden die beiden Ansätze des Supervised bzw. des Unsupervised Learnings evaluiert. Dabei sollen jedoch beide Begriffe nicht noch ausführlich beleuchtet werden. Es ist lediglich zu erwähnen, dass Supervised Learning Algorithmen im Gegensatz zu Unsupervised mit Datensätzen arbeiten, die Labels beinhalten, und so einen Datensatz kategorisieren. Grundlegende Informationen zu den einzelnen Vorgehensweisen können aus den Büchern "Hands-On Unsupervised Learning with Python" von Giuseppe Bonaccorso und "Applied Supervised Learning with Python" von Benjamin Johnston und Ishita Mathur entnommen werden. Nun gilt es zu klären, ob sich für die zugrundeliegende Aufgabe ein Supervised oder Unsupervised Ansatz eher anbietet. Ein Unsupervised Learning Algorithmus würde sich vor allem anbieten, wenn Zusammenhänge zwischen einzelnen Datensätzen gefunden werden sollen, die vielleicht nicht von Anfang an bekannt oder bewusst sind.
 \footcite[Vgl. ][21]{Unsupervised}
 Supervised Learning Algorithmen hingegen bieten sich vor allem an, wenn es darum geht einen Prozess zu automatisieren oder aus der Wirklichkeit zu replizieren.
@@ -285,12 +320,15 @@ Supervised Learning Algorithmen hingegen bieten sich vor allem an, wenn es darum
 Das in dieser Arbeit zugrundeliegende Problem ist demnach vor allem für Supervised Learning Algorithmen geeignet. Dies liegt zum einem daran, dass jedem Bild eines Menschen eine Basisemotion zugeordnet werden kann. Zum anderen ist auch der verwendete Datensatz, mit dem das Modell trainiert und getestet werden soll, ebenfalls gelabelt. Deshalb bietet sich dieses Verfahren am meisten an. Es wäre auch hypothetisch denkbar, einen Unsupervised Learning Algorithmus zu verwenden, aber dieser Ansatz wäre suboptimal, da er nicht dem eigentlichen Use Case dieses Ansatzes entspricht.
 
 \section{Gesichtserkennung mit OpenCV}
+\sectionauthor{1329241}
 In dem nun folgenden Abschnitt wird der theoretische Aspekt der Gesichtserkennung mit dem Tool OpenCV erläutert. In der Arbeit findet die Gesichtserkennung an mehreren Stellen Anwendung, auch wenn es eigentlich um Emotionserkennung geht. So wird zum Beispiel, bevor eine Vorhersage über eine Emotion zu einem Bild gemacht wird, überhaupt erst geprüft, ob auf dem Bild auch ein Gesicht vorhanden ist. Dies ist auch notwendig, da dies die Fehlerbehandlung erleichtert. Sollte ein Bild eingegeben werden, auf dem kein Gesicht zu erkennen ist, darf auch kein Rückgabewert von Emotionsklassifizierungen erhalten werden, weshalb vorher überprüft werden sollte, ob ein menschliches Gesicht auf dem Bild vorhanden ist.
 
 \subsection{Opencv Klassifizierer}
+\sectionauthor{1329241}
 OpenCV stellt verschiedenste Klassifizierer für die Aufgabe der Gesichtserkennung zur Verfügung. Zum einem die sogenannten HAAR-Cascade Klassifizierer, zum anderen dedizierte Gesichtserkennungsalgorithmen. Beide Arten werden im Laufe dieser Arbeit verwendet werden, weshalb es zum besseren Verständnis der Arbeit dienlich ist, die Funktionsweise dieser zu beleuchten.
 
 \subsubsection{HAAR Cascade Klassifizierer}
+\sectionauthor{1329241}
 Als Datengrundlage für diese Art der Klassifizierer werden positive Bilder gebraucht - im Falle der Gesichtserkennung also Bilder mit Gesichtern - aber auch negative. Aus diesen werden dann Eigenschaften extrahiert und verarbeitet. Grundsätzlich ist diese Art der Klassifizierung deutlich flexibler als ''reine'' Gesichtserkennungsalgorithmen. Dies liegt daran, dass HAAR Klassifizierungen nicht auf Gesichter beschränkt sind, sondern auf zahlreiche Eigenschaften wie Augen und Münder oder gänzlich auf andere Objekte wie Mäuse und Häuser angewendet werden können. Ein HAAR-Cascade Klassifizierer lässt sich dabei in vier Bereiche einteilen.
 \begin{itemize}
 \item HAAR feature selection
@@ -315,6 +353,7 @@ Diese Trainingsart benutzt nun den letzten Teil, das Kaskadieren von Klassifizie
 Auf diese Weise können Gesichter mittels HAAR-Klassifizierung erkannt werden.
 
 \subsubsection{Gesichtserkennungs Algorithmen}
+\sectionauthor{1329241}
 Der Fisher Face Recognizer ist einer von drei Gesichtserkennungs Algortihmen die OpenCV mit sich bringt. Einer seiner Gegenstücke ist der Eigenface Recognizer, auf dem der Fisher Face Recognizer partiell aufbaut. Aus diesem Grund wird zuerst die grundsätzliche Funktionsweise des Eigenface Algortihmus beleuchtet. Dieser Algorithmus bekommt einen Datensatz von verschiedenen Gesichtsbildern als Eingabeparameter. Der Eigenface Algortihmus stuft dabei manche Gesichtskomponenten wichtiger ein als andere. Zum Beispiel wenn mehr Varianz in den Trainingsdaten gegeben ist im Bereich der Nasen und Augen, und weniger im Bereich der Münder und Ohren, wird der Algorithmus die Nasen und auch Augen als die sinnvolleren oder wichtigeren Komponenten erachten. Anhand dieser wichtigen Komponenten können dann verschieden Gesichter erkannt werden.
 \footcite[Vgl.][]{Eigenface}
 Das Problem dieses Algorithmus ist nun, dass viele Komponenten der Gesichter nicht mehr beachtet werden, weil sie insgesamt eine zu niedrige Varianz aufgewiesen haben. Ein anderes Szenario wäre, dass eine Komponente ohne Aussagekraft eine sehr große Varianz in den Trainingsdaten enthält. Z.B. wenn in den Datensätzen eine hohe Varianz der jeweiligen Beleuchtung vorhanden ist, also wenn keine einheitliche Beleuchtung der Bilder vorhanden ist. Die Beleuchtung sagt per se nicht viel über ein Gesicht aus, aber der Eigenface Recognizer würde diese Komponente als sehr wichtig einstufen, was zu Fehlern führen kann.
@@ -326,6 +365,7 @@ Dieses Problem kann unter anderem durch den dritten von OpenCV angebotenen Gesic
 \footcite[Vgl.][]{Recognizer} 
 
 \subsection{Eingabe Daten}
+\sectionauthor{1329241}
 \label{subsec: Eingabe Daten}
 Wie im vorherigen Unterpunkt erwähnt, kann das Modell ebenfalls dadurch beeinflusst werden, wie der Eingabedatensatz aufgebaut ist. Dabei wird im Folgenden nicht auf den konkreten Datensatz eingegangen, sondern viel mehr auf die Anforderungen an die Beschaffenheit von diesem. Zunächst ist dabei zu beachten, dass es grundsätzlich einige Möglichkeiten gibt, die Eingabedaten, in diesem Fall Bilder von Gesichtern, vorab zu bearbeiten. Ein wesentlicher Aspekt dabei ist neben dem Anpassen der Bilder auf eine bestimmte Größe auch die Wahl der Farbdarstellung. Dabei geht es weniger darum, ob beispielsweise die Bilder im RGB (Rot - Grün - Blau) oder HSV (Hue - Saturation - Value) Farbraum vorliegen, sondern um die generelle Zahl an Kanälen, die Informationen von einem Bild beinhalten. Beispielsweise werden bei einer klassichen RGB Darstellung Informationen über das Bild auf drei Kanälen gespeichert. 
 \begin{figure}[h]
@@ -341,28 +381,36 @@ Werden die drei Kanäle wieder miteinander verbunden entsteht das Ausgangsbild. 
 \let\cleardoublepage\relax
 
 \chapter{Stand-Alone Lösung mit Schwerpunkt OpenCV}
+\chapterauthor{2356667}
 Während der weiteren Ausarbeitung des Konzeptes und der darauf basierenden Umsetzung sind letztendlich zwei verschiedene Lösungen entstanden. Aufgrund von Problemen, die innerhalb des Entwicklungsprozesses im Zusammenhang mit dem Hardwarekonzept aufgetreten sind, konnte das Projekt, so wie es geplant war, nicht zu Ende gebracht werden. Da dieser Ansatz jedoch als Grundlage für die letztendlich finale Lösung diente, werden sowohl das Konzept als auch die Umsetzung der ersten Lösung nachfolgend genauer erläutert.
 
 \section{Konzept}
+\sectionauthor{2356667}
 Im Folgenden wird das in der Planungsphase entwickelte Konzept zur Emotionserkennung unter verschiedenen Aspekten, wie der Architektur und der Kommunikation, erläutert.
 
 \subsection{Interaktionskonzept}
+\sectionauthor{2356667}
 Von außen betrachtet steht zuerst die Planung eines Interaktionskonzeptes an, in welcher Form der Nutzer die Möglichkeit hat, Input zur Verarbeitung zu liefern und an Output zu gelangen. Dem Anwender soll es möglich sein, schnell und verständlich mit dem Produkt zu interagieren, weshalb eine geeignete Benutzeroberfläche mit zwei wesentlichen Interaktionsoptionen erforderlich ist. Der aktuelle Video-Stream einer internen oder externen Kamera sollte als Input zur Emotionsanalyse verwenden werden und das Ergebnis der analysierten Sequenzen soll ausgegeben werden können. Um dies zu erreichen, soll die Bildbverarbeitungsbibliothek OpenCV verwendet werden, mit der sowohl der Zugriff auf alle verfügbaren Kameraeingabegeräte als auch die Darstellung von Bildern und Text in einer grafischen Benutzeroberfläche (GUI) in Form eines Fensters möglich ist. Die vom Nutzer gelieferten Videosequenzen sollen entsprechend bearbeitet werden, um anschließend eine Emotion zu erkennen und den entstandenen Output an die durch OpenCV generierte Oberfläche weiterzugeben. In welcher konkreten Form der Output dem Nutzer letztendlich dargestellt wird, als Grafik, einfache Textausgabe oder audiovisuell, ist noch zu entscheiden.\newline
 Zusammenfassend kann man also sagen, dass der Nutzer aufgrund der Übersichtlichkeit lediglich mit der von OpenCV generierten Oberfläche interagieren kann und sich zu keinem Zeitpunkt mit den dahinterliegenden Komponenten der Emotionserkennung befassen muss.\newline
 
 \subsection{Architektur}
+\sectionauthor{2356667}
 
 \subsubsection{Programmierumgebung}
+\sectionauthor{2356667}
 Aufgrund der Vorkenntnisse und Relevanz innerhalb des Studiums soll die Programmiersprache Python in aktuellster Version (3.6.9) vorrangig verwendet werden, jedoch kann unter gegebenen Umständen womöblich auch die Programmiersprache C++ eingesetzt werden, was noch zu prüfen ist. Auf eine bestimmte IDE wie PyCharm, Emacs oder Visual Studio Code wird sich an dieser Stelle nicht festgelegt, da dies jedem Entwickler selbst zu überlassen ist. Diesbezüglich sind nur Einschränkungen aufgrund der gewählten Rechnerarchitektur und der Programmiersprache zu berücksichtigen.\newline
 Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek OpenCV zur Bildverarbeitung und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum Trainieren oder Vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotionen anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
 
 \subsubsection{Hardware}
+\sectionauthor{2356667}
 Der Einfachheit halber wird zum Entwickeln als grundlegende Komponente ein handelsüblicher Laptop genutzt. Dabei wird außerdem auf das Open-Source Betriebssystem Ubuntu 18.04.4 LTS in der 64-bit Variante zurückgegriffen. Als zugrundeliegende Ressourcen stehen ein 8 Gigabyte großer Arbeitsspeicher sowie ein Intel Core i5-4210 Quadcore Prozessor mit einer Taktfrequenz von 4 x 2,60 GHz zur Verfügung. Des Weiteren kann die dedizierte Grafikkarte GeForce 820M mit einem Grafikkartenspeicher von 2046 MB verwendet werden. Der Festplattenspeicher von 500 GB kann im Umfang dieser Arbeit vernachlässigt werden, da es im Zusammenhang mit Gesichts- bzw. Emotionserkennung primär darauf ankommt, wie viel Rechenleistung zur Verfügung steht und nicht, wie groß die Speicherkapazität des Laufwerks ist. Um das rechenintensive Trainieren des Modells zur Emotionserkennung in akzeptabler Zeit zu garantieren, soll die Rechenleistung des Prozessors und der Grafikkarte vollständig genutzt werden können.
 
 \section{Umsetzung}
+\sectionauthor{2356667}
 In diesem Kapitel wird die Umsetzung der auf dem entwickelten Konzept basierenden Lösung näher erläutert. Es handelt sich dabei um den Stand-Alone Laptop mit installiertem Ubuntu 18.04.4 LTS, wobei der Input und der Output auf OpenCV GUIs basiert.
 
 \subsection{Input GUI}
+\sectionauthor{2356667}
 Als Einstieg in das Themengebiet Emotionserkennung bzw. Gesichtserkennung ergibt es Sinn, sich zuerst mit den Grundlagen der Bildverarbeitung und den Grundlagen von OpenCV vertraut zu machen. Aufgrund der aufgestellten Anforderungen ist es außerdem notwendig, eine grafische Oberfläche zu implementieren, mit der der Nutzer interagieren kann. Wie bereits in dem Konzept beschrieben, soll es dem User daher möglich sein, mithilfe der Webcam und einer grafischen Oberfläche, welche mit OpenCV programmiert wird, ein Bild als Input zu liefern. Wie man in Abbildung \ref{fig:Input GUI 1} sehen kann, wird im ersten Schritt die grafische Oberfläche erstellt und der Video Stream der Webcam in der Oberfläche angezeigt. Der zugehörige Codeausschnitt kann dem Anhang \ref{lst:Code Input GUI 1} entnommen werden.
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{Bilder/InputGUI1.png}
@@ -386,6 +434,7 @@ Nun lässt sich noch darüber diskutieren, ob es weitere besonders zu berücksic
 Somit sind wir nun in der Lage, alle relevanten Bereiche zu identifizieren und zu markieren. Um diese relevanten Regionen nun als Input für ein Modell zum Vorhersagen einer Emotion nutzen zu können, müssen die entsprechenden Bereiche jedoch ersteinmal abgespeichert werden. Um die Vergleichbarkeit der Bilder untereinander und die Vergleichbarkeit des zu testenden Bildes zu den trainierten Bildern zu gewährleisten, sollten diese des gleichen Formats sein. Wie bereits in der Theorie erwähnt, ist es außerdem sinnvoll entsprechende Ausschnitte nicht im Farbmodus abzuspeichern, sondern lediglich als Grayscale-Grafik. Die Erweiterung des bereits entstandenen Codes um die erleuterten Aspekte kann man am Code \ref{lst:Code Input GUI 3} sehen. Somit ist es dem Nutzer möglich, schnell und unkompliziert Bilder mit der Webcam zu machen und dort enthaltene Gesichter so zu speichern, dass sie als Input zum Vorhersagen einer Emotion genutzt werden können.
 
 \subsection{Dataset}
+\sectionauthor{2356667}
 Zum Trainieren eines Modells zur Emotionserkennung wird das Cohn-Kanade Dataset zur Analyse von Emotionen verwendet.\footcite[Vgl.][]{CK} In dem verwendeten Dataset sind ca. 10000 Grayscale-Bilder enthalten, welche die in \ref{tab:ckemotions} zu sehenden Emotionen umfassen.
 \begin{table}[h]
 \centering
@@ -480,33 +529,41 @@ Aus der dargestellten Struktur des Ordners, in dem sich sämtliche Bilder befind
 Um später ein vernüftiges superviesed Learning auf Grundlage des Datasets durchführen zu können, wird eine eigene Verzeichnisstruktur erstellt, die sortiert nach Emotionen jedes letzte Bild eines Emotionsverlaufs beinhaltet. Zusätzlich wird die Emotion neutral hinzugefügt, da jedes erste Bild eines Emotionsverlaufs als neutrale Ausgangslage dient. Der entwickelte Algorithmus zum Überarbeiten und Sortieren des Datasets und die daraus resultierende neue Verzeichnisstruktur können dem Code \ref{lst:Organising The Dataset} und der Abbildung \ref{fig:Tree Sorted Set} im Anhang entnommen werden.
 
 \subsection{Training}
+\sectionauthor{2356667}
 Zum Trainieren eines Modells stellt OpenCV verschiedene Klassifizierer zur Verfügung, jedoch wird sich in diesem Abschnitt immer auf das Supervised Learning des FisherFaceRecognizer bezogen, welcher mit dem im vorherigen Schritt präparierten Dataset trainiert wird. Da das Dataset schon sortiert und vorbereitet wurde, ist es nun sehr leicht, eine Methode zu schreiben, die ein Array mit Trainingsdaten und ein Array mit den zugehörigen Labels liefert. Aufgrund der Verzeichnisstruktur des Datasets kann man über alle Emotionsordner iterieren, dabei alle Grayscale-Bilder in das Array mit den Trainingsdaten einlesen und die jeweilige Emotion in das Array mit den Labeln einlesen. Dabei ist jedoch zu beachten, dass die Labels bzw. die Emotionen als Integer-Werte beginnend mit 0 und aufsteigend dargestellt werden müssen. Das heißt, die Ordnernamen, welche den Emotionen als Text entsprechen, müssen in Integer-Werte konvertiert werden, indem man z.B. den jeweiligen Index der Emotion in dem globalen Emotions-Array \ref{lst:Emotions-Array} nimmt.
 \lstinputlisting[style=custompython, numbers=none, linerange=5-5, caption=Emotions-Array, label=lst:Emotions-Array]{Code/ClassifierHandler.py}
 Die vollständige Methode zum Extrahieren der Trainigsdaten ist im Anhang unter \ref{lst:Trainingsdaten extrahieren} gelistet. 
 Da wir nun die erforderlichen Arrays mit Trainingsdaten und Labeln erzeugen können, beschäftigen wir uns als nächstes mit dem zu trainierenden Klassifizierer, dem sogenannten FisherFaceRecognizer. Die \texttt{FisherFaceRecognizer}-Klasse stellt die statische Methode \texttt{create()} und die Methode \texttt{train(InputArray data, InputArray labels)} zur Verfügung welche im Code \ref{lst:Classifier Handler} zum Trainieren benutzt werden. Es fällt somit deutlich auf, dass die Komplexität des eigentlichen Trainierens im Vergleich zur Vorbereitung des Datasets wesentlich geringer ist.
 
 \subsection{Testing}
+\sectionauthor{2356667}
 Das Testen des im vorherigen Schritt trainierten Modells kann aufgrund der Vorarbeit ebenfalls mit sehr geringem Zeitaufwand implementiert werden. Aufgrund der, wie sich später herausstellte, sehr geringen Datengrundlage und der Should-Anforderung gemäß MoSCoW Priorisierung, dass die Wahrscheinlichkeit zur Erkennung der richtigen Emotion über 50\% liegen soll, wird anstatt der üblichen Aufteilung des Datasets in Trainings- und Testdaten das komplette Dataset als Trainingsdaten genutzt. Daraus ergibt sich dann, dass ein anderes Verfahren zum Testen des Klassifiziers gefunden werden muss. Somit wird zum Testen des Modells eine grafische Oberfläche erstellt, die im speziellen als Echtzeitanalyse der Emotionen fungiert. Hierzu kann ein Großteil des Codes genutzt werden, der als Vorarbeit bei der Entwicklung der Input GUI implementiert wurde. Der Ablauf eines konkreten Tests ist dann das Starten der Oberfläche, welche den Video Stream der Webcam ausgibt und gleichzeitig jedes Einzelbild vom Modell analysieren lässt. Dies geschieht, wie ebenfalls bereits beschrieben, durch das Ausschneiden des Gesichtes und das anschließende Konvertieren in das Grayscale-Format sowie daraufhin das Vorhersagen einer Emotion. Das Gesicht wird dann mit einem Rechteck markiert und darüber wird die vorhergesagte Emotion ausgegeben. Verändert man den Code der Input GUI nur geringfügig und erweitert ihn um das Vorhersagen der Emotion und das Schreiben der vorhergesagten Emotion auf den Output Video Stream, dann erhält man den im Anhang \ref{lst:Test mit Input GUI} gezeigten Code.
 
 \subsection{Optimierung der Lösung}
+\sectionauthor{2356667}
 Durch das Testen des Modells konnte festgestellt werden, dass trotz der vergrößerten Menge an Daten zum Trainieren die Genauigkeit der Vorhersagen mit ca. 20\% deutlich unter den in den Anforderungen definierten 50\% liegt. Aufgrund dieser Tatsache wird versucht, den Trainingsprozess zu optimieren. Die Möglichkeiten zum komplexen Konfigurieren eines Modells in OpenCV sind begrenzt, sodass eine Konfiguration, die wesentlich mehr Features der Emotion als zuvor analysiert, erschwert wird. Außerdem würde sich dann die Tatsache bemerkbar machen, dass OpenCV keine Möglichkeit bietet, die  Rechenleistungen der CPU und der GPU zu kombinieren. Daraus würde sich ein sehr langwieriger Trainingsprozess ergeben, was nicht mehr den definierten Anforderungen entsprechen würde. Daher wird zunächst versucht, den Prozess in eine extra dafür vorgesehene Bibiliothek auszulagern, wobei die Entscheidung auf die Keras-API gefallen ist. Keras selbst dient in unserem Fall als Schnittstelle zum Tensorflow-Framework. Auf die genaue Funktionsweise von Keras wird in einem späteren Kapitel näher eingegangen. An dieser Stelle bleibt nur noch zu bemerken, dass die Installation von Keras und das Einbinden benötigter Komponenten zwar erfolgreich durchgeführt werden konnten, jedoch die Ausführen der benötigten Komponenten aufgrund einer nicht unterstützten Prozessorarchitektur bzw. eines nicht unterstützten Chipsets nicht möglich war. Aufgrund der benötigten Ressourcen und der mit Tensorflow kompatiblen Architektur wurde sich deshalb für eine Server-Client-Architektur entschieden.
 
 \chapter{Server-Client Lösung}
+\chapterauthor{2356667}
 Basierend auf den Erfahrungen, die während des Entwicklunsprozesses der Stand-Alone Lösung gewonnen werden konnten, werden das Konzept und dementsprechend auch die Umsetzung überarbeitet und optimiert. Nachfolgend wird die damit finale Lösung genauer erläutert.
 
 \section{Konzept}
+\sectionauthor{2356667}
 Die Interaktionsmöglichkeiten, die der Nutzer haben soll, bleiben unverändert. Der Übersichtlichkeit halber soll ausschließliche mit einer mithilfe von OpenCV generierten grafischen Oberfläche interagiert werden. Die Wesentlichen Änderungen beschränken sich auf die Systemarchitektur, insbesodere auf die Programmierumgebung.
 
 \subsection{Programmierumgebung}
 Zusätzlich zu den bereits erwähnten Gründen für die Entscheidung der Programmiersprache Python ist noch die Wiederverwendbarkeit der bisher entwickelten Lösung zu nennen. Um den Anforderungen bezüglich der dem Projekt zur Verfügung stehenden Zeit gerecht zu werden, wird weiterhin die Programmiersprache Python verwendet, da so der bisher implementierte Code als Grundlage dienen kann und die neue Lösung darauf aufbauend entwickelt werden kann. Außerdem stellt sich nun die Frage, mit welcher Entwicklungsumgebung gearbeitet wird. Da nun auf einer Cloud-Infrastruktur entwickelt wird, sind die reinen grafischen Umgebungen wie Visual Studio Code oder PyCharm nicht zu empfehlen. Aufgrund vieler Vorteile, die dem entsprechenden Kapitel zu entnehmen sind und der ebenfalls bereits erwähnten Relevanz innerhalb des Studiums, wird zum weiteren Entwickeln die Open-Source Webapplikation Jupyter Notebook verwendet. Da über das Webinterface insbesondere das Debugging vereinfacht wird, kann vor allem der Entwicklungsprozess signifikant beschleunigt werden. Der Einheitlichkeit halber wird die Clientanwendung ebenfalls mithilfe von Jupyter Notebook entwickelt, wobei diese in der finalen Version durch minimale Anpassungen auch problemlos ohne Jupyter Notebook ausführbar gemacht werden kann. OpenCV, die Programmbibliothek für Bildverarbeitung und Keras, die Deep-Learning-Bibliothek, werden weiterhin für die bereits beschriebenen Zwecke verwendet.
 
 \subsection{Hardware}
+\sectionauthor{2356667}
 Der Server wird in Cloudumgebung gehostet, die Infrastructure as a Service (IaaS) für Wissenschaft und Bildung bereitstellt. Hier ist besonders hervorzuheben, dass durch die Cloudumgebung eine hohe Flexibilität bezüglich der Skalierbarkeit gewährleistet ist. Hinsichtlich der verfügbaren Ressourcen wird ein Paket gewählt, das 4 virtuelle CPUs sowie 16 Gigabyte Hauptspeicher beinhaltet. Sollte im Verlauf der Umsetzung auffallen, dass die standardmäßig zur Verfügung gestellten Ressourcen nicht ausreichen, können diese bis zu 16 vCPUs und bis zu 32 Gigabyte RAM erweitert werden. Die vordefinierte Größe der Festplatte von 12 GB sollte für den Umfang des Projektes ausreichen, jedoch kann auch hier die Kapazität um bis zu 50 Gibibytes erhöht werden. Weiterhin wird auf das Betriebssystem Ubuntu 18.04 gesetzt, da so ein Großteil der zuvor gewonnen Erfahrung genutzt werden kann.
 
 \section{Umsetzung}
+\sectionauthor{2356667}
 Trotz der aufgetretenen Komplikationen bei der Entwicklung einer Stand-Alone Lösung muss an dieser Stelle erwähnt werden, dass große Teile, gerade im Bereich des Inputs und Outputs wiederverwendet werden. Die auf Grundlage der Stand-Alone Version entwickelte Server-Client Lösung wird nachfolgend genauer erläutert.
 
 \subsection{Dataset}
+\sectionauthor{2356667}
 Im Zuge der vertieften Recherche zu Keras und der direkten Verwendung im Bereich Gesichts- und Emotionserkennung konnte ein besseres Dataset als zuvor gefunden werden. Das Dataset gehört zu einer Open-Source Facial Expression Recognition auf der Plattform Kaggle.\footcite[Vgl.][]{FER-Challenge} Kaggle ist eine Online-Community deren Hauptzweck es ist, Data-Science-Wettbewerbe auszuschreiben, an denen jeder interessierte teilnehmen kann. Außerdem wird durch die Plattform ermöglicht, Datensätze zu finden und zu veröffentlichen und ggf. Modelle auszuprobieren oder ebenfalls zu veröffentlichen. Vereinfacht kann mann sagen, dass Kaggle ein virtueller Treffpunkt für Data-Scientists in den Bereichen maschinelles Lernen und KI-Entwicklung ist.\newline
 Betrachten wir nun das im Projekt verwendete Dataset. Das Dataset umfasst 35887 Datensätze, die allesamt gelabelt sind. Dabei wird das Set in Trainingsdaten, Public-Testdaten und Private-Testdaten unterteilt, wobei 80\% aller Werte auf das Trainingsset entfallen und jeweils 10\% auf die beiden Testsets. Die Unterteilung der Testdaten in Public und Private ist dabei nur im direkten Zusammenhang mit dem Kaggle-Wettbewert von Relevanz, da ein Set zum Testen des Modells für die Entwickler selbst vorgesehen ist und das Andere, um einen Sieger der Challenge auszumachen. Da wir mit unserem Modell nicht an der Facial Emotion Recognition Challenge teilnehmen, können wir die beiden Testsets zu einem großen zusammenfassen. Damit erhalten wir 28709 Datensätze zum Trainieren des Modells und 7178 Datensätze zum Testen. Aufgrund der Menge an Daten werden diese nicht wie beim anderen Dataset in einer Ordnerstruktur mit entsprechend vielen Bilddateien zur Verfügung gestellt, sondern als Comma-Separated-Values in einer CSV-Datei. Dabei handelt es sich um eine Art Tabelle, deren Struktur der nachfolgenden Tabelle \ref{tab:FER2013} zu entnehmen ist.
 \begin{table}[h]
@@ -578,11 +635,13 @@ Die Grafik \ref{fig:visualisierungferemotions} stellt eine visualisierte Häufig
 Betrachten wir nun die anderen Spalten. In der Spalte \texttt{pixels} befinden sich die eigentlichen Bilddaten als Pixelwerte, die lediglich mit einem Leerzeichen getrennt in einem String dargestellt werden. In Tabelle \ref{tab:FER2013} wird nur ein kleiner Ausschnitt der insgesamt 2304 Pixelwerte pro Datensatz angezeigt. Aus der Darstellung der Bilder im Grayscale-Format ergeben sich die in der Theorie bereits erläuterten Pixelwerte von 0 bis 255. Die Anzahl von 2304 Pixeln ergibt sich durch die Länge und die Breite der Bilder von jeweils 48 Pixel mal 48 Pixel. Bevor man die Bilddaten in Form des Strings aus Pixeln für das Modell nutzen kann, müssen diese erst entsprechend formatiert und umgeformt werden, aber dazu später mehr. Die letzte der Tabelle zu entnehmende Information befindet sich in der Spalte \texttt{Usage}. Dort wird jedem Datensatz zugeordnet, ob er im Zuge des Wettbewerbes zum Trainieren, zum privaten Testen oder zum öffentlichen Testen verwendet wird.
 
 \subsection{Modell}
+\sectionauthor{1329241}
 Nachfolgend wird das für die Emotionserkennung erstellte Modell mit den jeweils einzelnen Layern näher erläutert. Die komplette Struktur des Modells kann der Abbildung \ref{fig:Model Summary} im Anhang entnommen werden.
 Wie zu sehen ist, ist das Modell ein einfaches Convolutional Neural Network. 
 Wie der Grafik zu entnehmen ist sind die Eingabedaten 48 x 48 Pixel große Bilder, die wiederum durch drei sequentielle Schichten von Convolutional Layern und Pooling Layern verarbeitet werden. Jede dieser drei Schichten weist dabei wiederum drei Conv2D-Layer auf. Diese sind in Keras Convolutional-Layer. Jeder von diesen hat dabei 32 Filter als Verarbeitungsparameter, die wiederum eine Größe von 3 x 3 Pixeln aufweisen. Die Aktivierungsfunktion jedes dieser Conv2D-Layer ist die Relu Funktion, die bereits in Kapitel \ref{Aktivierungsfunktionen} erläutert wurde. Die Padding-Strategie für diese Schichten ist ''same''. Das bedeutet, dass die Bilder über die die Filter der Conv2D-Layer laufen am Rand so aufgefüllt werden, dass die resultierenden Ausgabewerte ebenfalls 48 x 48 Pixel groß sind, und sich nicht nach jedem  Convolutional-Layer verkleinern. Auf die jeweils drei Conv2D-Layer folgt ein Pooling Layer. Dieser verwendet die Max. Pooling Strategie und hat eine Größe von 2 x 2 Pixeln. Dadurch halbieren sich die Größen der Eingabebilder jeweils von 48 x 48 Pixeln auf 24 x 24 bzw. 12 x 12 und 6 x 6. Der Anschließende Flatten-Layer formatiert die 6 x 6 Bilder und die jeweiligen 32 Filter um, sodass die darauffolgenden Dense-Layer (Vollständig verbundene Layer) die Bilder verarbeiten können. Die drei Dense-Layer Verdichten die Ausgabeneuronen so, dass am Ende für jede Emotion die vorhergesagt werden kann ein Neuron als Ausgabeknoten übrig ist. Aktivierungsfunktionen der ersten beiden der drei Dense-Layer ist die Relu Funktion. Die Letzte Schicht hingegen verwendet für die Ausgabe die Softmax Funktion, diese ermöglicht es die Wahrscheinlichkeiten für die jeweilige Emotion auszugeben.
 
 \subsection{Trainieren des Modells}
+\sectionauthor{2356667}
 Sobald das beschriebene Modell kreiert wurde, kann mit dem wesentlichen Teil, dem Trainieren, fortgefahren werden. Ein definiertes Modell besitzt in Keras die Methode \texttt{fit}, deren Verwendung im einfachsten Fall folgendermaßen aussieht: \texttt{fit(x=Trainingsdaten, y=Trainingslabels)}, wobei \texttt{x} und \texttt{y} in diesem Fall Numpy-Arrays sind. Die Trainingsdaten und die entsprechenden Labels erhalten wir aus dem Dataset, jedoch müssen diese noch in das erforderliche Format, eine Matrix bzw. ein Numpy-Array konvertiert werden. Dazu müssen die bereits erwähnten Pixel in der Zeichenkette in eine Matrix der Form 48 Pixel x 48 Pixel gebracht werden, wobei wiederum jedes Pixel als eindimensionales Array mit einem Element dargestellt wird. Sollten an dieser Stelle Farbbilder mit dem Format 48 Pixel x 48 Pixel als Input genutzt werden, hätte man anstatt der Struktur \texttt{(48, 48, 1)} entsprechend der drei RGB-Werte Daten der Struktur \texttt{(48, 48, 3)}. Optional können der Methode \texttt{fit} Validierungsdaten und die zugehörigen Labels als Tupel übergeben werden. Dabei ist zu beachten, dass beide Komponenten als Numpy-Array vorliegen müssen und es analog zu den Trainingsdaten einer Konvertierung in das passende Format bedarf. Der Methode \texttt{fit} zum Trainieren des Modells können außerdem einige optionale Parameter mitgegeben werden, die im Zusammenhang mit den Validierungsdaten besonders für die Optimierung des Modells, dem Hyperparameter-Tuning, wichtig sind.\newline
 Als Rückgabewert liefert die angesprochene Methode ein History-Objekt, in welchem Daten wie Loss und Accuracy der Trainingsdaten und ggf. Loss und Accuracy der Validierungsdaten während des Trainingsprozesses aufgezeichnet wurden. Das History-Objekt existiert jedoch nur innerhalb der Laufzeit des Python-Skripts und wird nicht zusammen mit dem Modell über die API-Methode \texttt{save(path="modelToSave.model")} abgespeichert. Um die History eines Modells jederzeit anzeigen, ausgeben und ggf. visualisieren zu können, werden die aufgezeichneten Daten zusätzlich zum Modell im JSON-Format abespeichert und können bei Bedarf über entprechende Bibliotheken wieder geladen und in ein Dictionary konvertiert werden.\newline
 Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdaten mithilfe der Bibliothek \texttt{matplotlib} können der Abbildung \ref{fig:Visualize History} im Anhang entnommen werden.
@@ -598,23 +657,26 @@ Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdate
 \end{figure}
 
 \subsection{Testen des Modells}
+\sectionauthor{2356667}
 Beim Testen des Modells benötigt man analog zum Trainieren eines Modells mehrere Datensätze und deren jeweilige Label. Um eine Genauigkeit zu ermitteln, lässt man sich die Label des Testsets vom trainierten Modell vorhersagen und gleicht diese mit den tatsächlichen Labeln ab. Voraussetzung dafür ist, dass die Testdaten dem selben Format wie die Trainingsdaten, also einer \texttt{(48, 48, 1)}-Matrix, entsprechen. Mithilfe der Keras API-Methode \texttt{predict}, der man die gesamten Trainingsdaten auf einmal übergeben kann, kann man sich auf Grundlage des Modells die Labels vorhersagen lassen. Die konkrete Rückgabe der Methode ist ein Array, dessen Anzahl der Elemente der Anzahl an Trainingsdaten entspricht. Dabei ist wiederum jedes Element selbst ein Array, dessen Länge der Anzahl an möglichen Emotionen entspricht. Übergibt man beispielsweise 10 Testdatensätze und das Modell wurde mit 4 Emotionen trainiert, erhält man ein zweidimensionales Array, welches 10 Arrays der Länge 4 enthält. In den inneren Feldern sind für jede Emotion Werte zwischen 0 und 1 enthalten. Da diese einer Art Wahrscheinlichkteit entsprechen, ergeben sie kumuliert den Wert 1. Vereinfacht gesagt wird für jede Emotion, die als Input gegeben wird, die prozentuale Übereinstimmung mit jeder möglichen Emotion zurückgegeben bzw. die Wahrscheinlichkeit zu jeder möglichen Emotion vorhergesagt. Dies könnte beispielhaft so aussehen: \texttt{[0.05690899, 0.09713534, 0.5027235,  0.04000191, 0.29613075, 0.00709949]}. Möchte man zu einem Input eine einzige Emotion vorhersagen, ist es sinnvoll, die dem Maximum des Arrays entsprechende Emotion zurückzugeben. Nimmt man die in Tabelle \ref{tab:feremotions} definierte Zuordnung von Emotionen als Grundlage, entspricht das Maximum des Arrays dem Index 2, wobei dieser Wert wiederum der Emotion \texttt{Fear} zugeordnet ist.\newline
 Gleicht man die vorhergesagten Emotionen mit den tatsächlichen Emotionen ab, kann man eine statistische Auswertung über der Gesamtmenge aller Daten vornehmen, z.B. dass die Wahrscheinlichkeit einer richtigen Vorhersage bei 40\% liegt. Außerdem ist es möglich, den Anteil der richtigen Zuordnung jeder einzelnen Emotion, z.B. \texttt{[0.1, 0.2, 0.05, 0.15, 0.91, 0.34]} zu ermitteln. Dem letzteren Beispiel kann man entnehmen, dass das Modell sehr gut geeignet ist, die Emotion, die dem Wert 4 entspricht, zu erkennen, jedoch sehr schlecht darin ist, alle anderen Emotionen zu erkennen. Beide Daten werden während des Testprozesses berechnet und sind bei der späteren Optimierung des Modells hilfreich.
 
 \subsection{Optimierung des Modells}
-%TODO
+\sectionauthor{1329241}
 Um das Modell nun zu optimieren wurden einige Schritte unternommen. Zum einem wurde die Layer-Anordnung und auch Anzahl im Laufe der Arbeit verändert. Dabei konnten mit der vorliegenden Anordnung die aus der Grafik \ref{fig:Model Summary} zu entnehmen ist, die besten Ergebnisse erzielt werden. Die Konfiguration der einzelnen Layer wurde ebenfalls überarbeitet, vor allem hinsichtlich der Aktivierungsfunktion, Optimierungsfunktion, der Verlustfunktion, aber auch der allgemeinen Verarbeitungsparameter wie Padding-Strategie oder Filtergröße und Anzahl. Es wurden ebenso Optimierungen an der Epochen-Anzahl und Batch size vorgenommen. Letztlich wurden insgesamt 7 Epochen - Also sieben ganze Durchläufe zum Trainieren des Modells - vorgenommen, die jeweils eine Batch size von  64 aufweisen. Da zum Trainieren 80\% des Gesamtdatensatzes verwendet wurden, also insgesamt $ 28709 $ Bilder, werden pro Epoche insgesamt $ 448 $ Durchläufe mit 64 Bildern, und ein Durchlauf mit $ 37 $ Bildern durchgeführt. Diese Anzahl kommt dadurch zu Stande, dass bei mehr Epochen ein Overfitting an den Trainingsdaten zu erkennen waren. Die Batch size hingegen so gewählt um das Modell schnell und gleichzeitig weniger Ressourcen-intensiv zu gestalten. Die Optimierung des Modells generell folgt ein wenig dem trial and error Prinzip. Es gibt zwar einige Empfehlungen 
 \footcite[Vgl.][]{ModellOptimierung}
  - vor allem hinsichtlich der Hyperparameter wie Epochengröße und Batch size - jedoch gibt es keine generell beste Lösung die auf alle Anwendungsfälle passt. Deshalb müssen die besten Einstellungen für Hyperparameter zu dem jeweiligen Datensatz und Modellaufbau ''gefunden'' werden
 
 
 \subsection{Webserver}
+\sectionauthor{2356667}
 Einer der wesentlichen Unterschiede zu der zuvor entwickelten Lösung ist die Architektur. Es läuft nicht mehr alles lokal auf einem Rechner, sondern es wird zwischen Server und Client unterschieden. Alles was das Modell direkt betrifft, also das Trainieren, Testen und Vorhersagen, geschieht auf dem Server, wo auch das Modell selbst existiert. Um mit dem Client interagieren zu können, wird das Webframework Flask verwendet, welches konkret als Webserver dient. Da Flask in Python geschrieben ist, wird die Implementierung von Endpunkten in Verbindung mit den bereits implementierten Funktionalitäten sehr stark vereinfacht.\newline
 Die Interaktion zwischen Server und Client ist sehr überschaubar und es wird lediglich ein einziger Endpunkt auf der Serverseite benötigt. Dieser Endpunkt nimmt mittels der \texttt{POST}-Methode ein vom Client geliefertes, grob vorbearbeitetes Bild entgegen. Dieses Bild wird dann auf dem Server so formatiert, dass mithilfe eines bereits trainierten Modells eine Emotionsvorhersage getroffen werden kann. Das Ergebnis wird dann an den Client zurückgeliefert und kann dort in einen entsprechenden Kontext, wie die reine Ausgabe oder die Analyse eines Pokerfaces, gesetzt und weiterverwendet werden.\newline
 Damit der Server mithilfe eines Modells Vohersagen machen und Bilder archivieren kann, werden zur Initialisierung das Modell geladen und entsprechende Ordnerstrukturen angelegt, sofern diese noch nicht vorhanden sind. Danach kann der Webserver gestartet werden, um Verbindungen vom Client über einen vordefinierten Port entgegenzunehmen. Sobald ein Client ein Bild an den Server übergibt, wird dieses gespeichert bzw. archiviert. Da nicht sichergestellt ist, dass der Client ausschließlich Bilder der Größe 48 Pixel x 48 Pixel mit einem Gesichtsausschnitt  sendet, werden diese zunächst serverseitig geprüft und ggf. überarbeitet werden.  
 Die allgemeine Vorgehensweise ist dabei, zuerst ein Gesicht zu erkennen und dieses danach auf 48 Pixel x 48 Pixel zuzuschneiden. Damit das Modell eine optimale Vorhersage geben kann, wird der Ausschnitt des extrahierten Gesichtes ggf. noch in ein Graustufenformat konvertiert. Um nun einen validen Input für das Modell zu generieren, wird das Image-Objekt in einen Pixel-String bzw. in eine Matrixrepräsentation der Form \texttt{(48, 48, 1)} gebracht. Jetzt kann auf dem bei der Initialisierung geladenen Modell die bereits erläuterte Methode \texttt{predict} aufgerufen werden. Der Rückgabewert dieser Funktion bzw. die Vorhersagewerte der einzelnen Emotionen werden dann an den Client zurückgegeben.
 
 \subsection{Client}
+\sectionauthor{1329241}
 Der Hauptzweck des Clientanwendung ist die Darstellung des Output mithilfe einer grafischen Benutzerschnittstelle. Im Hintergrund interagiert der Client mit dem Server, indem er Webcam-Bilder liefert, die hinsichtlich der Emotion auf dem Server analysiert werden und erhält Vorhersage-Matrizen. Die Interpretation dieser Werte obliegt dem Client, der diese dem Nutzer auf bestimmte Weise zugänglich macht. Die Anwendung umfasst somit zwei Wesentliche Funktionalitäten, eine grafische Oberfläche zur Interaktion mit dem Anwender und im Hintergrund die Netzwerkkommunikation mit dem Server. Da nach den definierten Anforderungen keine komplexen Interaktionen mit dem Nutzer notwendig sind, umfasst die GUI lediglich ein Fenster in dem der Video-Stream der Webcam ausgegeben wird, mit der zusätlichen Information, ob sich laut Definition um ein Pokerface handelt oder nicht, als Schriftzug in einer Ecke des Bildes. Somit kann der Nutzer seine aktuelle Emotion sehen und die Ausgabe, ob ein Pokerface vorhanden ist oder nicht, besser nachvollziehen. Da die Ausgabe des Video-Streams im Fenster und die Netzwerkkommunikation grundsätzlich voneinander unabhängig sind, können diese Aufgaben in zwei verschiedene Prozesse bzw. Threads aufgeteilt werden. Wird dies nicht gemacht, kann es je nach Auslastung des Netzwerkes oder Ressourcenknappheit auf der Serverseite zu einer ruckeligen und verzögerten Ausgabe des Video-Stream kommen. Somit werden im Hauptprozess die grafischen Aufgaben erledigt, wobei man für die jeweilige Information, ob es sich um ein Pokerface handelt oder nicht, in eine geteilten globalen Variable gespeichert ist, die vom Netzwerk-Thread geschrieben und vom GUI-Thread gelesen wird. In definierten Intervallen kann der Thread zur Kommunikation mit dem Server einzelne Bilder des Video-Streams abgreifen und zur Vorhersage an den Server schicken, ohne dass bei der Ausgabe auf die Antwort des Servers gewartet werden muss. Wie bereits erwähnt, werden die vom Server gelieferten Daten clientseitig interpretiert, was konkret bedeutet, dass ein Algorithmus implementiert werden muss, der anhand der Vorhersagedaten entscheidet, ob ein Pokerface vorhanden ist oder nicht. \newline
 Wie bereits beschrieben wertet der hier explizierte Algorithmus Eingabedaten aus einem Videostream aus um ein Pokerface festzustellen. Nach der Definition in Kaptiel 
 \ref{pokerface}gibt es zwei Arten von Pokerfaces. Dieser Algorithmus behandelt dabei die Variante, in der das beobachtete Subjekt seinen Gesichtsausdruck dauerhaft beibehält. Um dies zu bewerkstelligen muss der Videostream in einer gewissen Rate abgetastet werden. Dies bedeutet, dass immer wieder Momentaufnahmen aus dem Videostream entnommen werden, und dem Server zum evaluieren gegeben werden. Dieser Vorgang wird einige Male wiederholt, und die daraus resultierenden Daten aggregiert und zwischengespeichert. Das Ergebnis dieser Aggregation ist dann eine Liste der Länge
@@ -631,6 +693,7 @@ $$ \forall e_{i} \in Emotion : (avg - e_{i} ) \leq \epsilon \Rightarrow Pokerfac
  $ \epsilon$ ist hierbei die Toleranz in der sich eine Abweichung der Emotion begeben darf.
 
 \chapter{Ergebnis}
+\chapterauthor{2356667}
 Außerdem werden die aufgrund des erstellten Konzeptes entwickelten Lösungsansätze und Lösungen erläutert. Dazu werden die definierten Anforderungen vor allem auch im Bezug auf das trainierte Modell zum Klassifizieren von den vordefinierten Emotionen und das Verifizieren und Testen dieses Modells auf Erfüllung geprüft.\newline
 Eine grundlegende Anforderung ist, dass die Emotionen nicht zufällig erkannt werden. Hier kann gesagt werden, dass diese Anforderung schon in frühen Projektphasen erfüllt werden konnte und die Genauigkeit der richtigen Zuordnung der Testdaten bei 55,71\% liegt. Somit ist davon auszugehen, dass vorhandene Emotionen im Durchschnitt auf ca. jedem zweiten Bild richtig klassifiziert werden. Dies kann in der Praxis anhand von eigenen Tests nur so bestätigt werden. Ergänzt man die Tabelle \ref{tab:feremotions} der Häufigkeitsverteilung der Emotionen mit der Genauigkeit der Zuordnung der Testdaten zu den einzelnen Emotionen ergibt sich folgende Tabelle \ref{tab:genauigkeitemotions}.
 \begin{table}[h]
@@ -657,27 +720,35 @@ Das Ziel des Projektes ist nicht die Analyse von ganzen Videos. Da immer einzeln
 
 \let\cleardoublepage\relax
 \chapter{Diskussion}
+\chapterauthor{1329241}
 Das nunmehr letzte Kapitel soll sich mit der kurzen Zusammenfassung der Ergebnisse des letztens Teils und deren Bewertung widmen. 
 %Die Ergebnisse aus dem letzten Kapitel noch einmal zusammenfassen?
 Des Weiteren sollen die angewandten Methoden reflektiert werden,
 offene Fragen beantwortet und auch weitere Punkte aufgezeigt werden die verbessert oder noch implementiert werden können. Dazu soll zunächst die Ergebnisse kurz zusammengefasst werden.
 
 \section{Reflexion der Ergebnisse}
+\sectionauthor{8774695}
 
 \subsection{Alternativen}
+\sectionauthor{8774695}
 
 \section{Reflexion Vorgehen}
+\sectionauthor{8774695}
 Mehr darauf eingehen dass das Kontrovers ist und auch die Basisemotionen kontrovers sind --  aber keine andere Möglichkeit vorhanden 
 
 \section{Reflexion der Literatur}
+\sectionauthor{8774695}
 Bezüglich der Literatur ergeben sich nun einige Schwierigkeiten. Dies liegt unter anderem daran, dass das generelle Thema der Gesichts und Emotionserkennung immer noch vor allem aus
 psychologischer Sicht in der Literatur behandelt wurde. Zwar gibt es Fachbücher auch aus informationstechnischer Sicht, welche ebenfalls in dieser Arbeit verwendet wurden.
 
 \section{Offene Implikationen}
+\sectionauthor{8774695}
 
 \chapter{Ausblick}
+\chapterauthor{1329241}
 
 \section{Alternative Ansätze zur Umsetzung von Emotionserkennung}
+\sectionauthor{1329241}
 In diesem Abschnitt nun werden verschiedene alternative Ansätze dargestellt und expliziert, die dazu verwendet werden können um Emotionen zu erkennen.
 Dieses Unterkapitel beschäftigt sich mit alternativen Ansätzen zu den bereits explizierten Basisemotionen. Diese sind wie bereits erwähnt umstritten, was die Frage zulässt warum diese überhaupt verwendet werden sollten. Ein weiterer kreativer Ansatz zur Erkennung von Emotionen wäre die Analyse der Stimmlage.
 Dieser Ansatz beruft sich darauf, dass das Sprachzentrum eines Menschen einer der wichtigsten Aspekte der Kommunikation und somit auch der Preisgabe von Informationen über den emotionalen Zustand eines Individuums ist.
