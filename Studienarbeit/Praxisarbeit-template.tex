@@ -425,7 +425,6 @@ Aufgrund der Vorkenntnisse und Relevanz innerhalb des Studiums soll die Programm
 %Ist es das?
 Auf eine bestimmte IDE wie PyCharm, Emacs oder Visual Studio Code wird sich an dieser Stelle nicht festgelegt, da dies jedem Entwickler selbst zu überlassen ist. Diesbezüglich sind nur Einschränkungen aufgrund der gewählten Rechnerarchitektur und der Programmiersprache zu berücksichtigen.\newline
 Zur Entwicklung einer Emotionserkennung sollen als grundlegende Komponenten die Programmbibliothek OpenCV zur Bildverarbeitung und das Framework Tensorflow bzw. die Deep-Learning-Bibliothek Keras verwendet werden. Da das Einsatzgebiet von OpenCV in der Bildverarbeitung liegt, soll die Bibliothek dazu genutzt werden, den Input so zu verändern, dass dieser vom Modell zum Trainieren oder Vorhersagen einer oder mehrerer Emotionen verwendet werden kann. Für den wesentlichen Teil der Arbeit, das Entwickeln eines Modells, welches menschliche Emotionen anhand eines Bildausschnittes von einem Gesichts erkennen kann, ist die Deep-Learning-Bibliothek Keras zu verwenden.
-
 \subsubsection{Hardware}
 \sectionauthor{2356667}
 Der Einfachheit halber wird zum Entwickeln als grundlegende Komponente ein handelsüblicher Laptop genutzt. Dabei wird außerdem auf das Open-Source Betriebssystem Ubuntu 18.04.4 LTS in der 64-bit Variante zurückgegriffen. Als zugrundeliegende Ressourcen stehen ein 8 Gigabyte großer Arbeitsspeicher sowie ein Intel Core i5-4210 Quadcore Prozessor mit einer Taktfrequenz von 4 x 2,60 GHz zur Verfügung. Des Weiteren kann die dedizierte Grafikkarte GeForce 820M mit einem Grafikkartenspeicher von 2046 MB verwendet werden. Der Festplattenspeicher von 500 GB kann im Umfang dieser Arbeit vernachlässigt werden, da es im Zusammenhang mit Gesichts- bzw. Emotionserkennung primär darauf ankommt, wie viel Rechenleistung zur Verfügung steht und nicht, wie groß die Speicherkapazität des Laufwerks ist. Um das rechenintensive Trainieren des Modells zur Emotionserkennung in akzeptabler Zeit zu garantieren, soll die Rechenleistung des Prozessors und der Grafikkarte vollständig genutzt werden können.
@@ -523,7 +522,7 @@ Es fällt auf, dass sich die dargestellte Anzahl von ca. 325 nutzbaren Bilder st
 	\begin{minipage}[b]{.2\linewidth} % [b] => Ausrichtung an \caption
 		\includegraphics[width=\linewidth]{Bilder/Disgust11.png}
 	\end{minipage}
-	\caption[t]{Emotionsverlauf von Neutral zu Disgust}
+	\caption{Emotionsverlauf von Neutral zu Disgust}
 	\label{fig:Disgust}
 \end{figure}
 
@@ -677,7 +676,7 @@ Die Visualisierungen der aufgezeichneten Daten inklusive entsprechender Testdate
 	\begin{minipage}[b]{\linewidth}
 		\includegraphics[width=\linewidth]{Bilder/accuracy_history.png}
 	\end{minipage}
-	\caption[t]{Visualisierung der aufgezeichneten Daten des History-Objektes}
+	\caption{Visualisierung der aufgezeichneten Daten des History-Objektes}
 	\label{fig:Visualize History}
 \end{figure}
 
